@@ -1,0 +1,6 @@
+[
+  //{"keys": ["super+shift+r"], "command": "reindent" , "args": {"single_line": false}}
+  {"keys": ["f12"], "command": "reindent" , "args": {"single_line": false}},
+  { "keys": ["super+v"], "command": "paste_and_indent" },
+  { "keys": ["super+shift+v"], "command": "paste" }
+]

@@ -1,0 +1,8 @@
+
+# Symlink for Ubuntu
+sudo ln -s ~/Sublime\ Text\ 2/sublime_text /usr/bin/subl
+
+
+# For OS X
+# This assumes Sublime Text 2 is placed in 'Applications', and that ~/bin is in your path
+ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl

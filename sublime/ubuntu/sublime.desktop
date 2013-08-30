@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Name=Sublime Text 2
+StartupNotify=true
+GenericName=Text Editor
+Comment=Edit text files
+Exec=/home/gfestari/sublime_text/sublime_text %U
+MimeType=text/plain;text/x-chdr;text/x-csrc;text/x-c++hdr;text/x-c++src;text/x-java;text/x-dsrc;text/x-pascal;text/x-perl;text/x-python;application/x-php;application/x-httpd-php3;application/x-httpd-php4;application/x-httpd-php5;application/xml;text/html;text/css;text/x-sql;text/x-diff;x-directory/normal;inode/directory;
+Categories=GNOME;GTK;Utility;TextEditor;Application;Development;
+Icon=/home/gfestari/sublime_text/Icon/st2_icon_128.png
+Name[en_US]=Sublime Text 2
+X-Ayatana-Desktop-Shortcuts=NewWindow;
+
+[NewWindow Shortcut Group]
+Name=New Editor Window
+Exec=/home/gfestari/sublime_text/sublime_text --new-window
+TargetEnvironment=Unity

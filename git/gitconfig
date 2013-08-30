@@ -1,0 +1,37 @@
+[core]
+  excludesfile = /home/username/.gitignore
+  autocrlf = input
+[user]
+  name = yourname
+  email = someone@email.com
+[credential]
+  helper = cache
+  # use osxkeychain on OS X
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
+[alias] # most of these are taken from: https://gist.github.com/oli/1637874
+  pl = pull --ff-only
+  up = !git remote update -p; git merge --ff-only @{u}
+  s = status
+  a = !git add . && git status
+  au = !git add -u . && git status
+  aa = !git add . && git add -u . && git status
+  rmall = !git rm $(git ls-files -d)
+  c = commit
+  cm = commit -m
+  ca = commit --amend # careful
+  ac = !git add . && git commit
+  acm = !git add . && git commit -m
+  l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset, %C(magenta)%ar%Creset'
+  ll = log --stat --abbrev-commit
+  d = diff --color-words
+  dh = diff --color-words head
+  master = checkout master
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+[rerere]
+  enabled = true

@@ -1,0 +1,73 @@
+# NOTE that `dircolors` requires coreutils on the host.
+# Alternatively, you could use BSD's output:
+#export CLICOLOR=1
+#export LSCOLORS=exfxcxdxbxegedabagacad
+# And use this instead on OS X
+#alias ls='ls -G'
+
+# Otherwise, replace `gdircolors` and `gls` with `dircolors` and `ls` on Ubuntu
+
+# double rainbows!
+if [ -f ~/.dircolors ]; then
+    . ~/.dircolors
+else
+    eval "$(gdircolors -b)"
+fi
+
+alias ls='gls -h --color=auto'
+
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# some handy aliases
+alias ll='ls -Fl'
+alias la='ls -Fa'
+alias lla='ls -la'
+
+# a simple function to `cd` and `ls`
+function cs () {
+  cd "$@" && ls
+}
+
+# if a default is required, it could be aliased instead to:
+# function chpwd() {
+#  emulate -L zsh
+#  ls
+# }
+
+# create parent Dirs as needed. Be verbose about it.
+alias mkd='mkdir -pv'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Disk usage, user recursively. @see http://serverfault.com/a/43298
+# On Ubuntu, replace 'gdu' with 'du'
+alias du='gdu --max-depth=1 -h'
+
+# Enable forward-search history [Ctrl + S]
+# @see http://stackoverflow.com/a/791800/992453
+stty -ixon
+
+# Backup copy RSync
+# Selected options are:
+#  -p - preserve permissions
+#  -o - preserve owner
+#  -g - preserve group
+#  -h - output in human-readable format
+#  --progress - display progress
+#  -b - instead of just overwriting an existing file, save the original
+#  --backup-dir=/tmp/rsync - move backup copies to "/tmp/rsync"
+#  -e /dev/null - only work on local files
+#  -- - everything after this is an argument, even if it looks like an option
+# @see: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/cp/cp.plugin.zsh
+alias cpv='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
+
+alias ..='cd ..'
+
+# easier to cope-with rbenv
+alias rb=rbenv

@@ -1,4 +1,4 @@
-dotfiles
-========
+.dotFiles
+=========
 
-A collection of my tool's preferences and workspace configuration.
+**This repo** is a collection of personal preferences and configuration settings I've tweaked and gathered from around the web. Use them wisely!

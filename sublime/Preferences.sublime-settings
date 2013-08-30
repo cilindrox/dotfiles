@@ -1,0 +1,88 @@
+{
+  // Editor
+  "font_face": "Ubuntu mono",
+  "font_size": 16,
+  "tab_size": 2,
+  "rulers": [80],
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true,
+
+  // UI
+  "bold_folder_labels": true,
+  "highlight_line": true,
+  "highlight_modified_tabs": true,
+
+  "font_options": ["subpixel_antialias"],
+
+  // Valid values are "smooth" (default), "phase", "blink", "wide" and "solid".
+  "caret_style": "phase",
+  "wide_caret": true,
+
+  "show_full_path": true,
+  "detect_indentation": true,
+  "auto_indent": true,
+  "draw_white_space": "all",
+  "ensure_newline_at_eof_on_save": true,
+  "scroll_past_end": true,
+
+  // Misc
+  "auto_complete_commit_on_tab": true,
+  "shift_tab_unindent": true,
+
+  "find_selected_text": true,
+  "copy_with_empty_selection": false,
+
+  // folder_exclude_patterns and file_exclude_patterns control which files
+  // are listed in folders on the side bar. These can also be set on a per-
+  // project basis.
+  "folder_exclude_patterns": [
+  ".svn",
+  ".git",
+  ".hg",
+  "CVS",
+  ".sass-cache",
+  "bundle"
+  ],
+
+  "file_exclude_patterns": [
+  "*.pyc",
+  "*.pyo",
+  "*.exe",
+  "*.dll",
+  "*.obj",
+  "*.o",
+  "*.a",
+  "*.lib",
+  "*.so",
+  "*.dylib",
+  "*.ncb",
+  "*.sdf",
+  "*.suo",
+  "*.pdb",
+  "*.idb",
+  ".DS_Store",
+  "*.class",
+  "*.psd",
+  "*.tags",
+  "*.db"
+  ],
+
+  // These files will still show up in the side bar, but won't be included in
+  // Goto Anything or Find in Files
+  "binary_file_patterns": [
+  "*.jpg",
+  "*.jpeg",
+  "*.png",
+  "*.gif",
+  "*.ttf",
+  "*.tga",
+  "*.dds",
+  "*.ico",
+  "*.eot",
+  "*.pdf",
+  "*.swf",
+  "*.jar",
+  "*.zip"
+  ]
+
+}
