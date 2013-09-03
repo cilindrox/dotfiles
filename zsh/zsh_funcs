@@ -20,7 +20,7 @@ function gitall() {
     D=${D%/*}
     cd $W/$D
     pwd
-    git pull
+    git pull --ff-only
   done
   cd $W
 }
