@@ -1,3 +1,5 @@
+# Add here your $PATH vars
+
 # Ruby config -- add the rbenv to PATH
 #export PATH="$HOME/.rbenv/bin:$PATH"
 
@@ -6,3 +8,5 @@
 
 # alternatively, use
 #if which rbenv > /dev/null; then eval "$(rbenv init --no-rehash - zsh)"; fi
+
+# EOF

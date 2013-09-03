@@ -1,3 +1,5 @@
+# Useful aliases for commands and functions
+
 # NOTE that `dircolors` requires coreutils on the host.
 # Alternatively, you could use BSD's output:
 #export CLICOLOR=1
@@ -56,3 +58,5 @@ alias ..='cd ..'
 
 # easier to cope-with rbenv
 alias rb=rbenv
+
+#EOF
