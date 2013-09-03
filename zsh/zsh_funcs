@@ -1,0 +1,27 @@
+# a simple function to `cd` and `ls`
+function cs () {
+  cd "$@" && ls
+}
+
+# if a default is required, it could be aliased instead to:
+# function chpwd() {
+#  emulate -L zsh
+#  ls
+# }
+
+# Recursively updates all git repositories in a directory.
+# Taken from
+#   http://blog.sdbarker.com/pro-tip-recursively-updating-all-git-repositories-in-a-directory
+function gitall() {
+  W=`pwd`
+  for i in $(find . -name .git)
+  do
+    D=$i
+    D=${D%/*}
+    cd $W/$D
+    pwd
+    git pull
+  done
+  cd $W
+}
+
