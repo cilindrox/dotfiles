@@ -27,17 +27,6 @@ alias ll='ls -Fl'
 alias la='ls -Fa'
 alias lla='ls -la'
 
-# a simple function to `cd` and `ls`
-function cs () {
-  cd "$@" && ls
-}
-
-# if a default is required, it could be aliased instead to:
-# function chpwd() {
-#  emulate -L zsh
-#  ls
-# }
-
 # create parent Dirs as needed. Be verbose about it.
 alias mkd='mkdir -pv'
 
@@ -48,10 +37,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # Disk usage, user recursively. @see http://serverfault.com/a/43298
 # On Ubuntu, replace 'gdu' with 'du'
 alias du='gdu --max-depth=1 -h'
-
-# Enable forward-search history [Ctrl + S]
-# @see http://stackoverflow.com/a/791800/992453
-stty -ixon
 
 # Backup copy RSync
 # Selected options are:
