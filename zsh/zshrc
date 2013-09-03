@@ -83,6 +83,10 @@ bindkey '[D' backward-word
 # bindkey '\e^[[E' beginning-of-line
 # bindkey '\e^[[F' end-of-line
 
+# Enable forward-search history [Ctrl + S]
+# @see http://stackoverflow.com/a/791800/992453
+stty -ixon
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # '~/.zsh_aliases' instead of adding them here directly.
@@ -94,6 +98,11 @@ fi
 # Environment vars definition.
 if [ -f ~/.env ]; then
     . ~/.env
+fi
+
+# Utility functions.
+if [ -f ~/.zsh_funcs ]; then
+    . ~/.zsh_funcs
 fi
 
 
