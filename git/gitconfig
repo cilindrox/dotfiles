@@ -28,10 +28,13 @@
   l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset, %C(magenta)%ar%Creset'
   ll = log --stat --abbrev-commit
   merff = merge --ff-only
+  news = log -p HEAD@{1}..HEAD@{0}
   noff = merge --no-ff
   pl = pull --ff-only
+  rfl = log --walk-reflogs # yourbranchnamehere
   rmall = !git rm $(git ls-files -d)
   s = status
+  ss = status -s
   up = !git remote update -p; git merge --ff-only @{u}
   alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 [rerere]
