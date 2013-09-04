@@ -14,7 +14,7 @@ In order to keep everything running as smooth as possible, just remember to run 
 
     brew update && brew upgrade
 
-If something seems to have gone foobar, just call the doctor:
+If something seems to have gone fubar, just call the doctor:
 
     brew doctor
 
