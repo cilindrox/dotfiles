@@ -7,7 +7,7 @@
 
 Just run:
 
-    # see [TODO]
+see [TODO](Readme.md#TODO)
 
 ## Bits and pieces
 * [Homebrew](brew/NOTES.md)
