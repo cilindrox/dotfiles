@@ -14,6 +14,19 @@
     interactive = auto
     ui = true
     pager = true
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = cyan
 [alias] # most of these are taken from: https://gist.github.com/oli/1637874
     a = !git add . && git status
     au = !git add -u . && git status
