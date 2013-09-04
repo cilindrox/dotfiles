@@ -12,7 +12,7 @@ Just run:
 ## Bits and pieces
 * [Homebrew](brew/NOTES.md)
 * [Z-Shell configuration](zsh/NOTES.md)
-* [Sublime configuration](subl/NOTES.md)
+* [Sublime configuration](sublime/NOTES.md)
 
 
 ## TODO
