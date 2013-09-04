@@ -18,3 +18,4 @@ Just run:
 ## TODO
 * Add installation & update scripts
 * Add script for linking all dotfiles
+* Add script for installing Homebrew packages from a list
