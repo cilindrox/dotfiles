@@ -1,4 +1,4 @@
-### ZSH _functions
+## ZSH _functions
 All zsh functions should be copied to your current loaded `$FPATH`. Optionally, `rm ~/.zcompdump` to clear zsh's completion cache.
 
 On OS X, using homebrew you should have something like:
