@@ -25,8 +25,8 @@
     ca = commit --amend # careful
     d = diff --color-words
     dh = diff --color-words head
-    l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset, %C(magenta)%ar%Creset'
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    lg = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset, %C(magenta)%ar%Creset'
     ll = log --stat --abbrev-commit
     merff = merge --ff-only
     news = log -p HEAD@{1}..HEAD@{0}
