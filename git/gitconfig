@@ -43,3 +43,6 @@
 [rerere]
     enabled = true
     autoupdate = true
+[github]
+    user = yourusername
+    token = yourtokenhere
