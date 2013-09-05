@@ -33,16 +33,22 @@ alias ll='ls -lh'
 alias la='ls -A'
 alias lla='ls -hal'
 
-# create parent Dirs as needed. Be verbose about it.
+alias ..='cd ..'
+
+
+# Create parent Dirs as needed. Be verbose about it.
 alias mkd='mkdir -pv'
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+
 # Disk usage, user recursively. @see http://serverfault.com/a/43298
 # On Ubuntu, replace 'gdu' with 'du'
 alias du='gdu --max-depth=1 -h'
+
 
 # Backup copy RSync
 # Selected options are:
@@ -58,9 +64,11 @@ alias du='gdu --max-depth=1 -h'
 # @see: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/cp/cp.plugin.zsh
 alias cpv='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
 
-alias ..='cd ..'
 
-# easier to cope-with rbenv
-alias rb=rbenv
+# File renaming with zmv function. Remember to add `autoload zmv` to your .zshrc
+# Usage:
+#   mmv *.c.orig orig/*.c
+#
+alias mmv='noglob zmv -vW'
 
 #EOF
