@@ -2,14 +2,14 @@
 
 # a simple function to `cd` and `ls`
 function cs () {
-    cd "$@" && ls
+    cd "$@" && ls -A
 }
 
-# if a default is required, it could be aliased instead to:
-# function chpwd() {
-#     emulate -L zsh
-#     ls
-# }
+# Alternatively, if a default is required, it could be aliased instead to:
+#   function chpwd() {
+#       emulate -L zsh
+#       ls
+#   }
 
 # Recursively updates all git repositories in a directory.
 # Taken from
