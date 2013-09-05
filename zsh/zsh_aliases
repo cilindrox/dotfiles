@@ -1,15 +1,19 @@
-# Useful aliases for commands and functions
+# Just some handy aliases for commands and functions
 
-# NOTE that `dircolors` requires coreutils on the host.
+# NOTE: `dircolors` requires the coreutils package to be installed.
 # Alternatively, you could use BSD's output:
-#export CLICOLOR=1
-#export LSCOLORS=exfxcxdxbxegedabagacad
-# And use this instead on OS X
-#alias ls='ls -G'
+#   export CLICOLOR=1
+#   export LSCOLORS=exfxcxdxbxegedabagacad
+#
+# ..and use this instead on OS X
+#   alias ls='ls -G'
+#
+# Otherwise, remember to replace the following on Ubuntu:
+#   `gdircolors` => `dircolors`
+#   `gls` => `ls`
 
-# Otherwise, replace `gdircolors` and `gls` with `dircolors` and `ls` on Ubuntu
+# Double Rainbows!
 
-# double rainbows!
 if [ -f ~/.dircolors ]; then
     . ~/.dircolors
 else
@@ -24,10 +28,10 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# some handy aliases
-alias ll='ls -Fl'
-alias la='ls -Fa'
-alias lla='ls -la'
+# some listing options...
+alias ll='ls -lh'
+alias la='ls -A'
+alias lla='ls -hal'
 
 # create parent Dirs as needed. Be verbose about it.
 alias mkd='mkdir -pv'
