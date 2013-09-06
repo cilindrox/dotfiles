@@ -35,6 +35,7 @@ alias lla='ls -hal'
 
 alias ..='cd ..'
 
+alias rand='echo $RANDOM'
 
 # Create parent Dirs as needed. Be verbose about it.
 alias mkd='mkdir -pv'
