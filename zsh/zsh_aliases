@@ -69,7 +69,7 @@ alias cpv='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
 # File renaming with zmv function. Remember to add `autoload zmv` to your .zshrc
 # Usage:
 #   mmv *.c.orig orig/*.c
-#
+# If you decide to ditch the 'noglob', remember to quote the parameters.
 alias mmv='noglob zmv -vW'
 
 #EOF
