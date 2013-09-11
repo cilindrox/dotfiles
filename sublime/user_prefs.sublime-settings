@@ -12,6 +12,11 @@
   "highlight_line": true,
   "highlight_modified_tabs": true,
 
+  "indent_guide_options": [
+  "draw_normal",
+  "draw_active"
+  ],
+
   "font_options": ["subpixel_antialias"],
 
   // Valid values are "smooth" (default), "phase", "blink", "wide" and "solid".
