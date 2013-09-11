@@ -31,17 +31,39 @@ function gitall() {
 #   @see: http://mathworld.wolfram.com/CliffRandomNumberGenerator.html
 # TODO: add args parsing for defining ranges.
 #   eg:
-#       cliff 10 => rand [0..10]
-#       cliff 10 -h => rand [1..10] # human readable
-#       cliff 1..4 => rand [1..4]
+#       cliff_rand 10 => rand [0..10]
+#       cliff_rand 10 -h => rand [1..10] # human readable
+#       cliff_rand 1..4 => rand [1..4]
 #
-function cliff {
+function cliff_rand {
   zmodload zsh/mathfunc
   seed=0.1
   (( seed = 100 * log(seed) ))
   (( number = fmod(seed, 1.0) ))
   (( cliff_number = fabs(number) ))
   print $cliff_number
+}
+
+# Optionally:
+# alias cliff=cliff_rand
+
+# Outputs a random password consisting of the chars on the `chars` array.
+# TODO: fixed length for now.
+#
+function randpass() {
+  zmodload -i zsh/mathfunc
+
+  length=13 # Max possible value are equal to size of $chars.
+  chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?:^~@#$%&*_+=[]/"
+
+  while (( i++ < length ))
+  do
+    random=$((1 + int(${(c)#chars} * rand48())))
+    password+="$chars[$random]"
+    chars[$random]=""
+  done
+
+  print "$password"
 }
 
 # EOF
