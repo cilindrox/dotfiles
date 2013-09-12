@@ -1,4 +1,6 @@
 {
+  // More info @http://docs.sublimetext.info/en/latest/reference/settings.html
+
   // Editor
   "font_face": "Ubuntu mono",
   "font_size": 11,
