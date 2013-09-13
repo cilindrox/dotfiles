@@ -1,5 +1,4 @@
-
-# Adding a command line utility for SublimeText
+## Adding a command line utility for SublimeText
 
 Use this to enable the `subl` utility to work with files and projects on the command line or as an EDITOR for unix tools such as git.
 
