@@ -1,6 +1,12 @@
 #!/bin/bash
 
-BASE_DIR=/
+PROJECT_ROOT=$1
+
+# Switch to the given project folder and initialize a git repo
+cd $PROJECT_ROOT && git init
+
+# TODO:
+# touch .gitkeep
 
 # DIRECTORIES
 CONFIG_DIR=config
@@ -26,7 +32,8 @@ mkdir $IMG_DIR
 mkdir $VIEWS_DIR
 
 touch $CFG_FILE
-touch $README_FILE # TODO: check if there's already a readme file (eg: created by GitHub)
+touch $README_FILE
 touch $APP_FILE
 
+# Nothing to do here...
 exit 0
