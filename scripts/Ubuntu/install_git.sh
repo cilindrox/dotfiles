@@ -6,10 +6,10 @@
 ROOT_UID=0     # Only users with $UID 0 have root privileges.
 E_NOTROOT=87   # Non-root exit error.
 
-# Installation requires root privileges, duh.
-if [ "$UID" -ne "$ROOT_UID" ]
+# Check for root permissions
+if [ `whoami` != "root" ]; then
 then
-  echo "Must be root to run this script."
+  echo "This script needs to be run as root."
   exit $E_NOTROOT
 fi
 
