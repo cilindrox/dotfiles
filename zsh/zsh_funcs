@@ -35,13 +35,21 @@ function gitall() {
 #       cliff 10 -h => rand [1..10] # human readable
 #       cliff 1..4 => rand [1..4]
 #
-function cliff {
-  zmodload zsh/mathfunc
-  seed=0.1
-  (( seed = 100 * log(seed) ))
-  (( number = fmod(seed, 1.0) ))
-  (( cliff_number = fabs(number) ))
-  print $cliff_number
+function cliff_rand () {
+    zmodload zsh/mathfunc
+    seed=0.1
+    (( seed = 100 * log(seed) ))
+    (( number = fmod(seed, 1.0) ))
+    (( cliff_number = fabs(number) ))
+    print $cliff_number
+}
+
+# returns a random number between 1..z
+function rand () {
+    # if (( $# == 0 ))
+    # then echo usage: yp name ...; fi
+    # $[RANDOM % $1 + 1]
+    echo $RANDOM
 }
 
 # EOF
