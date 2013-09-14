@@ -1,5 +1,4 @@
-
-# Adding a command line utility for SublimeText
+## Adding a command line utility for SublimeText
 
 Use this to enable the `subl` utility to work with files and projects on the command line or as an EDITOR for unix tools such as git.
 
@@ -48,3 +47,53 @@ The `-w` flag will make `subl` wait for the file to be closed before exiting.
 
 
 Please refer to [the official documentation](http://www.sublimetext.com/docs/3/osx_command_line.html) in case of snafu.
+
+
+## Handy shortcuts
+
+### Join lines
+
+    Cmd + J
+    Ctrl + J
+
+### Swap lines
+
+Because copypasta needs a break from time to time.
+
+    Ctrl + Cmd + Up/Down
+    Ctrl + Shift + Up/Down
+
+### Cloning lines
+
+    Ctrl + Shift + D
+
+### Capitalize!
+
+    Cmd + K, Cmd + U (upcase)
+    Cmd + K, Cmd + L (lowcase)
+
+    Ctrl + K, Cmd + U (upcase)
+    Ctrl + K, Cmd + L (lowcase)
+
+### Sort / Alphabetical sort
+
+Troz!
+
+    F5
+    Cmd + F5 (Capital first)
+
+    F9
+    Ctrl + F9 (Capital first)
+
+### Comment / Block comment
+
+    Cmd + /
+    Cmd + Opt +/
+
+    Ctrl + /
+    Ctrl + Shift + /
+
+### Block wrapping
+
+    Cmd + Opt + Q
+    Alt + Q

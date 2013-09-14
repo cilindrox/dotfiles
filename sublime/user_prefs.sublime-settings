@@ -1,28 +1,27 @@
 {
+  // More info @http://docs.sublimetext.info/en/latest/reference/settings.html
+
   // Editor
   "font_face": "Ubuntu mono",
-  "font_size": 16,
+  "font_size": 11,
   "tab_size": 2,
   "rulers": [80],
+  "word_wrap": true,
   "translate_tabs_to_spaces": true,
   "trim_trailing_white_space_on_save": true,
+  "use_tab_stops": true,
+  "trim_automatic_white_space": true,
 
   // UI
   "bold_folder_labels": true,
   "highlight_line": true,
   "highlight_modified_tabs": true,
-
-  "indent_guide_options": [
-  "draw_normal",
-  "draw_active"
-  ],
-
+  "draw_minimap_border": true,
+  "indent_guide_options": ["draw_normal", "draw_active"],
   "font_options": ["subpixel_antialias"],
-
-  // Valid values are "smooth" (default), "phase", "blink", "wide" and "solid".
+  // Caret styles: "smooth" (default), "phase", "blink", "wide" and "solid".
   "caret_style": "phase",
   "wide_caret": true,
-
   "show_full_path": true,
   "detect_indentation": true,
   "auto_indent": true,
@@ -33,7 +32,6 @@
   // Misc
   "auto_complete_commit_on_tab": true,
   "shift_tab_unindent": true,
-
   "find_selected_text": true,
   "copy_with_empty_selection": false,
 
