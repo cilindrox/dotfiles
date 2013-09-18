@@ -4,9 +4,9 @@
 #export PATH="$HOME/.rbenv/bin:$PATH"
 
 # required by rbenv
-#eval "$(rbenv init - --no-rehash zsh)"
+#eval "$(rbenv init -)"
 
 # alternatively, use
-#if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash zsh)"; fi
+#if which rbenv > /dev/null; then eval "$(rbenv init --no-rehash - zsh)"; fi
 
 # EOF
