@@ -15,6 +15,7 @@ rbenv
 rbenv-gem-rehash
 redis
 ruby-build
+the_silver_searcher
 tree
 wget
 xz
