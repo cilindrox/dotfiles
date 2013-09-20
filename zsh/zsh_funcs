@@ -1,41 +1,41 @@
 # Put here all helper functions for your zsh
 
-# a simple function to `cd` and `ls`
 function cs () {
+# a simple function to `cd` and `ls`
     cd "$@" && ls -A
 }
 
 # Alternatively, if a default is required, it could be aliased instead to:
-#   function chpwd() {
+#   function chpwd ( ) {
 #       emulate -L zsh
 #       ls
 #   }
 
+function gitall () {
 # Recursively updates all git repositories in a directory.
-# Taken from
-#   http://blog.sdbarker.com/pro-tip-recursively-updating-all-git-repositories-in-a-directory
-function gitall() {
+# Sauce: http://blog.sdbarker.com/pro-tip-recursively-updating-all-git-repositories-in-a-directory
     W=`pwd`
     for i in $(find . -name .git)
     do
         D=$i
         D=${D%/*}
-        cd $W/$D
+        cd "$W/$D"
         pwd
         git pull --ff-only
     done
-    cd $W
+    cd "$W"
 }
 
+function cliff_rand () {
 # Outputs a random number using Cliff Random Number Generator
-#   @see: http://mathworld.wolfram.com/CliffRandomNumberGenerator.html
+# See: http://mathworld.wolfram.com/CliffRandomNumberGenerator.html
+# Bonus points:
+#     alias cliff=cliff_rand
 # TODO: add args parsing for defining ranges.
 #   eg:
 #       cliff_rand 10 => rand [0..10]
 #       cliff_rand 10 -h => rand [1..10] # human readable
 #       cliff_rand 1..4 => rand [1..4]
-#
-function cliff_rand() {
     zmodload zsh/mathfunc
     seed=0.1
     (( seed = 100 * log(seed) ))
@@ -44,34 +44,60 @@ function cliff_rand() {
     print $cliff_number
 }
 
-# Optionally:
-# alias cliff=cliff_rand
-
-# returns a random number between 1..z
 function rand () {
+# Rreturns a random number between 1..z
     # if (( $# == 0 ))
     # then echo usage: yp name ...; fi
     # $[RANDOM % $1 + 1]
     echo $RANDOM
 }
 
+function randpass () {
 # Outputs a random password consisting of the chars on the `chars` array.
-# TODO: fixed length for now.
-#
-function randpass() {
-  zmodload -i zsh/mathfunc
+    zmodload -i zsh/mathfunc
 
-  length=13 # Max possible value are equal to size of $chars.
-  chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?:^~@#$%&*_+=[]/"
+    password=""
+    length="$1" # Max possible value are equal to size of $chars.
+    chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?:^~@#$%&*_+=[]/"
 
-  while (( i++ < length ))
-  do
-    random=$((1 + int(${(c)#chars} * rand48())))
-    password+="$chars[$random]"
-    chars[$random]=""
-  done
+    while (( i++ < length ))
+    do
+      random=$((1 + int(${(c)#chars} * rand48())))
+      $password+="$chars[$random]"
+      chars[$random]=""
+    done
 
-  print "$password"
+    echo "$password"
+}
+
+function explain () {
+# Usage:    explain COMMAND
+# Opens a browser window for the COMMAND page on explainshell.com
+# Sauce: https://github.com/schneems/explain_shell
+    # base url with first command already injected
+    # $ explain tar
+    #   => http://explainshell.com/explain/tar?args=
+    url="http://explainshell.com/explain/$1?args="
+
+    # removes $1 (tar) from arguments ($@)
+    shift;
+
+    # iterates over remaining args and adds builds the rest of the url
+    for i in "$@"; do
+      url=$url"$i""+"
+    done
+
+    # opens url in browser
+    case $OSTYPE in
+        darwin*)
+          open $url ;;
+        linux-gnu)
+          xdg-open $url ;;
+        cygwin)
+            cygstart $url ;;
+        *)
+          echo "no can do"
+    esac
 }
 
 # EOF
