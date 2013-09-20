@@ -1,6 +1,11 @@
 # Put here all helper functions for your zsh
 
-function cs () {
+function token () {
+    # Outputs your Github token, as defined in your gitconfig
+    echo `git config --global github.token`
+}
+
+cs () {
 # a simple function to `cd` and `ls`
     cd "$@" && ls -A
 }
@@ -11,7 +16,7 @@ function cs () {
 #       ls
 #   }
 
-function gitall () {
+gitall () {
 # Recursively updates all git repositories in a directory.
 # Sauce: http://blog.sdbarker.com/pro-tip-recursively-updating-all-git-repositories-in-a-directory
     W=`pwd`
@@ -26,7 +31,7 @@ function gitall () {
     cd "$W"
 }
 
-function cliff_rand () {
+cliff_rand () {
 # Outputs a random number using Cliff Random Number Generator
 # See: http://mathworld.wolfram.com/CliffRandomNumberGenerator.html
 # Bonus points:
@@ -44,7 +49,7 @@ function cliff_rand () {
     print $cliff_number
 }
 
-function rand () {
+rand () {
 # Rreturns a random number between 1..z
     # if (( $# == 0 ))
     # then echo usage: yp name ...; fi
@@ -52,7 +57,7 @@ function rand () {
     echo $RANDOM
 }
 
-function randpass () {
+randpass () {
 # Outputs a random password consisting of the chars on the `chars` array.
     zmodload -i zsh/mathfunc
 
@@ -70,7 +75,7 @@ function randpass () {
     echo "$password"
 }
 
-function explain () {
+explain () {
 # Usage:    explain COMMAND
 # Opens a browser window for the COMMAND page on explainshell.com
 # Sauce: https://github.com/schneems/explain_shell
