@@ -7,12 +7,12 @@
 
 Just run:
 
-see [TODO](Readme.md#TODO)
+see [TODO](#todo)
 
 ## Bits and pieces
-* [Homebrew](brew/NOTES.md)
-* [Z-Shell configuration](zsh/NOTES.md)
-* [Sublime configuration](sublime/NOTES.md)
+* [Homebrew](brew/README.md)
+* [Z-Shell configuration](zsh/README.md)
+* [Sublime configuration](sublime/README.md)
 
 
 ## TODO
