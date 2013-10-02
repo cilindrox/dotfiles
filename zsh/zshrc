@@ -1,39 +1,41 @@
-# Using '-z' option for running in native mode.
-autoload -Uz promptinit compinit zcalc zmv
+autoload -Uz compinit promptinit
+# `z` option runs in native mode.
 compinit      # use modern completion system
-promptinit    # pimp my prompt
+promptinit    # use the included prompt functionality
+
+# pimp my prompt
 prompt adam1
 
-# Config options
-setopt extendedhistory      # save timestamp and duration
-setopt histignorealldups    # ignore duplicates
-setopt histfindnodups       # do not display duplicates of a line previously found
-setopt histignorespace      # ignore lines which start with space
-setopt histreduceblanks     # prevent extra blanks on each line from being saved
-setopt incappendhistory     # incremental append, don't wait until shell exit
-setopt sharehistory         # share history between zsh processes
-setopt autocd               # cd just by typing the name of a directory
-setopt autopushd            # flip between places in a cinch
-# setopt noclobber           # avoid overwriting files. Use ! to confirm
-setopt interactivecomments  # allow inline comments
-setopt extended_glob        # enable extended globbing
-setopt globdots             # ignore preceeding dots. '.foo' == foo
-setopt complete_in_word     # complete from the cursor onwards
-setopt always_to_end        # move the cursor to the end of the word after completion
-setopt prompt_subst         # command substitution, parameter and arithmetic expansion
-setopt hist_verify          # make a newline show the change before executing it
+# load `zcalc` and `zmv` utilities
+autoload -Uz zcalc zmv
 
-# unsetopt menu_complete
-setopt auto_menu
+# Config options
+setopt EXTENDED_HISTORY       # save timestamp and duration
+setopt HIST_VERIFY            # make a newline show the change before executing it
+setopt HIST_IGNORE_SPACE      # ignore lines which start with space
+setopt HIST_IGNORE_ALL_DUPS   # ignore duplicates
+setopt HIST_FIND_NO_DUPS      # do not display duplicates of a found line
+setopt HIST_REDUCE_BLANKS     # trim extra blanks from history lines
+setopt INC_APPEND_HISTORY     # incremental append, don't wait until shell exit
+setopt SHARE_HISTORY          # share history between zsh processes
+setopt AUTOCD                 # cd just by typing the name of a directory
+setopt AUTOPUSHD              # flip between two places easily
+setopt NO_CLOBBER             # avoid overwriting files. Use ! to confirm
+setopt INTERACTIVE_COMMENTS   # allow inline comments
+setopt GLOBDOTS               # ignore preceeding dots. '.foo' == foo
+setopt COMPLETE_IN_WORD       # complete from the cursor onwards
+setopt ALWAYS_TO_END          # move the cursor to the end of the word after completion
+setopt PROMPT_SUBST           # command substitution, parameter and arithmetic expansion
+unsetopt MENU_COMPLETE        # insert the first match immediately
+setopt AUTO_MENU              # show menu for completion. Disable MENU_COMPLETE
+setopt BEEP                   # beep when no results are available
+setopt NOMATCH                # print an error when a pattern has no matches
+setopt COMPLETE_ALIASES       # autocompletion for aliases' switches
 
 # Keep 10,000 lines of history within the shell and save it to ~/.zsh_history
-# Also, ignore entries with leading spaces:
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
-
-# beep when no results are available
-setopt beep nomatch
 
 # Show elapsed time if a command takes longer than 10s
 REPORTTIME=10
@@ -55,7 +57,6 @@ zstyle ':completion:*' use-cache true
 # remove the trailing slash when using a directory as argument
 zstyle ':completion:*' squeeze-slashes true
 
-
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 # zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
@@ -64,9 +65,8 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,ucomm'
 
 # Set your default EDITOR tool
-# export EDITOR='nano'
+# replace with nano, vim, Emacs etc.
 export EDITOR='subl -w'
-
 
 # Key binds
 # use emacs keybindings even if EDITOR is set to vi
@@ -100,10 +100,9 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-# Utility functions.
+# Helper functions.
 if [ -f ~/.zsh_funcs ]; then
     . ~/.zsh_funcs
 fi
-
 
 # EOF
