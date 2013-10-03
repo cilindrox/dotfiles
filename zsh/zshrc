@@ -34,6 +34,7 @@ setopt AUTO_MENU              # show menu for completion. Disable MENU_COMPLETE
 setopt BEEP                   # beep when no results are available
 setopt NOMATCH                # print an error when a pattern has no matches
 setopt COMPLETE_ALIASES       # autocompletion for aliases' switches
+setopt  PUSHD_IGNORE_DUPS     # don't push multiple copies of the same dir onto the stack
 
 # Keep 10,000 lines of history within the shell and save it to ~/.zsh_history
 HISTSIZE=10000
