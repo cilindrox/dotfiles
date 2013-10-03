@@ -4,7 +4,10 @@ compinit      # use modern completion system
 promptinit    # use the included prompt functionality
 
 # pimp my prompt
-prompt adam1
+prompt adam1 magenta blue green
+
+# right-hand prompt with exit status error and time
+RPS1=%(?..%*[ %B%F{yellow}%?%b%f ])
 
 # load `zcalc` and `zmv` utilities
 autoload -Uz zcalc zmv
