@@ -90,15 +90,9 @@ bindkey '[D' backward-word
 # @see http://stackoverflow.com/a/791800/992453
 stty -ixon
 
-# Environment vars definition.
-if [ -f ~/.env ]; then
-    . ~/.env
-fi
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # '~/.zsh_aliases' instead of adding them here directly.
-
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
