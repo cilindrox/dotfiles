@@ -1,18 +1,7 @@
-autoload -Uz compinit promptinit
-# `z` option runs in native mode.
-compinit      # use modern completion system
-promptinit    # use the included prompt functionality
-
-# pimp my prompt
-prompt adam1 magenta blue green
-
-# right-hand prompt with exit status error and time
-RPS1=%(?..%*[ %B%F{yellow}%?%b%f ])
-
-# load `zcalc` and `zmv` utilities
-autoload -Uz zcalc zmv
+autoload -Uz compinit && compinit # use modern completion system. Run in native mode.
 
 # Config options
+# ** History **
 setopt EXTENDED_HISTORY       # save timestamp and duration
 setopt HIST_VERIFY            # make a newline show the change before executing it
 setopt HIST_IGNORE_SPACE      # ignore lines which start with space
@@ -21,6 +10,7 @@ setopt HIST_FIND_NO_DUPS      # do not display duplicates of a found line
 setopt HIST_REDUCE_BLANKS     # trim extra blanks from history lines
 setopt INC_APPEND_HISTORY     # incremental append, don't wait until shell exit
 setopt SHARE_HISTORY          # share history between zsh processes
+# ** Shell behavior **
 setopt AUTOCD                 # cd just by typing the name of a directory
 setopt AUTOPUSHD              # flip between two places easily
 setopt NO_CLOBBER             # avoid overwriting files. Use ! to confirm
@@ -28,13 +18,15 @@ setopt INTERACTIVE_COMMENTS   # allow inline comments
 setopt GLOBDOTS               # ignore preceeding dots. '.foo' == foo
 setopt COMPLETE_IN_WORD       # complete from the cursor onwards
 setopt ALWAYS_TO_END          # move the cursor to the end of the word after completion
-setopt PROMPT_SUBST           # command substitution, parameter and arithmetic expansion
-unsetopt MENU_COMPLETE        # insert the first match immediately
-setopt AUTO_MENU              # show menu for completion. Disable MENU_COMPLETE
 setopt BEEP                   # beep when no results are available
 setopt NOMATCH                # print an error when a pattern has no matches
 setopt COMPLETE_ALIASES       # autocompletion for aliases' switches
-setopt  PUSHD_IGNORE_DUPS     # don't push multiple copies of the same dir onto the stack
+setopt PUSHD_IGNORE_DUPS      # don't push multiple copies of the same dir onto the stack
+
+setopt PROMPT_SUBST           # command substitution, parameter and arithmetic expansion
+
+unsetopt MENU_COMPLETE        # insert the first match immediately
+setopt AUTO_MENU              # show menu for completion. Disable MENU_COMPLETE
 
 # Keep 10,000 lines of history within the shell and save it to ~/.zsh_history
 HISTSIZE=10000
@@ -101,6 +93,11 @@ fi
 # Helper functions.
 if [ -f ~/.zsh_funcs ]; then
     . ~/.zsh_funcs
+fi
+
+# Load the prompt.
+if [ -f ~/.zsh_prompt ]; then
+    . ~/.zsh_prompt
 fi
 
 # EOF
