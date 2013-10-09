@@ -11,6 +11,10 @@ setopt SHARE_HISTORY          # share history between zsh processes
 # ** Shell behavior **
 setopt AUTOCD                 # cd just by typing the name of a directory
 setopt AUTOPUSHD              # flip between two places easily
+setopt PUSHD_IGNORE_DUPS      # don't push multiple copies of the same dir onto the stack
+setopt PUSHD_SILENT           # don't print the directory stack after pushd or popd
+setopt PUSHD_TO_HOME          # pushd with no arguments gets you to Kansas
+setopt PUSHD_MINUS            # swaps `+` and `-` when used w/a number to specify a dir in the stack
 setopt NO_CLOBBER             # avoid overwriting files. Use ! to confirm
 setopt INTERACTIVE_COMMENTS   # allow inline comments
 setopt GLOBDOTS               # ignore preceeding dots. '.foo' == foo
@@ -19,7 +23,6 @@ setopt ALWAYS_TO_END          # move the cursor to the end of the word after com
 setopt BEEP                   # beep when no results are available
 setopt NOMATCH                # print an error when a pattern has no matches
 setopt COMPLETE_ALIASES       # autocompletion for aliases' switches
-setopt PUSHD_IGNORE_DUPS      # don't push multiple copies of the same dir onto the stack
 setopt NO_FLOW_CONTROL        # disable Ctrl + q / Ctrl + s flow control. Similar to `stty -ixon`
 
 setopt PROMPT_SUBST           # command substitution, parameter and arithmetic expansion
