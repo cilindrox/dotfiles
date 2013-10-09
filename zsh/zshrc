@@ -1,5 +1,3 @@
-autoload -Uz compinit && compinit # use modern completion system. Run in native mode.
-
 # Config options
 # ** History **
 setopt EXTENDED_HISTORY       # save timestamp and duration
@@ -22,6 +20,7 @@ setopt BEEP                   # beep when no results are available
 setopt NOMATCH                # print an error when a pattern has no matches
 setopt COMPLETE_ALIASES       # autocompletion for aliases' switches
 setopt PUSHD_IGNORE_DUPS      # don't push multiple copies of the same dir onto the stack
+setopt NO_FLOW_CONTROL        # disable Ctrl + q / Ctrl + s flow control. Similar to `stty -ixon`
 
 setopt PROMPT_SUBST           # command substitution, parameter and arithmetic expansion
 
@@ -35,6 +34,9 @@ HISTFILE=~/.zsh_history
 
 # Show elapsed time if a command takes longer than 10s
 REPORTTIME=10
+
+# use modern completion system. Run in native mode
+autoload -Uz compinit && compinit
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -78,10 +80,6 @@ bindkey '[D' backward-word
 # Skip to start/end of line with cmd-arrow
 # bindkey '\e^[[E' beginning-of-line
 # bindkey '\e^[[F' end-of-line
-
-# Enable forward-search history [Ctrl + S]
-# @see http://stackoverflow.com/a/791800/992453
-stty -ixon
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
