@@ -20,8 +20,7 @@ else
     eval "$(gdircolors -b)"
 fi
 
-alias ls='gls -h --color=auto'
-
+# Sprinkle some color...
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
@@ -29,14 +28,16 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # some listing options...
-alias ll='ls -lh'
+alias ls='gls --color=auto -h'
+alias ll='ls -l'
 alias la='ls -A'
-alias lla='ls -hal'
+alias lla='ls -al'
+alias lf='ls -aF'
 
 alias ..='cd ..'
 
 # Give a nice random integer...
-alias rand='echo $RANDOM'
+alias rand='echo "$RANDOM"'
 
 # Create parent Dirs as needed. Be verbose about it.
 alias mkd='mkdir -pv'
