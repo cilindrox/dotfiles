@@ -28,11 +28,12 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # some listing options...
-alias ls='gls --color=auto -h'
-alias ll='ls -l'
+alias ls='gls --color=auto'
 alias la='ls -A'
-alias lla='ls -al'
 alias lf='ls -aF'
+alias ll='ls -lh'
+alias lla='ll -a'
+alias lls='ll -S'
 
 alias ..='cd ..'
 
