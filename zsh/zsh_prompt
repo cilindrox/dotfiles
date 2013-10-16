@@ -4,6 +4,6 @@ autoload -Uz promptinit && promptinit # use the included prompt functionality
 prompt adam1 magenta blue green
 
 # right-hand prompt with exit status error and time
-RPS1=%(?..%*[ %B%F{yellow}%?%b%f ])
+RPS1=%(?..[ %B%F{yellow}%?%b%f ])
 
 # EOF
