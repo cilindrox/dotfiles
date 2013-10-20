@@ -85,6 +85,8 @@ bindkey '[D' backward-word
 bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
 
+bindkey '^Q' push-line-or-edit
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # '~/.zsh_aliases' instead of adding them here directly.
