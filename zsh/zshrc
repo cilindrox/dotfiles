@@ -3,11 +3,13 @@
 setopt EXTENDED_HISTORY       # save timestamp and duration
 setopt HIST_VERIFY            # make a newline show the change before executing it
 setopt HIST_IGNORE_SPACE      # ignore lines which start with space
-setopt HIST_IGNORE_ALL_DUPS   # ignore duplicates
+setopt HIST_IGNORE_DUPS       # ignore duplicates
 setopt HIST_FIND_NO_DUPS      # do not display duplicates of a found line
 setopt HIST_REDUCE_BLANKS     # trim extra blanks from history lines
 setopt INC_APPEND_HISTORY     # incremental append, don't wait until shell exit
-setopt SHARE_HISTORY          # share history between zsh processes
+# setopt SHARE_HISTORY        # share history between zsh processes
+setopt HIST_NO_FUNCTIONS      # skip function definitions
+
 # ** Shell behavior **
 setopt AUTOCD                 # cd just by typing the name of a directory
 setopt AUTOPUSHD              # flip between two places easily
@@ -86,6 +88,8 @@ bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
 
 bindkey '^Q' push-line-or-edit
+
+bindkey ' ' magic-space
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
