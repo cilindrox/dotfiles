@@ -11,6 +11,8 @@ libtool
 mongodb
 pcre
 pkg-config
+python
+python3
 rbenv
 rbenv-gem-rehash
 redis
