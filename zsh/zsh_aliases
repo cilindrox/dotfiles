@@ -39,7 +39,7 @@ alias ..='cd ..'
 alias dv='dirs -v'
 
 # Give a nice random integer...
-alias rand='echo "$RANDOM"'
+alias rand='echo $RANDOM'
 
 # Create parent Dirs as needed. Be verbose about it.
 alias mkd='mkdir -pv'
