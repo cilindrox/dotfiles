@@ -19,7 +19,6 @@ setopt PUSHD_TO_HOME          # pushd with no arguments gets you to Kansas
 setopt PUSHD_MINUS            # swaps `+` and `-` when used w/a number to specify a dir in the stack
 setopt NO_CLOBBER             # avoid overwriting files. Use ! to confirm
 setopt INTERACTIVE_COMMENTS   # allow inline comments
-setopt GLOBDOTS               # ignore preceeding dots. '.foo' == foo
 setopt COMPLETE_IN_WORD       # complete from the cursor onwards
 setopt ALWAYS_TO_END          # move the cursor to the end of the word after completion
 setopt BEEP                   # beep when no results are available
