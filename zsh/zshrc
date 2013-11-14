@@ -22,7 +22,8 @@ setopt INTERACTIVE_COMMENTS   # allow inline comments
 setopt COMPLETE_IN_WORD       # complete from the cursor onwards
 setopt ALWAYS_TO_END          # move the cursor to the end of the word after completion
 setopt BEEP                   # beep when no results are available
-setopt NOMATCH                # print an error when a pattern has no matches
+# setopt NOMATCH              # print an error when a pattern has no matches (default behavior)
+setopt CSH_NULL_GLOB          # error message when pattern fails. Null glob otherwise.
 setopt COMPLETE_ALIASES       # autocompletion for aliases' switches
 setopt NO_FLOW_CONTROL        # disable Ctrl + q / Ctrl + s flow control. Similar to `stty -ixon`
 
