@@ -108,4 +108,10 @@ if [ -f ~/.zsh_prompt ]; then
     . ~/.zsh_prompt
 fi
 
+# zsh syntax highlightning:
+#   https://github.com/zsh-users/zsh-syntax-highlighting
+if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    . /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
 # EOF
