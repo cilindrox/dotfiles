@@ -120,7 +120,7 @@ fi
 # You might need to rebuild zcompdump:
 #   rm -f ~/.zcompdump; compinit
 if [ -d /usr/local/share/zsh-completions ]; then
-  path=(/usr/local/share/zsh-completions $fpath)
+  fpath=(/usr/local/share/zsh-completions $fpath)
 fi
 
 
