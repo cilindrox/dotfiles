@@ -38,4 +38,5 @@ yajl
 yasm
 youtube-dl
 zsh
+zsh-completions
 zsh-syntax-highlighting

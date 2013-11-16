@@ -114,4 +114,13 @@ if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; 
     . /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+# zsh completions:
+#   https://github.com/zsh-users/zsh-completions
+# You might need to rebuild zcompdump:
+#   rm -f ~/.zcompdump; compinit
+if [ -d /usr/local/share/zsh-completions ]; then
+  path=(/usr/local/share/zsh-completions $fpath)
+fi
+
+
 # EOF
