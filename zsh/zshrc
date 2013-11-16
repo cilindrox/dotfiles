@@ -24,6 +24,7 @@ setopt ALWAYS_TO_END          # move the cursor to the end of the word after com
 setopt BEEP                   # beep when no results are available
 # setopt NOMATCH              # print an error when a pattern has no matches (default behavior)
 setopt CSH_NULL_GLOB          # error message when pattern fails. Null glob otherwise.
+setopt EXTENDED_GLOB          # expand globbing
 setopt COMPLETE_ALIASES       # autocompletion for aliases' switches
 setopt NO_FLOW_CONTROL        # disable Ctrl + q / Ctrl + s flow control. Similar to `stty -ixon`
 
