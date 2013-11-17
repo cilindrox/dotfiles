@@ -1,9 +1,0 @@
-
-# The following hasn't been validated yet:
-# setopt AUTO_PARAM_SLASH
-# setopt AUTO_REMOVE_SLASH
-# setopt BASH_AUTO_LIST
-
-# EOF
-
-rsync -a --info=progress2 /source /dest
