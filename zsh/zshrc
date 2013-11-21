@@ -85,8 +85,12 @@ bindkey '[C' forward-word
 bindkey '[D' backward-word
 
 # Type some chars, use the UP-DOWN keys to filter history
-bindkey '^[[A' history-beginning-search-backward
-bindkey '^[[B' history-beginning-search-forward
+# bindkey '^[[A' history-beginning-search-backward
+# bindkey '^[[B' history-beginning-search-forward
+
+# Alternate bindings for `history-substring-search` function
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 bindkey '^Q' push-line-or-edit
 
@@ -111,8 +115,14 @@ fi
 
 # zsh syntax highlightning:
 #   https://github.com/zsh-users/zsh-syntax-highlighting
-if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+if [ -d /usr/local/share/zsh-syntax-highlighting ]; then
     . /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+# history substring search
+#   Called after syntax-highlightning so we can use both
+if [ -d /usr/local/opt/zsh-history-substring-search ]; then
+    . /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
 fi
 
 # zsh completions:
