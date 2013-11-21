@@ -28,7 +28,7 @@ Edit your `/etc/paths` and put `/usr/local/bin` on top of `/usr/bin`
     /usr/sbin
     /sbin
 
-[amend PATH homebrew](http://stackoverflow.com/questions/10343834/homebrew-wants-me-to-amend-my-path-no-clue-how)
+More info: [amend PATH homebrew](http://stackoverflow.com/questions/10343834/homebrew-wants-me-to-amend-my-path-no-clue-how)
 
 
 ## Completion
