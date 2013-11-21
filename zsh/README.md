@@ -1,13 +1,38 @@
 # Z-Shell
 
-## _functions
-All zsh functions should be copied to your current loaded `$FPATH`. Optionally, `rm ~/.zcompdump` to clear zsh's completion cache.
+Just some quick tips to kickstart your shell.
 
-On OS X, using homebrew you should have something like:
+## Linking homebrew
 
-    /usr/local/Cellar/zsh/<zsh.version>/share/zsh/functions/
+On OS X, add homebrew completion by running this on your terminal:
 
-Or use `locate _find` to track down your current installation.
+    mkdir -p ~/.zsh/func
+    ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" ~/.zsh/func/_brew
+
+Add the following to your ~/.zshrc:
+
+    fpath=($HOME/.zsh/func $fpath)
+    typeset -U fpath
+
+
+## Fixing PATH errors
+
+Edit your `/etc/paths` and put `/usr/local/bin` on top of `/usr/bin`
+
+    % sudo vi /etc/paths
+
+    /usr/local/bin
+    /usr/local/sbin
+    /usr/bin
+    /bin
+    /usr/sbin
+    /sbin
+
+[amend PATH homebrew](http://stackoverflow.com/questions/10343834/homebrew-wants-me-to-amend-my-path-no-clue-how)
+
+
+## Completion
+All functions within the `completion` folder should be on your current `$FPATH` after that, you could (optionally) call `rm ~/.zcompdump` to clear zsh's completion cache.
 
 ### LS_COLORS
 
