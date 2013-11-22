@@ -41,6 +41,9 @@ HISTFILE=~/.zsh_history
 # Show elapsed time if a command takes longer than 10s
 REPORTTIME=10
 
+# load zmv function
+autoload -U zmv
+
 # use modern completion system. Run in native mode
 autoload -Uz compinit && compinit
 
@@ -85,8 +88,8 @@ bindkey '[C' forward-word
 bindkey '[D' backward-word
 
 # Type some chars, use the UP-DOWN keys to filter history
-# bindkey '^[[A' history-beginning-search-backward
-# bindkey '^[[B' history-beginning-search-forward
+# bindkey '\e[A' history-beginning-search-backward
+# bindkey '\e[B' history-beginning-search-forward
 
 # Alternate bindings for `history-substring-search` function
 bindkey '^[[A' history-substring-search-up
