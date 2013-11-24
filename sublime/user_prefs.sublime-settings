@@ -11,6 +11,8 @@
   "trim_trailing_white_space_on_save": true,
   "use_tab_stops": true,
   "trim_automatic_white_space": true,
+  "line_padding_bottom": 1,
+  "line_padding_top": 1,
 
   // UI
   "bold_folder_labels": true,
