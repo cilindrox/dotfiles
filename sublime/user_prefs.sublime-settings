@@ -2,8 +2,8 @@
   // More info @http://docs.sublimetext.info/en/latest/reference/settings.html
 
   // Editor
-  "font_face": "Ubuntu mono",
-  "font_size": 11,
+  "font_face": "Inconsolata-g",
+  "font_size": 14,
   "tab_size": 2,
   "rulers": [80],
   "word_wrap": true,
@@ -11,8 +11,9 @@
   "trim_trailing_white_space_on_save": true,
   "use_tab_stops": true,
   "trim_automatic_white_space": true,
-  "line_padding_bottom": 1,
-  "line_padding_top": 1,
+  "indent_to_bracket": true,
+  // "line_padding_bottom": 1,
+  // "line_padding_top": 1,
 
   // UI
   "bold_folder_labels": true,
@@ -30,6 +31,7 @@
   "draw_white_space": "all",
   "ensure_newline_at_eof_on_save": true,
   "scroll_past_end": true,
+  "draw_centered": true,
 
   // Misc
   "auto_complete_commit_on_tab": true,
