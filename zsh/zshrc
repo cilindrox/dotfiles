@@ -71,12 +71,10 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 #+ https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/ps.1.html
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,ucomm'
 
-# Set your default EDITOR tool
-# replace with nano, vim, Emacs etc.
+# Set your default EDITOR tool. Replace with nano, vim, Emacs etc.
 export EDITOR='subl -w'
 
-# Key binds
-# use emacs keybindings even if EDITOR is set to vi
+# Keybinds. Default to Emacs, even if EDITOR is set to vi
 bindkey -e
 
 # this will bind CTRL + back/forward arrows navigation
