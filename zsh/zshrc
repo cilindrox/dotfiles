@@ -100,39 +100,33 @@ bindkey ' ' magic-space
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # '~/.zsh_aliases' instead of adding them here directly.
-if [ -f ~/.zsh_aliases ]; then
-    . ~/.zsh_aliases
-fi
+[[ -f ~/.zsh_aliases ]] && . ~/.zsh_aliases
 
 # Helper functions.
-if [ -f ~/.zsh_funcs ]; then
-    . ~/.zsh_funcs
-fi
+[[ -f ~/.zsh_funcs ]] && . ~/.zsh_funcs
 
 # Load the prompt.
-if [ -f ~/.zsh_prompt ]; then
-    . ~/.zsh_prompt
-fi
+[[ -f ~/.zsh_prompt ]] && . ~/.zsh_prompt
 
 # zsh syntax highlightning:
 #   https://github.com/zsh-users/zsh-syntax-highlighting
-if [ -d /usr/local/share/zsh-syntax-highlighting ]; then
-    . /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
+[[ -d /usr/local/share/zsh-syntax-highlighting ]] && {
+  . /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+}
 
 # history substring search
 #   Called after syntax-highlightning so we can use both
-if [ -d /usr/local/opt/zsh-history-substring-search ]; then
-    . /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
-fi
+[[ -d /usr/local/opt/zsh-history-substring-search ]] && {
+  . /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
+}
 
 # zsh completions:
 #   https://github.com/zsh-users/zsh-completions
 # You might need to rebuild zcompdump:
 #   rm -f ~/.zcompdump; compinit
-if [ -d /usr/local/share/zsh-completions ]; then
+[[ -d /usr/local/share/zsh-completions ]] && {
   fpath=(/usr/local/share/zsh-completions $fpath)
-fi
+}
 
 
 # EOF
