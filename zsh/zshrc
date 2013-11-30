@@ -9,7 +9,6 @@ setopt HIST_REDUCE_BLANKS     # trim extra blanks from history lines
 setopt INC_APPEND_HISTORY     # incremental append, don't wait until shell exit
 setopt SHARE_HISTORY          # share history between zsh processes
 setopt HIST_NO_FUNCTIONS      # skip function definitions
-
 # ** Shell behavior **
 setopt AUTOCD                 # cd just by typing the name of a directory
 setopt AUTOPUSHD              # flip between two places easily
@@ -27,10 +26,8 @@ setopt CSH_NULL_GLOB          # error message when pattern fails. Null glob othe
 setopt EXTENDED_GLOB          # expand globbing
 setopt COMPLETE_ALIASES       # autocompletion for aliases' switches
 setopt NO_FLOW_CONTROL        # disable Ctrl + q / Ctrl + s flow control. Similar to `stty -ixon`
-
 setopt PROMPT_SUBST           # command substitution, parameter and arithmetic expansion
-
-unsetopt MENU_COMPLETE        # insert the first match immediately
+# unsetopt MENU_COMPLETE      # insert the first match immediately
 setopt AUTO_MENU              # show menu for completion. Disable MENU_COMPLETE
 
 # Keep 10,000 lines of history within the shell and save it to ~/.zsh_history
@@ -44,62 +41,29 @@ REPORTTIME=10
 # load zmv function
 autoload -U zmv
 
-# use modern completion system. Run in native mode
-autoload -Uz compinit && compinit
-
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' completer _expand _complete _correct _approximate
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' menu select=2
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-zstyle ':completion:*' menu select=long
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle ':completion:*' use-compctl false
-zstyle ':completion:*' verbose true
-zstyle ':completion:*' use-cache true
-# remove the trailing slash when using a directory as argument
-zstyle ':completion:*' squeeze-slashes true
-
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-# zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-
-# OS X config @see:
-#+ https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/ps.1.html
-zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,ucomm'
-
 # Set your default EDITOR tool. Replace with nano, vim, Emacs etc.
 export EDITOR='subl -w'
 
 # Keybinds. Default to Emacs, even if EDITOR is set to vi
 bindkey -e
-
-# this will bind CTRL + back/forward arrows navigation
+bindkey '^Q' push-line-or-edit
+bindkey ' ' magic-space
+# this will bind CTRL + back/forward navigation
 # bindkey ";5D" backward-word
 # bindkey ";5C" forward-word
-
 # OS X-specific config
 bindkey '[C' forward-word
 bindkey '[D' backward-word
-
 # Type some chars, use the UP-DOWN keys to filter history
 # bindkey '\e[A' history-beginning-search-backward
 # bindkey '\e[B' history-beginning-search-forward
-
 # Alternate bindings for `history-substring-search` function
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-bindkey '^Q' push-line-or-edit
-
-bindkey ' ' magic-space
+# ** Extra sauce **
 
 # Alias definitions.
-# You may want to put all your additions into a separate file like
-# '~/.zsh_aliases' instead of adding them here directly.
 [[ -f ~/.zsh_aliases ]] && . ~/.zsh_aliases
 
 # Helper functions.
@@ -108,25 +72,7 @@ bindkey ' ' magic-space
 # Load the prompt.
 [[ -f ~/.zsh_prompt ]] && . ~/.zsh_prompt
 
-# zsh syntax highlightning:
-#   https://github.com/zsh-users/zsh-syntax-highlighting
-[[ -d /usr/local/share/zsh-syntax-highlighting ]] && {
-  . /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-}
-
-# history substring search
-#   Called after syntax-highlightning so we can use both
-[[ -d /usr/local/opt/zsh-history-substring-search ]] && {
-  . /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
-}
-
-# zsh completions:
-#   https://github.com/zsh-users/zsh-completions
-# You might need to rebuild zcompdump:
-#   rm -f ~/.zcompdump; compinit
-[[ -d /usr/local/share/zsh-completions ]] && {
-  fpath=(/usr/local/share/zsh-completions $fpath)
-}
-
+# Completions config.
+[[ -f ~/.zsh_completion ]] && . ~/.zsh_completion
 
 # EOF
