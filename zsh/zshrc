@@ -1,34 +1,41 @@
 # Config options
 # ** History **
-setopt EXTENDED_HISTORY       # save timestamp and duration
-setopt HIST_VERIFY            # make a newline show the change before executing it
-setopt HIST_IGNORE_SPACE      # ignore lines which start with space
-setopt HIST_IGNORE_DUPS       # ignore duplicates
-setopt HIST_FIND_NO_DUPS      # do not display duplicates of a found line
-setopt HIST_REDUCE_BLANKS     # trim extra blanks from history lines
-setopt INC_APPEND_HISTORY     # incremental append, don't wait until shell exit
-setopt SHARE_HISTORY          # share history between zsh processes
-setopt HIST_NO_FUNCTIONS      # skip function definitions
+setopt EXTENDED_HISTORY       # save timestamp and duration.
+setopt HIST_VERIFY            # make a newline show the change before executing it.
+setopt HIST_IGNORE_SPACE      # ignore lines which start with space.
+setopt HIST_IGNORE_DUPS       # ignore duplicates.
+setopt HIST_FIND_NO_DUPS      # do not display duplicates of a found line.
+setopt HIST_REDUCE_BLANKS     # trim extra blanks from history lines.
+setopt INC_APPEND_HISTORY     # incremental append, don't wait until shell exit.
+setopt SHARE_HISTORY          # share history between zsh processes.
+setopt HIST_NO_FUNCTIONS      # skip function definitions.
 # ** Shell behavior **
-setopt AUTOCD                 # cd just by typing the name of a directory
-setopt AUTOPUSHD              # flip between two places easily
-setopt PUSHD_IGNORE_DUPS      # don't push multiple copies of the same dir onto the stack
-setopt PUSHD_SILENT           # don't print the directory stack after pushd or popd
-setopt PUSHD_TO_HOME          # pushd with no arguments gets you to Kansas
-setopt PUSHD_MINUS            # swaps `+` and `-` when used w/a number to specify a dir in the stack
-setopt NO_CLOBBER             # avoid overwriting files. Use ! to confirm
-setopt INTERACTIVE_COMMENTS   # allow inline comments
-setopt COMPLETE_IN_WORD       # complete from the cursor onwards
-setopt ALWAYS_TO_END          # move the cursor to the end of the word after completion
-setopt BEEP                   # beep when no results are available
-# setopt NOMATCH              # print an error when a pattern has no matches (default behavior)
+setopt AUTOCD                 # cd just by typing the name of a directory.
+setopt AUTOPUSHD              # flip between two places easily.
+setopt PUSHD_IGNORE_DUPS      # don't push multiple copies of the same dir onto the stack.
+setopt PUSHD_SILENT           # don't print the directory stack after pushd or popd.
+setopt PUSHD_TO_HOME          # pushd with no arguments gets you to Kansas.
+setopt PUSHD_MINUS            # swaps `+` and `-` when used w/a number to specify a dir in the stack.
+setopt NO_CLOBBER             # avoid overwriting files. Use ! to confirm.
+setopt INTERACTIVE_COMMENTS   # allow inline comments.
+setopt COMPLETE_IN_WORD       # complete from the cursor onwards.
+setopt ALWAYS_TO_END          # move the cursor to the end of the word after completion.
+setopt BEEP                   # beep when no results are available.
+# setopt NOMATCH              # print an error when a pattern has no matches (default behavior).
 setopt CSH_NULL_GLOB          # error message when pattern fails. Null glob otherwise.
-setopt EXTENDED_GLOB          # expand globbing
-setopt COMPLETE_ALIASES       # autocompletion for aliases' switches
-setopt NO_FLOW_CONTROL        # disable Ctrl + q / Ctrl + s flow control. Similar to `stty -ixon`
-setopt PROMPT_SUBST           # command substitution, parameter and arithmetic expansion
-# unsetopt MENU_COMPLETE      # insert the first match immediately
-setopt AUTO_MENU              # show menu for completion. Disable MENU_COMPLETE
+setopt EXTENDED_GLOB          # expand globbing.
+setopt COMPLETE_ALIASES       # autocompletion for aliases' switches.
+setopt NO_FLOW_CONTROL        # disable Ctrl + q / Ctrl + s flow control. Similar to `stty -ixon`.
+setopt PROMPT_SUBST           # command substitution, parameter and arithmetic expansion.
+unsetopt MENU_COMPLETE        # insert the first match immediately.
+setopt AUTO_MENU              # show menu for completion. Disable MENU_COMPLETE.
+setopt MAGIC_EQUAL_SUBST      # enable completion after equals sign on `var=value` patterns.
+unsetopt LIST_BEEP            # disable beeping on ambiguous-completion.
+setopt PATH_DIRS              # perform path search even on command names with slashes.
+setopt AUTO_LIST              # automatically list choices on ambiguous completion.
+setopt AUTO_PARAM_SLASH       # add a trailing slash for completed directories.
+setopt AUTO_PARAM_KEYS        # attempt to autocomplete params on lists.
+setopt AUTO_REMOVE_SLASH      # remove the slash if the next character is delimiter.
 
 # Keep 10,000 lines of history within the shell and save it to ~/.zsh_history
 HISTSIZE=10000
@@ -47,8 +54,9 @@ export EDITOR='subl -w'
 # Keybinds. Default to Emacs, even if EDITOR is set to vi
 bindkey -e
 bindkey '^Q' push-line-or-edit
+bindkey '^Z' undo
 bindkey ' ' magic-space
-# this will bind CTRL + back/forward navigation
+# CTRL + back/forward word navigation
 # bindkey ";5D" backward-word
 # bindkey ";5C" forward-word
 # OS X-specific config
@@ -64,15 +72,15 @@ bindkey '^[[B' history-substring-search-down
 # ** Extra sauce **
 
 # Alias definitions.
-[[ -f ~/.zsh_aliases ]] && . ~/.zsh_aliases
+[[ -f ~/.zsh_aliases ]] && source ~/.zsh_aliases
 
 # Helper functions.
-[[ -f ~/.zsh_funcs ]] && . ~/.zsh_funcs
+[[ -f ~/.zsh_funcs ]] && source ~/.zsh_funcs
 
 # Load the prompt.
-[[ -f ~/.zsh_prompt ]] && . ~/.zsh_prompt
+[[ -f ~/.zsh_prompt ]] && source ~/.zsh_prompt
 
 # Completions config.
-[[ -f ~/.zsh_completion ]] && . ~/.zsh_completion
+[[ -f ~/.zsh_completion ]] && source ~/.zsh_completion
 
 # EOF
