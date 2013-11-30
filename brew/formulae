@@ -22,11 +22,13 @@ libtiff
 libtool
 libyaml
 mongodb
+node
 pcre
 pkg-config
 python
 python3
 rbenv
+rbenv-default-gems
 rbenv-gem-rehash
 readline
 redis
