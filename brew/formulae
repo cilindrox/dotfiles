@@ -28,8 +28,10 @@ pkg-config
 python
 python3
 rbenv
+rbenv-aliases
 rbenv-default-gems
 rbenv-gem-rehash
+rbenv-vars
 readline
 redis
 rsync
