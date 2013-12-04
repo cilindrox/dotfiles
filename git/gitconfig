@@ -45,6 +45,7 @@
     news = log -p HEAD@{1}..HEAD@{0}
     noff = merge --no-ff
     pl = pull --ff-only
+    pb = pull --rebase
     rfl = log --walk-reflogs # yourbranchnamehere
     rmall = !git rm $(git ls-files -d)
     s = status
