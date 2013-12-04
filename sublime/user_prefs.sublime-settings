@@ -3,7 +3,7 @@
 
   // Editor
   "font_face": "Inconsolata-g",
-  "font_size": 14,
+  "font_size": 16,
   "tab_size": 2,
   "rulers": [80],
   "word_wrap": true,
@@ -32,6 +32,11 @@
   "ensure_newline_at_eof_on_save": true,
   "scroll_past_end": true,
   "draw_centered": true,
+
+  // Themes
+  "theme":"Soda Light 3.sublime-theme",
+  "soda_folder_icons": true,
+  "color_scheme": "Packages/RailsCasts Colour Scheme/RailsCastsColorScheme.tmTheme",
 
   // Misc
   "auto_complete_commit_on_tab": true,
