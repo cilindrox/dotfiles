@@ -31,7 +31,7 @@
   "draw_white_space": "all",
   "ensure_newline_at_eof_on_save": true,
   "scroll_past_end": true,
-  "draw_centered": true,
+  // "draw_centered": true,
 
   // Themes
   "theme":"Soda Light 3.sublime-theme",
