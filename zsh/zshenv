@@ -1,21 +1,21 @@
 # Add here your $PATH vars
 
 # Ruby config -- add rbenv and ruby-build to $PATH
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 # required by rbenv
-#eval "$(rbenv init -)"
+eval "$(rbenv init -)"
 
 # alternatively, use
 #if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 # Android PATH
 #export PATH=$PATH:$HOME/android-studio/sdk/tools
 #export PATH=$PATH:$HOME/android-studio/sdk/platform-tools
-
-# Go PATH
-#export GOROOT=$HOME/go
-#export PATH=$PATH:$GOROOT/bin
 
 # EOF
