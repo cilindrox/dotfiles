@@ -13,12 +13,7 @@
 #   `gls` => `ls`
 
 # Double Rainbows!
-
-if [ -f ~/.dircolors ]; then
-    . ~/.dircolors
-else
-    eval "$(gdircolors -b)"
-fi
+[[ -f ~/.dircolors ]] && source ~/.dircolors || eval "$(gdircolors -b)"
 
 # Sprinkle some color...
 alias dir='dir --color=auto'
@@ -26,9 +21,8 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
-# some listing options...
 alias ls='gls --color=auto'
+
 alias la='ls -A'
 alias lf='ls -aF'
 alias ll='ls -lh'
@@ -36,19 +30,18 @@ alias lla='ll -a'
 alias lls='ll -S'
 
 alias ..='cd ..'
+alias ...='cd ../..'
 alias dv='dirs -v'
-
-# Give a nice random integer...
+alias tag='ctags -R -f .tags'
 alias rand='echo $RANDOM'
-
-# Create parent Dirs as needed. Be verbose about it.
 alias mkd='mkdir -pv'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Disk usage, user recursively. @see http://serverfault.com/a/43298
+# Disk usage by user, recursive implementation
+#   http://serverfault.com/a/43298
 # On Ubuntu, replace 'gdu' with 'du'
 alias du='gdu --max-depth=1 -h'
 
