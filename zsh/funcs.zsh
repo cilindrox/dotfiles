@@ -1,10 +1,10 @@
 # Put here all helper functions for your zsh
 
-# load `zcalc` and `zmv` utilities
+# load `zcalc` and `zmv` functions
 autoload -Uz zcalc zmv
 
+# Outputs your Github token, as defined in your gitconfig
 function token () {
-    # Outputs your Github token, as defined in your gitconfig
     echo `git config --global github.token`
 }
 

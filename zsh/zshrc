@@ -45,9 +45,6 @@ HISTFILE=~/.zsh_history
 # Show elapsed time if a command takes longer than 10s
 REPORTTIME=10
 
-# load zmv function
-autoload -U zmv
-
 # Set your default EDITOR tool. Replace with nano, vim, Emacs etc.
 export EDITOR='subl -w'
 
