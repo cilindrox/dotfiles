@@ -52,14 +52,6 @@ cliff_rand () {
     print $cliff_number
 }
 
-rand () {
-# Rreturns a random number between 1..z
-    # if (( $# == 0 ))
-    # then echo usage: yp name ...; fi
-    # $[RANDOM % $1 + 1]
-    echo $RANDOM
-}
-
 randpass () {
 # Outputs a random password consisting of the chars on the `chars` array.
     zmodload -i zsh/mathfunc
