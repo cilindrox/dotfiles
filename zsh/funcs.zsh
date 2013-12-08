@@ -84,8 +84,10 @@ explain () {
 
     # iterates over remaining args and adds builds the rest of the url
     for i in "$@"; do
-      url=$url"$i""+"
+      url=$url"$i+"
     done
+
+    url=$url[0,-2]
 
     # opens url in browser
     case $OSTYPE in
@@ -98,6 +100,26 @@ explain () {
         *)
           echo "no can do"
     esac
+}
+
+# colored manpages
+# List of TERMCAP is as follows:
+#   begin blinking
+#   begin bold
+#   end mode
+#   end standout-mode
+#   begin standout-mode - info box
+#   end underline
+#   begin underline
+man() {
+    env LESS_TERMCAP_mb=$'\E[01;31m' \
+    LESS_TERMCAP_md=$'\E[01;38;5;74m' \
+    LESS_TERMCAP_me=$'\E[0m' \
+    LESS_TERMCAP_se=$'\E[0m' \
+    LESS_TERMCAP_so=$'\E[38;5;246m' \
+    LESS_TERMCAP_ue=$'\E[0m' \
+    LESS_TERMCAP_us=$'\E[04;38;5;146m' \
+    man "$@"
 }
 
 # EOF

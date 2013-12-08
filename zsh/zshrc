@@ -36,6 +36,7 @@ setopt AUTO_LIST              # automatically list choices on ambiguous completi
 setopt AUTO_PARAM_SLASH       # add a trailing slash for completed directories.
 setopt AUTO_PARAM_KEYS        # attempt to autocomplete params on lists.
 setopt AUTO_REMOVE_SLASH      # remove the slash if the next character is delimiter.
+setopt RCQUOTES               # double-single quotes '' for escaping
 
 # Keep 10,000 lines of history within the shell and save it to ~/.zsh_history
 HISTSIZE=10000
