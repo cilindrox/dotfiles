@@ -50,6 +50,7 @@
     rmall = !git rm $(git ls-files -d)
     s = status
     ss = status -s
+    stache = !echo "You probably didnt want those files, anyway..." && echo && git stash $@
     up = !git remote update -p; git merge --ff-only @{u}
     serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
