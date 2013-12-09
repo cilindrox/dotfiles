@@ -1,0 +1,12 @@
+# link this as ~/.rbenv/default-gems
+# see: https://github.com/sstephenson/rbenv-default-gems#usage
+
+gem-ctags
+bundler
+rake
+minitest
+rubocop
+shotgun
+bcrypt-ruby
+curb
+sinatra

@@ -22,6 +22,7 @@ ln -s $repo_dir/prefs/gitconfig ~/.gitconfig
 ln -s $repo_dir/prefs/dircolors ~/.dircolors
 ln -s $repo_dir/prefs/agignore ~/.agignore
 ln -s $repo_dir/prefs/gemrc ~/.gemrc
+ln -s $repo_dir/prefs/default-gems ~/.rbenv/default-gems
 
 # link startup files and zsh config
 ln -s $repo_dir/zsh/aliases.zsh ~/.aliases.zsh
