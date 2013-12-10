@@ -1,0 +1,3 @@
+# this should linked as ~/.gemrc
+install: --no-ri --no-rdoc
+update: --no-ri --no-rdoc

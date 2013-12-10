@@ -35,10 +35,9 @@
     ass = !git add -A . && git status
     c = commit
     cm = commit -m
-    ca = commit --amend # careful
     d = diff --color-words
     dh = diff --color-words head
-    l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    l = log --color --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%Creset:%C(yellow)%d%Creset %s - %Cgreen(%cr)' --abbrev-commit
     lg = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset, %C(magenta)%ar%Creset'
     ll = log --stat --abbrev-commit
     merff = merge --ff-only
@@ -49,7 +48,7 @@
     rfl = log --walk-reflogs # yourbranchnamehere
     rmall = !git rm $(git ls-files -d)
     s = status
-    ss = status -s
+    sb = status -sb
     stache = !echo "You probably didnt want those files, anyway..." && echo && git stash $@
     up = !git remote update -p; git merge --ff-only @{u}
     serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
