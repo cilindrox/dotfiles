@@ -1,6 +1,7 @@
 [core]
     excludesfile = /home/username/.gitignore
     autocrlf = input
+    pager = less
 [user]
     name = yourname
     email = someone@email.com
