@@ -32,7 +32,7 @@
     a = !git add . && git status
     au = !git add -u . && git status
     ac = !git add -A . && git commit
-    acm = !git add -A . && git commit -m
+    acm = !git commit -am
     ass = !git add -A . && git status
     c = commit
     cm = commit -m

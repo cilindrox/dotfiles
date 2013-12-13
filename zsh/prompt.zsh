@@ -5,7 +5,7 @@ autoload -Uz colors && colors         # create a colors associative array
 # adds the current branch name in green
 git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null)
-  [[ -n $ref ]] && echo "[%{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%}]"
+  [[ -n $ref ]] && echo "[%{$fg_bold[blue]%}${ref#refs/heads/}%{$reset_color%}]"
 }
 
 # right-hand prompt with exit status error and git info
