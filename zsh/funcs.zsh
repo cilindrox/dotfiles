@@ -70,6 +70,13 @@ randpass () {
     echo "$password"
 }
 
+# translates `...` into ../..
+rationalize-dot() {
+  [[ $LBUFFER = *.. ]] && LBUFFER+=/.. || LBUFFER+=.
+}
+zle -N rationalize-dot
+bindkey . rationalize-dot
+
 explain () {
 # Usage:    explain COMMAND
 # Opens a browser window for the COMMAND page on explainshell.com
