@@ -25,6 +25,7 @@
   // Caret styles: "smooth" (default), "phase", "blink", "wide" and "solid".
   "caret_style": "phase",
   "wide_caret": true,
+  "caret_extra_width": 2,
   "show_full_path": true,
   "detect_indentation": true,
   "auto_indent": true,
@@ -47,6 +48,7 @@
   // remove ! and ? for goto compatibility with Ruby defs.
   "word_separators": "./\\()\"'-:,.;<>~@#$%^&*|+=[]{}`~",
 
+  // Don't include any of these in Goto Anything or Find in Files
   "folder_exclude_patterns": [
   ".svn",
   ".git",
@@ -55,7 +57,6 @@
   ".sass-cache",
   "bundle"
   ],
-
   "file_exclude_patterns": [
   ".tags",
   ".tags_sorted_by_file",
@@ -81,8 +82,6 @@
   "*.tags",
   "*.db"
   ],
-
-  // Don't include any of these in Goto Anything or Find in Files
   "binary_file_patterns": [
   "*.jpg",
   "*.jpeg",
@@ -97,6 +96,11 @@
   "*.swf",
   "*.jar",
   "*.zip"
+  ],
+  "index_exclude_patterns": [
+  "*.sql",
+  "*.log",
+  "*.tmp",
+  "*.temp"
   ]
-
 }

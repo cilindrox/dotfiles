@@ -38,7 +38,7 @@
     cm = commit -m
     d = diff --color-words
     dh = diff --color-words head
-    l = log --color --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%Creset:%C(yellow)%d%Creset %s - %Cgreen(%cr)' --abbrev-commit
+    l = log --color --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%Creset:%C(yellow)%d%Creset %s - %Cgreen(%cr)' --abbrev-commit --
     lg = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset, %C(magenta)%ar%Creset'
     ll = log --stat --abbrev-commit
     merff = merge --ff-only
