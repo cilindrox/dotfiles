@@ -91,7 +91,7 @@ explain () {
 
     # iterates over remaining args and adds builds the rest of the url
     for i in "$@"; do
-      url=$url"$i+"
+        url=$url"$i+"
     done
 
     url=$url[0,-2]
@@ -99,13 +99,13 @@ explain () {
     # opens url in browser
     case $OSTYPE in
         darwin*)
-          open $url ;;
+            open $url ;;
         linux-gnu)
-          xdg-open $url ;;
+            xdg-open $url ;;
         cygwin)
             cygstart $url ;;
         *)
-          echo "no can do"
+            echo "no can do"
     esac
 }
 
