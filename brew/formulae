@@ -23,6 +23,7 @@ libtiff
 libtool
 libyaml
 mongodb
+most
 node
 pcre
 pkg-config
