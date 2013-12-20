@@ -10,14 +10,14 @@ eval "$(rbenv init -)"
 # alternatively, use
 #if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
-# use `less` as the default pager
-export LESS='--ignore-case --raw-control-chars'
-export PAGER='less'
+# use `most` as the default pager
+export PAGER='most'
 
 # Set your default EDITOR tool (replace with nano, vim, Emacs etc.)
 export EDITOR='subl -w'
 
 # Colored `less` output
+export LESS='--ignore-case --raw-control-chars'
 export LESS_TERMCAP_mb=$'\E[01;31m'         # begin blinking
 export LESS_TERMCAP_md=$'\E[01;38;5;74m'    # begin bold
 export LESS_TERMCAP_me=$'\E[0m'             # end mode
