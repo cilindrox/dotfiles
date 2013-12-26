@@ -80,7 +80,8 @@
   "*.class",
   "*.psd",
   "*.tags",
-  "*.db"
+  "*.db",
+  "dump.rdb"
   ],
   "binary_file_patterns": [
   "*.jpg",
