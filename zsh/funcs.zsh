@@ -109,6 +109,14 @@ explain () {
     esac
 }
 
+# Wait 30s before closing the terminal.
+# Trap the alarm and update the title bar.
+# TRAPALARM() {
+#     print -nP "\e]2;%T\a"
+#     TMOUT=30
+# }
+# TMOUT=30
+
 # colored manpages
 # man() {
 #     env LESS_TERMCAP_mb=$'\E[01;31m' \
