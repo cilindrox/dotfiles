@@ -35,6 +35,8 @@ alias dv='dirs -v'
 alias tag='ctags -R -f .tags'
 alias rand='echo $RANDOM'
 alias mkd='mkdir -pv'
+alias ag='ag --smart-case'
+alias ags='ag --stats'
 
 alias gits='git status -sb'
 
