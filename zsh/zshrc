@@ -72,15 +72,15 @@ bindkey '^[[B' history-substring-search-down
 # ** Extra sauce **
 
 # Alias definitions.
-[[ -f ~/.aliases.zsh ]] && source ~/.aliases.zsh
+[[ -s ~/.aliases.zsh ]] && source ~/.aliases.zsh
 
 # Helper functions.
-[[ -f ~/.funcs.zsh ]] && source ~/.funcs.zsh
+[[ -s ~/.funcs.zsh ]] && source ~/.funcs.zsh
 
 # Load the prompt.
-[[ -f ~/.prompt.zsh ]] && source ~/.prompt.zsh
+[[ -s ~/.prompt.zsh ]] && source ~/.prompt.zsh
 
 # Completions config.
-[[ -f ~/.completion.zsh ]] && source ~/.completion.zsh
+[[ -s ~/.completion.zsh ]] && source ~/.completion.zsh
 
 # EOF
