@@ -6,6 +6,8 @@ bundler
 rake
 minitest
 rubocop
+haml
+sass
 shotgun
 bcrypt-ruby
 curb

@@ -39,6 +39,7 @@ alias ag='ag --smart-case'
 alias ags='ag --stats'
 
 alias gits='git status -sb'
+alias gemupd='gem update --system && gem update'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
