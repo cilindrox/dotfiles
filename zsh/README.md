@@ -106,3 +106,24 @@ Here's the list of available color combinations under GNU `ls` command. Just rem
 `. ~/.zshrc` - Reload your zsh configuration (assuming /home/< username>/.zshrc is the location of your zshrc file.)<p>
 
 These were originally available at [Stefan Klumpp's Geek!mind](http://www.geekmind.net/2011/01/shortcuts-to-improve-your-bash-zsh.html) and are a nice reminder of how to get things done quicker.
+
+## Noteworthy manpages
+
+Just a list of handy manpages to keep as a reference.
+
+* ascii(7)
+* chmod(1)
+* fstab(5)
+* hier(7)
+* locale(1P)(5)(7)
+* printf(3)
+* proc(5)
+* regex(7)
+* signal(7)
+* term(5)(7)
+* termcap(5)
+* terminfo(5)
+
+Source: [Arch Wiki][1]
+
+[1]: https://wiki.archlinux.org/index.php/Man_Page#Noteworthy_manpages
