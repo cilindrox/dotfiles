@@ -24,6 +24,7 @@ setopt BEEP                   # beep when no results are available.
 # setopt NOMATCH              # print an error when a pattern has no matches (default behavior).
 setopt CSH_NULL_GLOB          # error message when pattern fails. Null glob otherwise.
 setopt EXTENDED_GLOB          # expand globbing.
+# setopt GLOB_COMPLETE          # cycle through glob expansion results.
 setopt COMPLETE_ALIASES       # autocompletion for aliases' switches.
 setopt NO_FLOW_CONTROL        # disable Ctrl + q / Ctrl + s flow control. Similar to `stty -ixon`.
 setopt PROMPT_SUBST           # command substitution, parameter and arithmetic expansion.
