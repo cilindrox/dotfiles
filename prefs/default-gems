@@ -1,5 +1,6 @@
-# link this as ~/.rbenv/default-gems
-# see: https://github.com/sstephenson/rbenv-default-gems#usage
+# link this as `~/.rbenv/default-gems`
+# see:
+#   https://github.com/sstephenson/rbenv-default-gems#usage
 
 gem-ctags
 bundler
@@ -8,7 +9,6 @@ minitest
 rubocop
 haml
 sass
+gist
 shotgun
-bcrypt-ruby
-curb
 sinatra
