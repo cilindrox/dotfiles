@@ -2,6 +2,7 @@ autoconf
 automake
 boost
 cmake
+colordiff
 coreutils
 ctags
 curl

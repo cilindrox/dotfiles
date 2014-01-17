@@ -22,6 +22,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias ls='gls --color=auto'
+alias diff=colordiff
 
 alias la='ls -A'
 alias lf='ls -aF'
