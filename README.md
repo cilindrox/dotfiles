@@ -5,9 +5,13 @@ dotFiles
 
 ## Installation
 
+**STILL BETA** see [TODO](#todo)
+
 Just run:
 
-see [TODO](#todo)
+    sh install.sh
+
+and let the installation script work its magic.
 
 ## Bits and pieces
 * [Homebrew] [1]
@@ -16,9 +20,11 @@ see [TODO](#todo)
 * [gitignore] [4]
 
 ## TODO
-* Add installation & update scripts
-* Add script for linking all dotfiles
-* Add script for installing Homebrew packages from a list
+- [x] Installation script
+- [x] Package update script
+- [x] Link all dotfiles within installation
+- [ ] Install Homebrew formulae from a list
+- [ ] Add param parsing options to install script
 
 [1]: brew/README.md
 [2]: zsh/README.md
