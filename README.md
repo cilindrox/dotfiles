@@ -23,8 +23,9 @@ and let the installation script work its magic.
 - [x] Installation script
 - [x] Package update script
 - [x] Link all dotfiles within installation
-- [ ] Install Homebrew formulae from a list
+- [x] Install Homebrew formulae from a list
 - [ ] Add param parsing options to install script
+- [ ] Add backup to dotfile linking functions
 
 [1]: brew/README.md
 [2]: zsh/README.md
