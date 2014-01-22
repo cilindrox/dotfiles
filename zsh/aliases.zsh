@@ -12,6 +12,9 @@
 #   `gdircolors` => `dircolors`
 #   `gls` => `ls`
 
+# Global Aliases
+alias -g PJ='| python -mjson.tool'  # pretty-print JSONs, similar to `jq`
+
 # Double Rainbows!
 [[ -f ~/.dircolors ]] && source ~/.dircolors || eval "$(gdircolors -b)"
 

@@ -18,7 +18,7 @@ clear
 hash brew 2>/dev/null || install_brew
 brew update # && brew upgrade # TODO - make package upgrade optional
 
-formulae='autoconf automake cmake colordiff coreutils ctags curl figlet git gource htop-osx mongodb most node python3 rbenv rbenv-aliases rbenv-default-gems rbenv-gem-rehash rbenv-vars readline redis ruby-build the_silver_searcher tree wget yajl youtube-dl zsh zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting'
+formulae='autoconf automake cmake colordiff coreutils ctags curl figlet git gource htop-osx jq mercurial mongodb most node python3 rbenv rbenv-aliases rbenv-default-gems rbenv-gem-rehash rbenv-vars readline redis ruby-build the_silver_searcher tree wget yajl youtube-dl zsh zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting'
 
 brew install formulae
 
