@@ -7,6 +7,8 @@ bundler
 rake
 minitest
 rubocop
+bson_ext
+genghisapp
 haml
 sass
 gist
