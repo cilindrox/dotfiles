@@ -97,3 +97,9 @@ Troz!
 
     Cmd + Opt + Q
     Alt + Q
+
+## User preferences and Package Control
+
+See [this link][1] for more info on how to set up sync for Package Control preferences and Sublime settings.
+
+[1]: [https://sublime.wbond.net/docs/syncing]
