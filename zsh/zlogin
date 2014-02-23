@@ -1,1 +1,2 @@
-hash -d dot=~/github/dotfiles
+hash -d dot='~/github/dotfiles'
+hash -d pkgs='~/Library/Application Support/Sublime Text 3/Packages/User'

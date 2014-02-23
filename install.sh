@@ -59,6 +59,12 @@ do
 done
 
 # # #
+# Sublime Text 3 preferences
+# # #
+
+ln -s $repo_dir/sublime '~/Library/Application Support/Sublime Text 3/Packages/User'
+
+# # #
 # Misc tool configuration
 # # #
 

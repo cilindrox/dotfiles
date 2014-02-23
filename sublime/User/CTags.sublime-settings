@@ -1,0 +1,4 @@
+{
+  "autocomplete": true,
+  "command": "/usr/local/bin/ctags"
+}
