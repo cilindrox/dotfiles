@@ -16,17 +16,38 @@ clear
 # install Homebrew and must-have packages
 # # #
 hash brew 2>/dev/null || install_brew
-brew update # && brew upgrade # TODO - make package upgrade optional
+brew update && brew upgrade
 
-formulae='autoconf automake cmake colordiff coreutils ctags curl figlet git gource htop-osx jq mercurial mongodb most node python3 rbenv rbenv-aliases rbenv-default-gems rbenv-gem-rehash rbenv-vars readline redis ruby-build the_silver_searcher tree wget yajl youtube-dl zsh zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting'
-
-brew install formulae
+core_tools='git ctags jq most the_silver_searcher colordiff mercurial'
+misc_tools='figlet gource htop-osx tree'
+youtube='youtube-dl jpeg ffmpeg faac lame webp x264 xvid'
+no_sql='mongodb redis'
+languages='go node python python3'
+ruby_tools='rbenv ruby-build rbenv-aliases rbenv-default-gems rbenv-gem-rehash rbenv-vars'
+zsh_tools='zsh zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting'
+core_osx='openssl bash emacs gpatch nano m4 make curl rsync'
 
 # # #
+# Update core OS X tools
+# # #
+brew install "$core_osx $core_tools $misc_tools $youtube $no_sql $languages $ruby_tools $zsh_tools"
+
 # link restricted formulae
-# # #
 brew link curl --force
 # brew link sqlite --force
+
+# # #
+# Install GNU utilities and link them with their default names
+# # #
+brew install coreutils gawk wget
+brew tap homebrew/dupes
+brew install findutils --default-names
+brew install gnu-getopt --default-names
+brew install gnu-indent --default-names
+brew install gnu-sed --default-names
+brew install gnutls --default-names
+brew install grep --default-names
+brew install gnu-tar --default-names
 
 # # #
 # set zsh as your login shell

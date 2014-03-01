@@ -30,8 +30,17 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m'   # begin underline
 
 # GNU utils PATH
 gnu_dir="$(brew --prefix coreutils)"
-export MANPATH="$gnu_dir/libexec/gnuman:$MANPATH"
 export PATH="$gnu_dir/libexec/gnubin:$PATH"
+export MANPATH="$gnu_dir/libexec/gnuman:$MANPATH"
+
+# sed
+sed_dir="$(brew --prefix gnu-sed)"
+PATH="$sed_dir/libexec/gnubin:$PATH"
+MANPATH="$sed_dir/libexec/gnuman:$MANPATH"
+
+# tar
+tar_dir="$(brew --prefix gnu-tar)"
+PATH="$tar_dir/libexec/gnubin:$PATH"
 
 # Go
 export GOPATH=$HOME/go
