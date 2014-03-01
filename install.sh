@@ -79,6 +79,9 @@ do
   ln -s $repo_dir/zsh/$j ~/.$j
 done
 
+# create a .zsh directory for our helper functions and link some of them
+mkdir ~/.zsh; ln -s $repo_dir/zsh/completion/_go ~/.zsh/_go
+
 # # #
 # Sublime Text 3 preferences
 # # #

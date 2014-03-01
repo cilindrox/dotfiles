@@ -43,8 +43,8 @@ tar_dir="$(brew --prefix gnu-tar)"
 PATH="$tar_dir/libexec/gnubin:$PATH"
 
 # Go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export GOPATH=$(brew --prefix go)
+export PATH=$PATH:$GOPATH/libexec/bin
 
 # Java
 # export JAVA_HOME=$(/usr/libexec/java_home)

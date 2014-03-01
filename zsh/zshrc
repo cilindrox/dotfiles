@@ -84,4 +84,7 @@ bindkey '^[[B' history-substring-search-down
 # Completions config.
 [[ -s ~/.completion.zsh ]] && source ~/.completion.zsh
 
+# Completion helper functions
+[[ -d ~/.zsh ]] && source ~/.zsh/_go
+
 # EOF
