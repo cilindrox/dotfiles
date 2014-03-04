@@ -18,9 +18,8 @@ clear
 hash brew 2>/dev/null || install_brew
 brew update && brew upgrade
 
-core_tools='git ctags jq most the_silver_searcher colordiff mercurial'
-misc_tools='figlet gource htop-osx tree'
-youtube='youtube-dl jpeg ffmpeg faac lame webp x264 xvid'
+core_tools='git ctags jq most the_silver_searcher colordiff mercurial tree htop-osx'
+misc_tools='z figlet gource youtube-dl jpeg ffmpeg faac lame webp x264 xvid'
 no_sql='mongodb redis'
 languages='go node python python3'
 ruby_tools='rbenv ruby-build rbenv-aliases rbenv-default-gems rbenv-gem-rehash rbenv-vars'
@@ -30,7 +29,7 @@ core_osx='openssl bash emacs gpatch nano m4 make curl rsync'
 # # #
 # Update core OS X tools
 # # #
-brew install "$core_osx $core_tools $misc_tools $youtube $no_sql $languages $ruby_tools $zsh_tools"
+brew install "$core_osx $core_tools $misc_tools $no_sql $languages $ruby_tools $zsh_tools"
 
 # link restricted formulae
 brew link curl --force
