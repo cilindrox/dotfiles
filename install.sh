@@ -18,10 +18,29 @@ clear
 hash brew 2>/dev/null || install_brew
 brew update && brew upgrade
 
+# # #
+# Install GNU utilities and link them with their default names
+# # #
+brew install coreutils
+brew tap homebrew/dupes
+brew install binutils diffutils gawk wget
+brew install findutils --default-names
+brew install gnu-getopt --default-names
+brew install gnu-indent --default-names
+brew install gnu-tar --default-names
+brew install gnu-sed --default-names
+brew install gnutls --default-names
+brew install grep --default-names
+
+brew install python --with-brewed-openssl
+brew install openssh --with-brewed-openssl
+brew install macvim --override-system-vim --custom-system-icons
+brew install vim --override-system-vi
+
 core_tools='git ctags jq most the_silver_searcher colordiff mercurial tree htop-osx'
 misc_tools='z figlet gource youtube-dl jpeg ffmpeg faac lame webp x264 xvid'
 no_sql='mongodb redis'
-languages='go node python python3'
+languages='go node python3'
 ruby_tools='rbenv ruby-build rbenv-aliases rbenv-default-gems rbenv-gem-rehash rbenv-vars'
 zsh_tools='zsh zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting'
 core_osx='openssl bash emacs gpatch nano m4 make curl rsync'
@@ -34,19 +53,6 @@ brew install "$core_osx $core_tools $misc_tools $no_sql $languages $ruby_tools $
 # link restricted formulae
 brew link curl --force
 # brew link sqlite --force
-
-# # #
-# Install GNU utilities and link them with their default names
-# # #
-brew install coreutils gawk wget
-brew tap homebrew/dupes
-brew install findutils --default-names
-brew install gnu-getopt --default-names
-brew install gnu-indent --default-names
-brew install gnu-sed --default-names
-brew install gnutls --default-names
-brew install grep --default-names
-brew install gnu-tar --default-names
 
 # # #
 # set zsh as your login shell
