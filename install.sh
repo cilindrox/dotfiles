@@ -37,18 +37,16 @@ brew install openssh --with-brewed-openssl
 brew install macvim --override-system-vim --custom-system-icons
 brew install vim --override-system-vi
 
-core_tools='git ctags jq most the_silver_searcher colordiff mercurial tree htop-osx'
-misc_tools='z figlet gource youtube-dl jpeg ffmpeg faac lame webp x264 xvid'
-no_sql='mongodb redis'
-languages='go node python3'
-ruby_tools='rbenv ruby-build rbenv-aliases rbenv-default-gems rbenv-gem-rehash rbenv-vars'
-zsh_tools='zsh zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting'
-core_osx='openssl bash emacs gpatch nano m4 make curl rsync'
-
 # # #
 # Update core OS X tools
 # # #
-brew install "$core_osx $core_tools $misc_tools $no_sql $languages $ruby_tools $zsh_tools"
+brew install openssl bash emacs gpatch nano m4 make curl rsync
+brew install git ctags jq most the_silver_searcher colordiff mercurial tree htop-osx
+brew install z figlet gource youtube-dl jpeg ffmpeg faac lame webp x264 xvid
+brew install mongodb redis
+brew install go node python3
+brew install rbenv ruby-build rbenv-aliases rbenv-default-gems rbenv-gem-rehash rbenv-vars
+brew install zsh zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting
 
 # link restricted formulae
 brew link curl --force
