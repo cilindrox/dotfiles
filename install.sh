@@ -90,8 +90,7 @@ mkdir ~/.zsh; ln -s $repo_dir/zsh/completion/_go ~/.zsh/_go
 # # #
 # Sublime Text 3 preferences
 # # #
-
-ln -s $repo_dir/sublime '~/Library/Application Support/Sublime Text 3/Packages/User'
+ln -s $repo_dir/sublime/User "$HOME/Library/Application Support/Sublime Text 3/Packages/User"
 
 # # #
 # Misc tool configuration
