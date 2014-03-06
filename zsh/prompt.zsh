@@ -38,7 +38,7 @@ prompt_adam3_setup () {
   prompt_adam1_color2=${2:-'cyan'}
   prompt_adam1_color3=${3:-'green'}
 
-  base_prompt="%F{magenta}%B%m%f%b "
+  base_prompt="%F{red}%m%f "
   post_prompt="%b%f%k"
 
   base_prompt_no_color=$(echo "$base_prompt" | perl -pe "s/%(K{.*?}|k)//g")
