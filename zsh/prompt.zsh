@@ -38,7 +38,7 @@ prompt_adam3_setup () {
   prompt_adam1_color2=${2:-'cyan'}
   prompt_adam1_color3=${3:-'green'}
 
-  base_prompt="%F{yellow}%B%m%f%b "
+  base_prompt="%F{magenta}%B%m%f%b "
   post_prompt="%b%f%k"
 
   base_prompt_no_color=$(echo "$base_prompt" | perl -pe "s/%(K{.*?}|k)//g")
@@ -56,10 +56,10 @@ prompt_adam1_precmd () {
   base_prompt_etc=$(print -P "$base_prompt%(4~|...|)%3~")
   prompt_length=${#base_prompt_etc}
   if [[ $prompt_length -lt 40 ]]; then
-    path_prompt="%B%F{$prompt_adam1_color2}%(4~|...|)%3~%F{white}"
+    path_prompt="%B%F{$prompt_adam1_color2}%(4~|...|)%3~%F{black}"
   else
     space_left=$(( $COLUMNS - $#base_prompt_expanded_no_color - 2 ))
-    path_prompt="%B%F{$prompt_adam1_color3}%${space_left}<...<%~$prompt_newline%F{white}"
+    path_prompt="%B%F{$prompt_adam1_color3}%${space_left}<...<%~$prompt_newline%F{black}"
   fi
   PS1="$base_prompt$path_prompt %# $post_prompt"
   PS2="$base_prompt$path_prompt %_> $post_prompt"
