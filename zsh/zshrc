@@ -44,10 +44,13 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
+# this will be used later on...
+brew_dir=$(brew --prefix)
+
 # Enable online help
 unalias run-help
 autoload -Uz run-help
-HELPDIR=/usr/local/share/zsh/helpfiles
+HELPDIR=$brew_dir/share/zsh/helpfiles
 
 # Show elapsed time if a command takes longer than 10s
 REPORTTIME=10
@@ -88,7 +91,6 @@ bindkey '^[[B' history-substring-search-down
 [[ -d ~/.zsh ]] && . ~/.zsh/_go
 
 # Jump around
-brew_dir=$(brew --prefix)
 [[ -d $brew_dir/etc/profile.d ]] && . $brew_dir/etc/profile.d/z.sh
 
 # EOF
