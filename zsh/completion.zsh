@@ -91,3 +91,10 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,uco
 # zstyle ':vcs_info:*' actionformats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
 # zstyle ':vcs_info:*' formats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%f '
 # zstyle ':vcs_info:*' enable git hg
+
+# Completion helper functions
+# FIXME (gfestari): should source func/*
+if [ -d ~/.zsh/func ]; then
+    . ~/.zsh/func/_go
+    . ~/.zsh/func/_grails
+fi
