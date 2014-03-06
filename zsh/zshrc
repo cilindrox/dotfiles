@@ -73,21 +73,22 @@ bindkey '^[[B' history-substring-search-down
 # ** Extra sauce **
 
 # Alias definitions.
-[[ -s ~/.aliases.zsh ]] && source ~/.aliases.zsh
+[[ -s ~/.aliases.zsh ]] && . ~/.aliases.zsh
 
 # Helper functions.
-[[ -s ~/.funcs.zsh ]] && source ~/.funcs.zsh
+[[ -s ~/.funcs.zsh ]] && . ~/.funcs.zsh
 
 # Load the prompt.
-[[ -s ~/.prompt.zsh ]] && source ~/.prompt.zsh
+[[ -s ~/.prompt.zsh ]] && . ~/.prompt.zsh
 
 # Completions config.
-[[ -s ~/.completion.zsh ]] && source ~/.completion.zsh
+[[ -s ~/.completion.zsh ]] && . ~/.completion.zsh
 
 # Completion helper functions
-[[ -d ~/.zsh ]] && source ~/.zsh/_go
+[[ -d ~/.zsh ]] && . ~/.zsh/_go
 
 # Jump around
-source $(brew --prefix)/etc/profile.d/z.sh
+brew_dir=$(brew --prefix)
+[[ -d $brew_dir/etc/profile.d ]] && . $brew_dir/etc/profile.d/z.sh
 
 # EOF
