@@ -14,6 +14,11 @@
 
 # Global Aliases
 alias -g PJ='| python -mjson.tool'  # pretty-print JSONs, similar to `jq`
+alias -g M='| most'
+alias -g NUL="> /dev/null 2>&1"
+alias -g S='| sort -n'
+alias -g TL='| tail -f'
+
 
 # Double Rainbows!
 [[ -f ~/.dircolors ]] && source ~/.dircolors || eval "$(gdircolors -b)"
@@ -55,8 +60,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # On Ubuntu, replace 'gdu' with 'du'
 alias du='gdu --max-depth=1 -h'
 
-# Backup copy RSync
-# Selected options are:
+# Copy using rsync with the following options:
+#   @see: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/cp/cp.plugin.zsh
 #  -p - preserve permissions
 #  -o - preserve owner
 #  -g - preserve group
@@ -66,7 +71,6 @@ alias du='gdu --max-depth=1 -h'
 #  --backup-dir=/tmp/rsync - move backup copies to "/tmp/rsync"
 #  -e /dev/null - only work on local files
 #  -- - everything after this is an argument, even if it looks like an option
-# @see: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/cp/cp.plugin.zsh
 alias cpv='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
 
 # File renaming with zmv function. Remember to add `autoload zmv` to your .zshrc
