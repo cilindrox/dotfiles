@@ -43,7 +43,7 @@ brew install vim --override-system-vi
 brew install openssl bash emacs gpatch nano m4 make curl rsync
 brew install git ctags jq most the_silver_searcher colordiff mercurial tree htop-osx
 brew install z figlet gource youtube-dl jpeg ffmpeg faac lame webp x264 xvid
-brew install mongodb redis
+brew install mongodb redis rethinkdb
 brew install go node python3
 brew install rbenv ruby-build rbenv-aliases rbenv-default-gems rbenv-gem-rehash rbenv-vars
 brew install zsh zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting
