@@ -8,6 +8,7 @@ rake
 minitest
 rubocop
 rails
+zeus
 bson_ext
 genghisapp
 haml
