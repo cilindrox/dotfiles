@@ -95,7 +95,7 @@ ln -s $repo_dir/sublime/User "$HOME/Library/Application Support/Sublime Text 3/P
 # # #
 
 # node
-npm install -g coffee-script sails bower grunt-cli
+npm install -g jshint coffee-script sails bower grunt-cli
 
 # Git: update these vars to match your username and email
 username=uname
