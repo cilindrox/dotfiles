@@ -1,16 +1,28 @@
 {
 	"installed_packages":
 	[
+		"Alignment",
 		"ApplySyntax",
 		"Base16 Color Schemes",
 		"BeautifyRuby",
 		"Better CoffeeScript",
+		"BracketHighlighter",
 		"CTags",
+		"Emmet",
 		"GitGutter",
 		"Haml",
+		"JavaScript Snippets",
+		"JsFormat",
+		"JSHint Gutter",
+		"Sass",
 		"SCSS",
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-annotations",
+		"SublimeLinter-haml",
+		"SublimeLinter-jshint",
+		"SublimeLinter-rubocop",
 		"Theme - Soda"
 	]
 }
