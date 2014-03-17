@@ -44,7 +44,7 @@ brew install openssl bash emacs gpatch nano m4 make curl rsync
 brew install git ctags jq most the_silver_searcher colordiff mercurial tree htop-osx
 brew install z figlet gource youtube-dl jpeg ffmpeg faac lame webp x264 xvid
 brew install mongodb redis rethinkdb
-brew install go node python3
+brew install go python3
 brew install rbenv ruby-build rbenv-aliases rbenv-default-gems rbenv-gem-rehash rbenv-vars
 brew install zsh zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting
 
@@ -94,8 +94,12 @@ ln -s $repo_dir/sublime/User "$HOME/Library/Application Support/Sublime Text 3/P
 # Misc tool configuration
 # # #
 
+# # #
 # node
-npm install -g jshint coffee-script sails bower grunt-cli
+# # #
+brew install node --without-npm
+curl -L https://npmjs.org/install.sh | sh
+npm install -g jade express kraken sails grunt-cli bower coffee-script jshint
 
 # Git: update these vars to match your username and email
 username=uname

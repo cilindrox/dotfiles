@@ -93,8 +93,11 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,uco
 # zstyle ':vcs_info:*' enable git hg
 
 # Completion helper functions
-# FIXME (gfestari): should source func/*
 if [ -d ~/.zsh/func ]; then
-    . ~/.zsh/func/_go
-    . ~/.zsh/func/_grails
+  for i in ~/.zsh/func ; do
+    . $i
+  done
 fi
+
+# Enable node completion
+eval "$(npm completion 2>/dev/null)"

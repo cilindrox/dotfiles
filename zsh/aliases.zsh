@@ -33,9 +33,9 @@ alias ls='gls --color=auto'
 alias diff=colordiff
 
 alias la='ls -A'
-alias lf='ls -aF'
+alias lf='ls -AF'
 alias ll='ls -lh'
-alias lla='ll -a'
+alias lla='ll -A'
 alias lls='ll -S'
 
 alias ..='cd ..'
