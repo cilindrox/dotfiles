@@ -1,0 +1,24 @@
+[
+	{"id": "side-bar-files-open-with",
+		"children":
+		[
+			//separator
+			// {"caption":"-"},
+
+			//application n
+			{
+				"caption": "Marked",
+				"id": "side-bar-files-open-with-marked",
+
+				"command": "side_bar_files_open_with",
+				"args": {
+									"paths": [],
+									"application": "Marked.app",
+									"extensions":"markdown|md|textile" //any file with extension
+								}
+			},
+
+			{"caption":"-"}
+		]
+	}
+]
