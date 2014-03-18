@@ -99,7 +99,7 @@ ln -s $repo_dir/sublime/User "$HOME/Library/Application Support/Sublime Text 3/P
 # # #
 brew install node --without-npm
 curl -L https://npmjs.org/install.sh | sh
-npm install -g jade express kraken sails grunt-cli bower coffee-script jshint
+npm install jade express kraken sails grunt-cli bower coffee-script jshint uglify-js -g
 
 # Git: update these vars to match your username and email
 username=uname

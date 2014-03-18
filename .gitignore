@@ -1,2 +1,2 @@
 # Ignore Sublime Text's base16 theme packages
-*.tmTheme
+*(SL).tmTheme
