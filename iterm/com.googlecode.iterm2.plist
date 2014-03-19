@@ -15043,7 +15043,7 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/github/dotfiles/iterm</string>
+	<string>~/Documents</string>
 	<key>NSNavPanelExpandedStateForSaveMode</key>
 	<true/>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -15264,11 +15264,11 @@
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.17647059261798859</real>
+				<real>0.92549020051956177</real>
 				<key>Green Component</key>
-				<real>0.17647059261798859</real>
+				<real>0.94117647409439087</real>
 				<key>Red Component</key>
-				<real>0.17647059261798859</real>
+				<real>0.94901961088180542</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -15287,11 +15287,11 @@
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.78431373834609985</real>
+				<real>0.31764706969261169</real>
 				<key>Green Component</key>
-				<real>0.81568628549575806</real>
+				<real>0.31764706969261169</real>
 				<key>Red Component</key>
-				<real>0.82745099067687988</real>
+				<real>0.31764706969261169</real>
 			</dict>
 			<key>Character Encoding</key>
 			<integer>4</integer>
@@ -15304,20 +15304,20 @@
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.78431373834609985</real>
+				<real>0.31764706969261169</real>
 				<key>Green Component</key>
-				<real>0.81568628549575806</real>
+				<real>0.31764706969261169</real>
 				<key>Red Component</key>
-				<real>0.82745099067687988</real>
+				<real>0.31764706969261169</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.17647059261798859</real>
+				<real>0.92549020051956177</real>
 				<key>Green Component</key>
-				<real>0.17647059261798859</real>
+				<real>0.94117647409439087</real>
 				<key>Red Component</key>
-				<real>0.17647059261798859</real>
+				<real>0.94901961088180542</real>
 			</dict>
 			<key>Cursor Type</key>
 			<integer>2</integer>
@@ -15338,11 +15338,11 @@
 			<key>Foreground Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.78431373834609985</real>
+				<real>0.31764706969261169</real>
 				<key>Green Component</key>
-				<real>0.81568628549575806</real>
+				<real>0.31764706969261169</real>
 				<key>Red Component</key>
-				<real>0.82745099067687988</real>
+				<real>0.31764706969261169</real>
 			</dict>
 			<key>Guid</key>
 			<string>41E04EB0-8222-4AD3-9403-CFBB6D34424C</string>
@@ -15677,20 +15677,20 @@
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
+				<real>0.31764706969261169</real>
+				<key>Green Component</key>
+				<real>0.31764706969261169</real>
+				<key>Red Component</key>
+				<real>0.31764706969261169</real>
+			</dict>
+			<key>Selection Color</key>
+			<dict>
+				<key>Blue Component</key>
 				<real>0.78431373834609985</real>
 				<key>Green Component</key>
 				<real>0.81568628549575806</real>
 				<key>Red Component</key>
 				<real>0.82745099067687988</real>
-			</dict>
-			<key>Selection Color</key>
-			<dict>
-				<key>Blue Component</key>
-				<real>0.31764706969261169</real>
-				<key>Green Component</key>
-				<real>0.31764706969261169</real>
-				<key>Red Component</key>
-				<real>0.31764706969261169</real>
 			</dict>
 			<key>Semantic History</key>
 			<dict>
@@ -15832,6 +15832,8 @@
 			<string>/Users/gastonfestari</string>
 		</dict>
 	</array>
+	<key>NoSyncNeverRemindPrefsChangesCopy</key>
+	<true/>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -15891,7 +15893,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-03-06T01:26:12Z</date>
+	<date>2014-03-18T22:57:56Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
