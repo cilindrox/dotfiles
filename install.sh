@@ -41,7 +41,7 @@ brew install vim --override-system-vi
 # Update core OS X tools
 # # #
 brew install openssl bash emacs gpatch nano m4 make curl rsync
-brew install git ctags jq most the_silver_searcher colordiff mercurial tree htop-osx
+brew install git git-extras ctags jq most the_silver_searcher colordiff mercurial tree htop-osx
 brew install z figlet gource youtube-dl jpeg ffmpeg faac lame webp x264 xvid
 brew install mongodb redis rethinkdb
 brew install go python3
@@ -89,6 +89,12 @@ ln -s $repo_dir/zsh/completion ~/.zsh/func
 # Sublime Text 3 preferences
 # # #
 ln -s $repo_dir/sublime/User "$HOME/Library/Application Support/Sublime Text 3/Packages/User"
+
+# # #
+# Atom editor preferences
+# # #
+ln -s $repo_dir/atom "$HOME/.atom"
+
 
 # # #
 # Misc tool configuration

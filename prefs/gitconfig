@@ -1,13 +1,14 @@
-[core]
-    excludesfile = /home/username/.gitignore
-    autocrlf = input
-    pager = most
 [user]
     name = yourname
     email = someone@email.com
+[core]
+    pager = most
+    excludesfile = ~/.gitignore
+    autocrlf = input
+    editor = subl -w
 [credential]
+    # use `helper = cache` on Ubuntu
     helper = osxkeychain
-    # helper = cache
 [color]
     diff = auto
     status = auto
@@ -29,11 +30,9 @@
     changed = yellow
     untracked = cyan
 [alias] # most of these are taken from: https://gist.github.com/oli/1637874
-    a = !git add . && git status
-    au = !git add -u . && git status
+    a = !git add -A . && git status
     ac = !git add -A . && git commit
-    acm = !git commit -am
-    ass = !git add -A . && git status
+    acm = commit -am
     c = commit
     cm = commit -m
     d = diff --color-words
@@ -53,7 +52,7 @@
     stache = !echo "You probably didnt want those files, anyway..." && echo && git stash $@
     up = !git remote update -p; git merge --ff-only @{u}
     serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
-    alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+    alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort | most
 [rebase]
     autosquash = true
 [rerere]

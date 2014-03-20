@@ -1,0 +1,64 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed.
+ *
+ * If you are unfamiliar with LESS, you can read more about it here:
+ * http://www.lesscss.org
+ */
+
+.tree-view {
+
+}
+
+.editor {
+
+}
+
+.editor .markup.underline.link.hyperlink {
+  text-decoration: underline;
+}
+
+// block cursor
+.editor .cursor {
+  // position: absolute;
+  // border: 1px solid;
+  // background-color: rgba(244,100,122,0.6);
+}
+
+// fade transition
+.editor.is-focused .cursor {
+  transition: opacity .2s;
+  &.blink-off {
+      visibility: visible;
+      opacity: 0;
+  }
+}
+
+// git config
+.editor .git-commit.line-too-long.deprecated {
+  color: orange;
+  text-decoration: none;
+}
+
+.editor .git-commit.line-too-long.illegal {
+  color: #fff;
+  background: #DA2C43;
+  opacity: 0.9;
+}
+
+.tree-view .entry.directory.status-modified > .header,
+.tree-view .entry.file.status-modified {
+  font-weight: bold;
+}
+
+// document tabs close button
+// .tab-bar .tab.modified:not(:hover) .close-icon {
+//   border: 4px solid #AAA;
+//   border-radius: 12px;
+// }
+//
+// .tab-bar .tab.modified:hover .close-icon {
+//   color: inherit;
+// }
