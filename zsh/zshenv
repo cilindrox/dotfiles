@@ -47,11 +47,14 @@ export GOPATH=$(brew --prefix go)
 export PATH=$PATH:$GOPATH/libexec/bin
 
 # Java
-# export JAVA_HOME=$(/usr/libexec/java_home)
-# export PATH=$PATH:$JAVA_HOME/bin
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$PATH:$JAVA_HOME/bin
 
 # Android
 # export PATH=$PATH:$HOME/android-studio/sdk/tools
 export PATH=$PATH:$HOME/platform-tools
+
+export GRAILS_HOME=$HOME/grails
+export PATH=$PATH:$GRAILS_HOME/bin
 
 # EOF

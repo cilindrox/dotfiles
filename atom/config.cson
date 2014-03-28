@@ -1,7 +1,7 @@
 'exception-reporting':
   'userId': 'c96d75a9-843a-d6f4-717b-54434486ec98'
 'release-notes':
-  'viewedVersion': '0.78.0'
+  'viewedVersion': '0.79.0'
 'welcome':
   'showOnStartup': false
 'metrics':
@@ -15,8 +15,8 @@
   'softWrapAtPreferredLineLength': true
 'core':
   'themes': [
-    'atom-dark-ui'
-    'atom-dark-syntax'
+    'atom-light-ui'
+    'solarized-light-syntax'
   ]
   'ignoredNames': [
     '.git'

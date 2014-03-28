@@ -6,3 +6,4 @@
 # Atom editor misc folders
 atom/storage
 atom/packages
+atom/.node-gyp/

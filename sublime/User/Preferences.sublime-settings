@@ -20,7 +20,7 @@
 	"bold_folder_labels": true,
 	"caret_extra_width": 2,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/base16-tomorrow.dark (SL).tmTheme",
+	"color_scheme": "Packages/User/base16-tomorrow.light (SL).tmTheme",
 	"copy_with_empty_selection": false,
 	"detect_indentation": true,
 	"draw_minimap_border": true,
@@ -72,8 +72,6 @@
 	"font_size": 16,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
-	"line_padding_top": 1,
-	"line_padding_bottom": 1,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -91,6 +89,8 @@
 		"*.tmp",
 		"*.temp"
 	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
 	"rulers":
 	[
 		80
