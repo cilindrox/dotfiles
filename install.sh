@@ -95,7 +95,6 @@ ln -s $repo_dir/sublime/User "$HOME/Library/Application Support/Sublime Text 3/P
 # # #
 ln -s $repo_dir/atom "$HOME/.atom"
 
-
 # # #
 # Misc tool configuration
 # # #

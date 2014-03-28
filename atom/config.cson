@@ -13,14 +13,18 @@
   'showInvisibles': true
   'softWrap': true
   'softWrapAtPreferredLineLength': true
+  'tabLength': 2
 'core':
   'themes': [
     'atom-light-ui'
-    'solarized-light-syntax'
+    'atom-dark-syntax'
   ]
+  'excludeVcsIgnoredPaths': false
   'ignoredNames': [
     '.git'
     '.svn'
     '.DS_Store'
   ]
+'autocomplete':
+  'includeCompletionsFromAllBuffers': true
 'autosave': {}
