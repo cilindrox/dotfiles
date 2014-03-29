@@ -16,10 +16,11 @@ setopt PUSHD_IGNORE_DUPS      # don't push multiple copies of the same dir onto 
 setopt PUSHD_SILENT           # don't print the directory stack after pushd or popd.
 setopt PUSHD_TO_HOME          # pushd with no arguments gets you to Kansas.
 setopt PUSHD_MINUS            # swaps `+` and `-` when used w/a number to specify a dir in the stack.
-# setopt NO_CLOBBER             # avoid overwriting files. Use ! to confirm.
+setopt NO_CLOBBER             # avoid overwriting files. Use ! to confirm.
+setopt HIST_ALLOW_CLOBBER     # use history entries to enable clobbering.
 setopt INTERACTIVE_COMMENTS   # allow inline comments.
 setopt COMPLETE_IN_WORD       # complete from the cursor onwards.
-setopt ALWAYS_TO_END          # move the cursor to the end of the word after completion.
+setopt ALWAYS_TO_END          # move cursor after the word with each completion.
 setopt BEEP                   # beep when no results are available.
 # setopt NOMATCH              # print an error when a pattern has no matches (default behavior).
 setopt CSH_NULL_GLOB          # error message when pattern fails. Null glob otherwise.

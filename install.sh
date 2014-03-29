@@ -41,7 +41,7 @@ brew install vim --override-system-vi
 # Update core OS X tools
 # # #
 brew install openssl bash emacs gpatch nano m4 make curl rsync
-brew install git git-extras ctags jq most the_silver_searcher colordiff mercurial tree htop-osx
+brew install git git-extras tig ctags jq most the_silver_searcher colordiff mercurial tree htop-osx
 brew install z figlet gource youtube-dl jpeg ffmpeg faac lame webp x264 xvid
 brew install mongodb redis rethinkdb
 brew install go python3
