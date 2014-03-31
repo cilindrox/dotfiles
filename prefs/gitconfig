@@ -31,7 +31,8 @@
     untracked = cyan
 [alias] # most of these are taken from: https://gist.github.com/oli/1637874
     a = !git add -A . && git status
-    ac = !git add -A . && git commit
+    am = commit --amend
+    aam = commit --add --amend
     acm = commit -am
     c = commit
     cm = commit -m
