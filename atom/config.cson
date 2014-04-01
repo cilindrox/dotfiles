@@ -17,9 +17,8 @@
 'core':
   'themes': [
     'atom-light-ui'
-    'atom-dark-syntax'
+    'fizzy'
   ]
-  'excludeVcsIgnoredPaths': false
   'ignoredNames': [
     '.git'
     '.svn'
@@ -28,3 +27,24 @@
 'autocomplete':
   'includeCompletionsFromAllBuffers': true
 'autosave': {}
+'tree-view':
+  'hideIgnoredNames': true
+  'hideVcsIgnoredFiles': true
+'git-diff':
+  'showIconsInEditorGutter': true
+'jshint':
+  'validateOnlyOnSave': true
+'markdown-preview':
+  'grammars': [
+    'source.gfm'
+    'source.litcoffee'
+    'text.plain'
+    'text.plain.null-grammar'
+  ]
+'spell-check':
+  'grammars': [
+    'source.gfm'
+    'text.git-commit'
+    'text.plain'
+    'text.plain.null-grammar'
+  ]
