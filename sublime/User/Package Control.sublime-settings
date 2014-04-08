@@ -3,6 +3,7 @@
 	[
 		"Alignment",
 		"ApplySyntax",
+		"AutoFileName",
 		"Base16 Color Schemes",
 		"BeautifyRuby",
 		"Better CoffeeScript",
@@ -15,6 +16,7 @@
 		"GitGutter",
 		"Gitignore",
 		"Haml",
+		"Jade",
 		"JavaScript Snippets",
 		"JsFormat",
 		"JSHint Gutter",

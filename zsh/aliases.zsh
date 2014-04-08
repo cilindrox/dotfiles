@@ -19,7 +19,6 @@ alias -g NUL="> /dev/null 2>&1"
 alias -g S='| sort -n'
 alias -g TL='| tail -f'
 
-
 # Double Rainbows!
 [[ -f ~/.dircolors ]] && source ~/.dircolors || eval "$(gdircolors -b)"
 
@@ -47,7 +46,7 @@ alias mkd='mkdir -pv'
 alias ag='ag --smart-case --stats'
 
 alias gits='git status -sb'
-alias gemupd='gem update --system && gem update'
+alias gemupd='gem update --system && gem update && gem cleanup'
 
 alias more=most
 
