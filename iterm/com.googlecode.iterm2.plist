@@ -15034,18 +15034,15 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
-	<key>NSColorPanelMode</key>
-	<string>5</string>
-	<key>NSColorPickerPageableNameListDefaults</key>
-	<string>1Crayons</string>
-	<key>NSColorPickerSlidersDefaults</key>
-	<string>1</string>
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Documents</string>
 	<key>NSNavPanelExpandedStateForSaveMode</key>
 	<true/>
+	<string>~/github/dotfiles/iterm</string>
+	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{1205, 778}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -15080,12 +15077,8 @@
 		<key>TB Size Mode</key>
 		<integer>1</integer>
 	</dict>
-	<key>NSWindow Frame NSColorPanel</key>
-	<string>268 229 214 309 0 0 1280 778 </string>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>755 77 445 270 0 0 1280 778 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>51 276 924 485 0 0 1280 778 </string>
+	<string>276 293 924 485 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>149 114 810 501 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -15875,7 +15868,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/gastonfestari/github/dotfiles/iterm</string>
+	<string>/Users/ext_gfestari/github/dotfiles/iterm</string>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>

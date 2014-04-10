@@ -1,6 +1,5 @@
 {
-	"installed_packages":
-	[
+	"installed_packages": [
 		"Alignment",
 		"ApplySyntax",
 		"AutoFileName",

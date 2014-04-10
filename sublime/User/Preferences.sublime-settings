@@ -85,6 +85,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"EditorConfig",
 		"Vintage"
 	],
 	"indent_guide_options":
