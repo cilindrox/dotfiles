@@ -104,7 +104,7 @@ ln -s $repo_dir/atom "$HOME/.atom"
 # # #
 brew install node --without-npm
 curl -L https://npmjs.org/install.sh | sh
-npm install -g jade express kraken sails grunt-cli bower coffee-script jshint uglify-js socket.io gulp mocha lodash
+npm install -g jade express kraken sails grunt-cli bower coffee-script jshint uglify-js socket.io gulp mocha lodash semver colors
 
 # Git: update these vars to match your username and email
 username=uname

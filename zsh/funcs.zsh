@@ -203,4 +203,9 @@ extract() {
 
 alias x=extract
 
+# Retrieve version info from an npm package
+npm_info () {
+  npm info $1 version
+}
+
 # EOF
