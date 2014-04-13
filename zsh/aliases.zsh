@@ -13,14 +13,17 @@
 #   `gls` => `ls`
 
 # Global Aliases
-alias -g PJ='| python -mjson.tool'  # pretty-print JSONs, similar to `jq`
 alias -g M='| most'
 alias -g NUL="> /dev/null 2>&1"
 alias -g S='| sort -n'
 alias -g TL='| tail -f'
 
+# pretty-print JSON strings
+alias -g PJ='| python -mjson.tool'
+alias -g JQ='| jq .'
+
 # Double Rainbows!
-[[ -f ~/.dircolors ]] && source ~/.dircolors || eval "$(gdircolors -b)"
+[[ -f ~/.dircolors ]] && . ~/.dircolors || eval "$(gdircolors -b)"
 
 # Sprinkle some color...
 alias dir='dir --color=auto'
@@ -80,5 +83,8 @@ alias mmv='noglob zmv -vW'
 
 # housekeeping for homebrew
 alias upd='brew update && brew upgrade && brew cleanup && brew prune'
+
+# Start mongoDB using a local DB path
+alias mond='mongod --dbpath "$(pwd)/data"&'
 
 #EOF
