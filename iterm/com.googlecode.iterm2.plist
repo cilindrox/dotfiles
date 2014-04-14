@@ -15038,9 +15038,6 @@
 	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Documents</string>
-	<key>NSNavPanelExpandedStateForSaveMode</key>
-	<true/>
-	<string>~/github/dotfiles/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{1205, 778}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -15078,13 +15075,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>276 293 924 485 0 0 1280 778 </string>
+	<string>238 96 924 485 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>149 114 810 501 0 0 1280 778 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>342 211 810 501 0 0 1280 778 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>173 27 650 451 0 0 1280 778 </string>
+	<string>288 227 810 501 0 0 1280 778 </string>
+	<key>NeverWarnAboutShortLivedSessions_41E04EB0-8222-4AD3-9403-CFBB6D34424C</key>
+	<true/>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -15886,7 +15881,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-04-02T02:08:40Z</date>
+	<date>2014-04-14T12:41:06Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
