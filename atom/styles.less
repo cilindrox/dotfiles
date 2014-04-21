@@ -78,9 +78,15 @@
 
   // block cursor
   .cursor {
-    // position: absolute;
-    // border: 1px solid;
-    // background-color: rgba(244,100,122,0.6);
+    margin-left: -1px;
+    border-radius: 2px;
+    padding: 0 1px;
+    border-left: none;
+    background: rgba(255,255,255,.3);
+    -webkit-transition: -webkit-transform, .06s;
+  }
+  .is-focused .cursor.blink-off {
+    visibility: visible;
   }
 
   // fade transition
