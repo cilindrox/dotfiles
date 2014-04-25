@@ -15034,12 +15034,18 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSColorPanelMode</key>
+	<string>5</string>
+	<key>NSColorPickerPageableNameListDefaults</key>
+	<string>1Crayons</string>
+	<key>NSColorPickerSlidersDefaults</key>
+	<string>1</string>
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Documents</string>
-	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{1205, 778}</string>
+	<key>NSNavPanelExpandedStateForSaveMode</key>
+	<true/>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -15074,12 +15080,18 @@
 		<key>TB Size Mode</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>268 229 214 309 0 0 1280 778 </string>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>755 77 445 270 0 0 1280 778 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>238 96 924 485 0 0 1280 778 </string>
+	<string>51 276 924 485 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>288 227 810 501 0 0 1280 778 </string>
-	<key>NeverWarnAboutShortLivedSessions_41E04EB0-8222-4AD3-9403-CFBB6D34424C</key>
-	<true/>
+	<string>350 116 810 501 0 0 1280 778 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>342 211 810 501 0 0 1280 778 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>173 27 650 451 0 0 1280 778 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -15863,7 +15875,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/ext_gfestari/github/dotfiles/iterm</string>
+	<string>/Users/gastonfestari/github/dotfiles/iterm</string>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -15881,7 +15893,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-04-14T12:41:06Z</date>
+	<date>2014-04-18T16:13:17Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>

@@ -1,6 +1,7 @@
 # Add here your $PATH vars
 
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 
 # Ruby config -- add rbenv and ruby-build to $PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
