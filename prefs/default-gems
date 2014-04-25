@@ -7,6 +7,8 @@ bundler
 rake
 minitest
 rubocop
+pry
+pry-doc
 rails
 zeus
 bson_ext
