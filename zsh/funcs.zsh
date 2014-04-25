@@ -208,4 +208,10 @@ npm_info () {
   npm info $1 version
 }
 
+# Displays a list of available branches and last committer, sorted by date.
+# protip: alias this as `git hist`
+repo_history() {
+  git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n
+}
+
 # EOF
