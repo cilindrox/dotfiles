@@ -31,9 +31,9 @@
     untracked = cyan
 [alias] # most of these are taken from: https://gist.github.com/oli/1637874
     a = !git add -A . && git status
-    am = commit --amend
     aam = commit --add --amend
     acm = commit -am
+    am = commit --amend
     c = commit
     cm = commit -m
     d = diff --color-words
@@ -44,15 +44,18 @@
     merff = merge --ff-only
     news = log -p HEAD@{1}..HEAD@{0}
     noff = merge --no-ff
-    pl = pull --ff-only
     pb = pull --rebase
+    pl = pull --ff-only
+    praise = blame
+    restore = checkout --
     rfl = log --walk-reflogs # yourbranchnamehere
     rmall = !git rm $(git ls-files -d)
     s = status
     sb = status -sb
     stache = !echo "You probably didnt want those files, anyway..." && echo && git stash $@
+    unstage = reset HEAD --
     up = !git remote update -p; git merge --ff-only @{u}
-    serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+    visualise = !gitk
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 [push]
     default = simple
