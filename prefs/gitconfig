@@ -52,7 +52,7 @@
     rmall = !git rm $(git ls-files -d)
     s = status
     sb = status -sb
-    stache = !echo "You probably didnt want those files, anyway..." && echo && git stash $@
+    stache = !echo "You probably didn't want those files, anyway..." && echo && git stash $@
     unstage = reset HEAD --
     up = !git remote update -p; git merge --ff-only @{u}
     visualise = !gitk
