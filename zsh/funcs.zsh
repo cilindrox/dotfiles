@@ -71,7 +71,7 @@ randpass () {
 }
 
 # translates `...` into ../..
-rationalize-dot() {
+rationalize-dot () {
   [[ $LBUFFER = *.. ]] && LBUFFER+=/.. || LBUFFER+=.
 }
 zle -N rationalize-dot
@@ -111,14 +111,14 @@ explain () {
 
 # Wait 30s before closing the terminal.
 # Trap the alarm and update the title bar.
-# TRAPALARM() {
+# TRAPALARM () {
 #     print -nP "\e]2;%T\a"
 #     TMOUT=30
 # }
 # TMOUT=30
 
 # colored manpages
-# man() {
+# man () {
 #     env LESS_TERMCAP_mb=$'\E[01;31m' \
 #     LESS_TERMCAP_md=$'\E[01;38;5;74m' \
 #     LESS_TERMCAP_me=$'\E[0m' \
@@ -131,7 +131,7 @@ explain () {
 
 # `extract` function, stolen from oh-my-zsh:
 #   @see: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/extract/extract.plugin.zsh
-extract() {
+extract () {
   local remove_archive
   local success
   local file_name
@@ -210,7 +210,7 @@ npm_info () {
 
 # Displays a list of available branches and last committer, sorted by date.
 # protip: alias this as `git hist`
-repo_history() {
+repo_history () {
   git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n
 }
 
