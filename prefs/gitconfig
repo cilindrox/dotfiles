@@ -30,12 +30,12 @@
     changed = yellow
     untracked = cyan
 [alias] # most of these are taken from: https://gist.github.com/oli/1637874
-    a = !git add -A . && git status
-    aam = commit --add --amend
-    acm = commit -am
-    am = commit --amend
+    a = !git add -a . && git status
+    aa = !git add -A . && git status
     c = commit
+    cam = commit -am
     cm = commit -m
+    co = checkout
     d = diff --color-words
     dh = diff --color-words head
     l = log --color --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%Creset:%C(yellow)%d%Creset %s - %Cgreen(%cr)' --abbrev-commit --
@@ -48,14 +48,14 @@
     pl = pull --ff-only
     praise = blame
     restore = checkout --
-    rfl = log --walk-reflogs # yourbranchnamehere
+    rfl = log --walk-reflogs
     rmall = !git rm $(git ls-files -d)
     s = status
     sb = status -sb
     stache = !echo "You probably didn't want those files, anyway..." && echo && git stash $@
     unstage = reset HEAD --
     up = !git remote update -p; git merge --ff-only @{u}
-    visualise = !gitk
+    view = !gitk
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 [push]
     default = simple
