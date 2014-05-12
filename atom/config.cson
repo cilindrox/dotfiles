@@ -1,7 +1,7 @@
 'exception-reporting':
   'userId': 'c96d75a9-843a-d6f4-717b-54434486ec98'
 'release-notes':
-  'viewedVersion': '0.92.0'
+  'viewedVersion': '0.94.0'
 'welcome':
   'showOnStartup': false
 'metrics':
@@ -16,8 +16,8 @@
   'tabLength': 2
 'core':
   'themes': [
-    'atom-light-ui'
-    'atom-light-syntax'
+    'atom-dark-ui'
+    'base16-tomorrow-dark-theme'
   ]
 'autocomplete':
   'includeCompletionsFromAllBuffers': true
