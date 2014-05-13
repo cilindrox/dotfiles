@@ -4,6 +4,7 @@
   "preserve_newlines": true,
   "max_preserve_newlines": 4,
   "space_in_paren": false,
+  "space_before_conditional": true,
   "jslint_happy": true,
   "brace_style": "collapse",
   "keep_array_indentation": false,
@@ -14,7 +15,6 @@
   "e4x": false,
   "wrap_line_length": 80,
   "laxcomma": true,
-  "space_before_conditional": true,
 
   // jsformat options
   "format_on_save": true,
