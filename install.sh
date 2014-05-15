@@ -106,7 +106,7 @@ ln -s $repo_dir/atom "$HOME/.atom"
 # brew install node --without-npm
 brew install node
 # curl -L https://npmjs.org/install.sh | sh
-npm install -g jade express kraken sails grunt-cli bower coffee-script coffeelint jshint uglify-js socket.io gulp mocha lodash semver colors docco nodemon
+npm install -g npm-check-updates express coffee-script nodemon coffeelint jshint gulp mocha colors docco
 
 # Git: update these vars to match your username and email
 username='uname'

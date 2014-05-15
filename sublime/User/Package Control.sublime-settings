@@ -28,9 +28,11 @@
 		"SublimeLinter",
 		"SublimeLinter-annotations",
 		"SublimeLinter-coffee",
+		"SublimeLinter-coffeelint",
 		"SublimeLinter-haml",
 		"SublimeLinter-jshint",
 		"SublimeLinter-rubocop",
-		"Theme - Soda"
+		"Theme - Soda",
+		"WordCount"
 	]
 }

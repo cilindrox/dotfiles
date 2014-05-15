@@ -16,8 +16,8 @@
   'tabLength': 2
 'core':
   'themes': [
-    'atom-dark-ui'
-    'base16-tomorrow-dark-theme'
+    'atom-light-ui'
+    'base16-light-syntax'
   ]
 'autocomplete':
   'includeCompletionsFromAllBuffers': true
