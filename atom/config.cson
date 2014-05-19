@@ -1,13 +1,12 @@
 'exception-reporting':
   'userId': 'c96d75a9-843a-d6f4-717b-54434486ec98'
 'release-notes':
-  'viewedVersion': '0.94.0'
+  'viewedVersion': '0.95.0'
 'welcome':
   'showOnStartup': false
 'metrics':
   'userId': '8a4cfcf1a4293ba8f031fb948fc8c0abe316f22a'
 'editor':
-  'fontSize': 16
   'fontFamily': 'inconsolata-g'
   'showIndentGuide': true
   'showInvisibles': true
@@ -19,6 +18,7 @@
     'atom-light-ui'
     'base16-light-syntax'
   ]
+  'useReactEditor': true
 'autocomplete':
   'includeCompletionsFromAllBuffers': true
 'autosave': {}
