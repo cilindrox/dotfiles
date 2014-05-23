@@ -88,4 +88,7 @@ alias upd='brew update && brew upgrade && brew cleanup && brew prune'
 # Start mongoDB using a local DB path
 alias mond='mongod --dbpath "$(pwd)/data"&'
 
+# show all git branches
+alias branches='git branch -a'
+
 #EOF
