@@ -45,6 +45,7 @@ brew install git git-extras tig ctags jq most the_silver_searcher colordiff merc
 brew install z figlet gource youtube-dl jpeg ffmpeg faac lame webp x264 xvid
 brew install mongodb redis rethinkdb
 brew install go python3
+brew install leiningen
 brew install rbenv ruby-build rbenv-aliases rbenv-default-gems rbenv-gem-rehash rbenv-vars
 brew install zsh zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting
 
