@@ -53,6 +53,7 @@ alias gits='git status -sb'
 alias gemupd='gem update --system && gem update && gem cleanup'
 
 alias more=most
+alias lol=lolcat
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
