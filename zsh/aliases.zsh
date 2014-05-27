@@ -92,4 +92,7 @@ alias mond='mongod --dbpath "$(pwd)/data"&'
 # show all git branches
 alias branches='git branch -a'
 
+# update all vim plugins
+alias vimupd='cd ~vim && gitall'
+
 #EOF

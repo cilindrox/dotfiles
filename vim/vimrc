@@ -1,15 +1,28 @@
-" Basic settings
-set nocompatible
-syntax on
-set backspace=2 "Makes backspace work
-set history=500 "Sets undo history size
-set ruler "Sets up status bar
-set laststatus=2 "Always keeps the status bar active
-set number "Turns on line numbering
-set t_Co=256 "Sets Vim to use 256 colors
-colorscheme evening
-"colorscheme elflord
+autocmd!
 
+call pathogen#infect()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" BASIC EDITING CONFIGURATION
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+" allow unsaved background buffers and remember marks/undo for them
+set hidden
+" remember more commands and search history
+set history=10000
+" Keep the status bar active
+set laststatus=2
+set incsearch
+set backspace=indent,eol,start
+" Enable syntax highlighting
+syntax on
+set ruler "Sets up status bar
+set number "Turns on line numbering
+
+set t_Co=256 "Sets Vim to use 256 colors
+" Dark variation of base16 theme
+set background=dark
+colorscheme base16-default
 
 " Indentation settings
 set tabstop=2 "Sets display width of tabs
@@ -21,16 +34,26 @@ set expandtab
 
 
 " Search settings
-set hlsearch "Highlights search terms
-set showmatch "Highlights matching parentheses
-set ignorecase "Ignores case when searching
-set smartcase "Unless you put some caps in your search term
+set hlsearch    " Highlights search terms
+set showmatch   " Highlights matching parentheses
+set ignorecase  " Ignores case when searching
+set smartcase   " Unless you put some caps in your search term
 
 
 " Key mappings
 "Use jj instead of escape in insert mode
 "inoremap jj <Esc>`^
 
-
 "Turn on plugin & indentation support for specific filetypes
 filetype plugin indent on
+
+" Open NERDTree
+autocmd vimenter * NERDTree
+
+
+" Key binds
+" Toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'

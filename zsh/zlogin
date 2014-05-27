@@ -1,4 +1,5 @@
 hash -d dot=~/github/dotfiles
+hash -d vim=~/.vim
 hash -d pkgs="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
 
 # load groovy version manager
