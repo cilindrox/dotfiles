@@ -31,4 +31,14 @@ git clone git://github.com/tpope/vim-bundler.git
 # base16
 git clone https://github.com/chriskempson/base16-vim.git
 
+# git gutter
+git clone git://github.com/airblade/vim-gitgutter.git
+
+# airline && powerline fonts:
+# https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
+git clone git://github.com/bling/vim-airline.git
+git clone git://github.com/Lokaltog/powerline-fonts.git ~/.fonts
+fc-cache -vf ~/.fonts
+echo 'NOTE: change non-ASCII font to a prepatched one to get powerline working.'
+
 exit 0

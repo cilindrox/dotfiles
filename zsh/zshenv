@@ -17,7 +17,7 @@ eval "$(rbenv init -)"
 export PAGER='most'
 
 # Set your default EDITOR tool (replace with nano, vim, Emacs etc.)
-export EDITOR='subl -w'
+export EDITOR='vim'
 
 # Colored `less` output
 export LESS='--ignore-case --raw-control-chars'
