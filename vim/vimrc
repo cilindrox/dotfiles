@@ -73,6 +73,7 @@ set expandtab
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
@@ -165,7 +166,9 @@ map <C-n> :NERDTreeToggle<CR>
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-
+" @see: http://superuser.com/a/445206
+let g:ctrlp_extensions = ['line']
+" let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 
 " Airline
 let g:airline_powerline_fonts = 1
