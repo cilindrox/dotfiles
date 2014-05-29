@@ -166,6 +166,9 @@ let g:ctrlp_cmd = 'CtrlP'
 " @see: http://superuser.com/a/445206
 let g:ctrlp_extensions = ['line']
 " let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
 
 " Airline
 let g:airline_powerline_fonts = 1
