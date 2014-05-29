@@ -143,7 +143,7 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 set t_Co=256 "Sets Vim to use 256 colors
 " Dark variation of base16 theme
-set background=dark
+set background=light
 colorscheme base16-default
 
 
@@ -160,12 +160,12 @@ colorscheme base16-default
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
+
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 " @see: http://superuser.com/a/445206
-let g:ctrlp_extensions = ['line']
-" let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
+let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
