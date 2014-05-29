@@ -5,7 +5,7 @@ autoload -Uz colors && colors         # create a colors associative array
 # adds the current branch name in green
 git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null)
-  [[ -n $ref ]] && echo "[%F{yellow}${ref#refs/heads/}%{$reset_color%}]"
+  [[ -n $ref ]] && echo "[%F{green}${ref#refs/heads/}%{$reset_color%}]"
 }
 
 # right-hand prompt with exit status error and git info
@@ -35,11 +35,11 @@ EOF
 
 prompt_adam3_setup () {
   prompt_adam1_color1=${1:-'red'}
-  prompt_adam1_color2=${2:-'green'}
+  prompt_adam1_color2=${2:-'yellow'}
   prompt_adam1_color3=${3:-'magenta'}
 
-  base_prompt="%F{red}%m%f "
-  post_prompt="%b%f%k"
+  base_prompt="%F{blue}%m%f "
+  post_prompt="%f%k"
 
   base_prompt_no_color=$(echo "$base_prompt" | perl -pe "s/%(K{.*?}|k)//g")
   post_prompt_no_color=$(echo "$post_prompt" | perl -pe "s/%(K{.*?}|k)//g")
@@ -56,10 +56,10 @@ prompt_adam1_precmd () {
   base_prompt_etc=$(print -P "$base_prompt%(4~|...|)%3~")
   prompt_length=${#base_prompt_etc}
   if [[ $prompt_length -lt 40 ]]; then
-    path_prompt="%B%F{$prompt_adam1_color2}%(4~|...|)%3~%F{black}"
+    path_prompt="%F{$prompt_adam1_color2}%(4~|...|)%3~%F{white}"
   else
     space_left=$(( $COLUMNS - $#base_prompt_expanded_no_color - 2 ))
-    path_prompt="%B%F{$prompt_adam1_color3}%${space_left}<...<%~$prompt_newline%F{black}"
+    path_prompt="%F{$prompt_adam1_color3}%${space_left}<...<%~$prompt_newline%F{white}"
   fi
   PS1="$base_prompt$path_prompt %# $post_prompt"
   PS2="$base_prompt$path_prompt %_> $post_prompt"

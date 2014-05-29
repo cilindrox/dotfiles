@@ -1,11 +1,8 @@
-" Use Vim settings, rather then Vi settings. This setting must be as early as
-" possible, as it has side effects.
+" Disallow Vi settings. Welcome to the future.
 set nocompatible
 
 " Leader
 let mapleader = " "
-
-call pathogen#infect()
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 " set backspace=indent,eol,start
@@ -73,7 +70,7 @@ set expandtab
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+" let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
@@ -172,6 +169,7 @@ let g:ctrlp_extensions = ['line']
 
 " Airline
 let g:airline_powerline_fonts = 1
+
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
