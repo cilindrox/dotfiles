@@ -7,12 +7,13 @@
 'metrics':
   'userId': '8a4cfcf1a4293ba8f031fb948fc8c0abe316f22a'
 'editor':
-  'fontFamily': 'inconsolata-g'
+  'fontFamily': 'Fira mono'
   'showIndentGuide': true
   'showInvisibles': true
   'softWrap': true
   'softWrapAtPreferredLineLength': true
   'tabLength': 2
+  'fontSize': 17
 'core':
   'themes': [
     'atom-light-ui'

@@ -2,20 +2,20 @@
 # see:
 #   https://github.com/sstephenson/rbenv-default-gems#usage
 
-gem-ctags
+bson_ext
 bundler
-rake
+gem-ctags
+genghisapp
+# gist
+haml
+lolcat
 minitest
-rubocop
 pry
 pry-doc
-rails
-zeus
-bson_ext
-genghisapp
-haml
+# rails
+rake
+rubocop
 sass
-gist
 shotgun
-sinatra
-lolcat
+# sinatra
+# zeus
