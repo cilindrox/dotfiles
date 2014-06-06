@@ -17,6 +17,7 @@ alias -g M='| most'
 alias -g NUL="> /dev/null 2>&1"
 alias -g S='| sort -n'
 alias -g TL='| tail -f'
+alias -g lines='| wc -l'
 
 # pretty-print JSON strings
 alias -g PJ='| python -mjson.tool'
