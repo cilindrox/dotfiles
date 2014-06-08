@@ -42,7 +42,7 @@ brew install vim --override-system-vi
 # # #
 brew install openssl bash emacs gpatch nano m4 make curl rsync
 brew install git git-extras tig ctags jq most the_silver_searcher colordiff mercurial tree htop-osx
-brew install z figlet gource youtube-dl jpeg ffmpeg faac lame webp x264 xvid
+brew install z figlet gource youtube-dl jpeg ffmpeg faac lame webp x264 xvid imagemagick ttyrec
 brew install mongodb redis rethinkdb
 brew install go python3
 brew install leiningen

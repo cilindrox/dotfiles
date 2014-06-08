@@ -73,7 +73,8 @@
 		".hg",
 		"CVS",
 		".sass-cache",
-		"bundle"
+		"bundle",
+		"node_modules"
 	],
 	"font_face": "Fira Mono",
 	"font_options":
@@ -85,8 +86,8 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Markdown"
+		"Markdown",
+		"Vintage"
 	],
 	"indent_guide_options":
 	[
@@ -98,8 +99,8 @@
 	[
 		"*.sql",
 		"*.log",
-		"*.tmp",
-		"*.temp"
+		"*.temp",
+		"*.tmp"
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
