@@ -1,0 +1,12 @@
+{
+	"apply_syntax_extensions":
+	[
+		"pyw",
+		"py3"
+	],
+	"extensions":
+	[
+		"pyw",
+		"py3"
+	]
+}

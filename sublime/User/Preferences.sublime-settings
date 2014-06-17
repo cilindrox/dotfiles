@@ -74,6 +74,10 @@
 		"CVS",
 		".sass-cache",
 		"bundle",
+		".groovy",
+		".settings",
+		"target",
+		"target-eclipse",
 		"node_modules"
 	],
 	"font_face": "Fira Mono",
@@ -81,7 +85,7 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 17,
+	"font_size": 16,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
