@@ -11,7 +11,6 @@
 		"CTags",
 		"DocBlockr",
 		"EditorConfig",
-		"Emmet",
 		"GitCommitMsg",
 		"GitGutter",
 		"Gitignore",
@@ -33,6 +32,7 @@
 		"SublimeLinter-jshint",
 		"SublimeLinter-rubocop",
 		"Theme - Soda",
+		"Vanilla lodash Snippets",
 		"WordCount"
 	]
 }
