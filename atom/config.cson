@@ -13,10 +13,11 @@
   'softWrap': true
   'softWrapAtPreferredLineLength': true
   'tabLength': 2
-  'fontSize': 17
+  'fontSize': 14
+  'lineHeight': 1.4
 'core':
   'themes': [
-    'atom-light-ui'
+    'atom-dark-ui'
     'base16-light-syntax'
   ]
   'useReactEditor': true
