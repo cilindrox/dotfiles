@@ -65,6 +65,7 @@
     up = !git remote update -p; git merge --ff-only @{u}
     view = !gitk
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+    ctags = !.git/hooks/ctags
 [push]
     default = simple
 [rebase]
@@ -72,3 +73,5 @@
 [rerere]
     enabled = true
     autoupdate = true
+[init]
+    templatedir = ~/.git_template

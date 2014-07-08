@@ -73,6 +73,9 @@ do
   ln -s $repo_dir/prefs/$i ~/.$i
 done
 
+# link git hooks
+ln -s "$repo_dir/git_template" '~/.git_template'
+
 # link default-gem list
 ln -s $repo_dir/prefs/default-gems ~/.rbenv/default-gems
 
