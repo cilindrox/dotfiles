@@ -13,8 +13,6 @@
   'softWrap': true
   'softWrapAtPreferredLineLength': true
   'tabLength': 2
-  'fontSize': 14
-  'lineHeight': 1.4
 'core':
   'themes': [
     'atom-dark-ui'
