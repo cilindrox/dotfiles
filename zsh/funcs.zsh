@@ -214,10 +214,15 @@ repo_history () {
   git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n
 }
 
-# list all globally-installed npm packages
+# List all globally-installed npm packages
 npm_global_instals() {
   npm ls -gp --depth=0 | awk -F/node_modules/ '{print $2}' | grep -vE '^(npm|)$'
   # | xargs npm -g rm
+}
+
+# Attach or create tmux session named the same as current directory.
+tat () {
+  tmux new-session -As "$(basename "$PWD" | tr . -)"
 }
 
 # EOF
