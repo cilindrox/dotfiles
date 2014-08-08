@@ -144,7 +144,7 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 set t_Co=256 "Sets Vim to use 256 colors
 " Dark variation of base16 theme
 set background=light
-colorscheme base16-default
+" colorscheme base16-default
 
 
 " TODO(gfestari): Search settings
