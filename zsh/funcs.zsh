@@ -215,7 +215,7 @@ repo_history () {
 }
 
 # List all globally-installed npm packages
-npm_global_instals() {
+npm_global_instals () {
   npm ls -gp --depth=0 | awk -F/node_modules/ '{print $2}' | grep -vE '^(npm|)$'
   # | xargs npm -g rm
 }
