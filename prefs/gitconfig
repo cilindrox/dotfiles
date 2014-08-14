@@ -49,19 +49,20 @@
     pb = pull --rebase
     pl = pull --ff-only
     praise = blame
-    rc = rebase --continue            # continue rebase
-    rs = rebase --skip                # skip rebase
+    rc = rebase --continue # continue rebase
+    rs = rebase --skip     # skip rebase
 
     # un-fuck things
     restore = checkout --
-    uncommit = reset --soft HEAD^     # go back before last commit, with files in uncommitted state
+    uncommit = reset --soft HEAD^ # go back before last commit, with files in uncommitted state
     unstage = reset HEAD --
 
     rfl = log --walk-reflogs
     rmall = !git rm $(git ls-files -d)
     s = status
     sb = status -sb
-    stache = !echo "You probably didn't want those files, anyway..." && echo && git stash $@
+    stache = !echo "You probably didnt want those files, anyway..." \
+    && echo && git stash $@
     up = !git remote update -p; git merge --ff-only @{u}
     view = !gitk
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
