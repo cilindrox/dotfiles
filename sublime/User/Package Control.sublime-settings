@@ -2,6 +2,7 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"AngularJS",
 		"ApplySyntax",
 		"AutoFileName",
 		"Base16 Color Schemes",
@@ -14,6 +15,7 @@
 		"GitCommitMsg",
 		"GitGutter",
 		"Gitignore",
+		"GoSublime",
 		"Haml",
 		"Jade",
 		"JavaScript Snippets",
