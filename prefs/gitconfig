@@ -1,13 +1,12 @@
 [user]
-    name = yourname
-    email = someone@email.com
+    name = gfestari
+    email = cilindrox@gmail.com
 [core]
     pager = most
     excludesfile = ~/.gitignore
     autocrlf = input
     editor = subl -w
 [credential]
-    # use `helper = cache` on Ubuntu
     helper = osxkeychain
 [color]
     diff = auto
