@@ -106,5 +106,5 @@ fi
 eval "$(npm completion 2>/dev/null)"
 
 # Homebrew git & misc completion
-[[ -d /usr/local/share/zsh/site-functions ]] &&\
+[[ -d /usr/local/share/zsh/site-functions ]] && \
   source /usr/local/share/zsh/site-functions

@@ -97,4 +97,6 @@ alias branches='git branch -a'
 # update all vim plugins
 alias vimupd='cd ~vim && gitall'
 
+alias dh='dirs -v'
+
 #EOF
