@@ -87,7 +87,7 @@ do
 done
 
 # create a .zsh/func directory for helper functions
-ln -s $repo_dir/zsh/completion ~/.zsh/func
+ln -s $repo_dir/zsh/completion ~/.zsh/completion
 
 ln -s $repo_dir/vim/vimrc ~/.vimrc
 

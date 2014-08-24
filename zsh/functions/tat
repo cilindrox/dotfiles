@@ -1,0 +1,5 @@
+# Attach or create tmux session named the same as current directory.
+
+function tat () {
+  tmux new-session -As "$(basename "$PWD" | tr . -)"
+}

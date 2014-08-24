@@ -1,0 +1,8 @@
+# translates `....` into ../..
+
+function rationalize-dot () {
+  [[ $LBUFFER = *... ]] && LBUFFER+=/.. || LBUFFER+=.
+}
+
+zle -N rationalize-dot
+bindkey . rationalize-dot

@@ -1,0 +1,10 @@
+# a simple function to `cd` and `ls`
+# Alternatively, if a default is required, it could be aliased instead to:
+#   function chpwd ( ) {
+#       emulate -L zsh
+#       ls
+#   }
+
+function cs () {
+    cd "$@" && ls -A
+}

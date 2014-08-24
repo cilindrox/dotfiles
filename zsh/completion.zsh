@@ -4,6 +4,9 @@
 [[ -d /usr/local/share/zsh-completions ]] && \
   fpath=(/usr/local/share/zsh-completions $fpath)
 
+fpath=($HOME/.zsh/completion $fpath)
+typeset -U fpath
+
 # Load and initialize the modern completion system.
 autoload -Uz compinit && compinit
 
@@ -93,9 +96,9 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,uco
 # zstyle ':vcs_info:*' enable git hg
 
 # Completion helper functions
-if [ -d ~/.zsh/func ]; then
-  for i in ~/.zsh/func ; do
-    . $i
+if [ -d ~/.zsh/completion ]; then
+  for i in ~/.zsh/completion ; do
+    source $i
   done
 fi
 

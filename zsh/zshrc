@@ -45,7 +45,10 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
-# this will be used later on...
+# load `zcalc` and `zmv` functions
+autoload -Uz zcalc zmv
+
+# Store Homebrew location...
 brew_dir=$(brew --prefix)
 
 # Enable online help
@@ -77,18 +80,22 @@ bindkey '^[[B' history-substring-search-down
 # ** Extra sauce **
 
 # Alias definitions.
-[[ -s ~/.aliases.zsh ]] && . ~/.aliases.zsh
+[[ -s ~/.aliases.zsh ]] && source ~/.aliases.zsh
 
 # Helper functions.
-[[ -s ~/.funcs.zsh ]] && . ~/.funcs.zsh
+if [ -d ~/.zsh/functions ]; then
+  for function in ~/.zsh/functions/*; do
+    source $function
+  done
+fi
 
 # Load the prompt.
-[[ -s ~/.prompt.zsh ]] && . ~/.prompt.zsh
+[[ -s ~/.prompt.zsh ]] && source ~/.prompt.zsh
 
 # Completions config.
-[[ -s ~/.completion.zsh ]] && . ~/.completion.zsh
+[[ -s ~/.completion.zsh ]] && source ~/.completion.zsh
 
 # Zump around
-[[ -d $brew_dir/etc/profile.d ]] && . $brew_dir/etc/profile.d/z.sh
+[[ -d $brew_dir/etc/profile.d ]] && source $brew_dir/etc/profile.d/z.sh
 
 # EOF

@@ -11,7 +11,7 @@ On OS X, add homebrew completion by running this on your terminal:
 
 Add the following to your ~/.zshrc:
 
-    fpath=($HOME/.zsh/func $fpath)
+    fpath=($HOME/.zsh/completion $fpath)
     typeset -U fpath
 
 
