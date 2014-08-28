@@ -36,7 +36,7 @@ EOF
 prompt_adam3_setup () {
   prompt_adam1_color1=${1:-'red'}
   prompt_adam1_color2=${2:-'cyan'}
-  prompt_adam1_color3=${3:-'white'}
+  prompt_adam1_color3=${3:-'magenta'}
 
   # base_prompt="%F{blue}%m%f "
   # base_prompt=' %B%F{red}❯%F{yellow}❯%F{green}❯%f%b'

@@ -2,6 +2,6 @@
 // Follow go fmt [recommendations](http://golang.org/src/cmd/gofmt/doc.go)
 
 {
-  "tab_size": 8,
+  "tab_size": 4,
   "translate_tabs_to_spaces": false,
 }

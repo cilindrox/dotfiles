@@ -2,7 +2,6 @@
 	"installed_packages":
 	[
 		"Alignment",
-		"AngularJS",
 		"ApplySyntax",
 		"AutoFileName",
 		"Base16 Color Schemes",
@@ -21,6 +20,7 @@
 		"JavaScript Snippets",
 		"JsFormat",
 		"LESS",
+		"Mocha Snippets",
 		"Node Completions",
 		"Sass",
 		"SCSS",

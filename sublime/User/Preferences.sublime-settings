@@ -31,7 +31,7 @@
 	"bold_folder_labels": true,
 	"caret_extra_width": 2,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/base16-flat.light (SL).tmTheme",
+	"color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
 	"copy_with_empty_selection": false,
 	"detect_indentation": true,
 	"draw_minimap_border": true,
@@ -80,12 +80,12 @@
 		"target-eclipse",
 		"node_modules"
 	],
-	"font_face": "Fira Mono",
+	"font_face": "Inconsolata-g",
 	"font_options":
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 15,
+	"font_size": 16,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
