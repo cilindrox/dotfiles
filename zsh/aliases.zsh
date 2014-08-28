@@ -99,4 +99,6 @@ alias vimupd='cd ~vim && gitall'
 
 alias dh='dirs -v'
 
+[ -f ~/.aliases ] && source ~/.aliases
+
 #EOF

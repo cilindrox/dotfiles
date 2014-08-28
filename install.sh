@@ -31,6 +31,7 @@ brew install gnu-tar --default-names
 brew install gnu-sed --default-names
 brew install gnutls --default-names
 brew install grep --default-names
+brew install ansifilter
 
 brew install python --with-brewed-openssl
 brew install openssh --with-brewed-openssl
@@ -86,10 +87,13 @@ do
   ln -s $repo_dir/zsh/$j ~/.$j
 done
 
-# create a .zsh/func directory for helper functions
+# link helper and completion functions
+ln -s $repo_dir/zsh/functions ~/.zsh/functions
 ln -s $repo_dir/zsh/completion ~/.zsh/completion
 
+# vimfiles
 ln -s $repo_dir/vim/vimrc ~/.vimrc
+ln -sf $repo_dir/tmux.conf ~/.tmux.conf
 
 # # #
 # Sublime Text 3 preferences
