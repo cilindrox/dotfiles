@@ -29,10 +29,9 @@
     changed = yellow
     untracked = cyan
 [alias] # most of these are taken from: https://gist.github.com/oli/1637874
-    a = !git add -a . && git status
-    aa = !git add -A . && git status
-    amend = commit --amend            # ammend your last commit
-    ammend = commit --amend           # ammend your last commit
+    aa = add --all --intent-to-add
+    ap = add --patch
+    amend = commit --amend
     c = commit
     cam = commit -am
     cm = commit -m
@@ -48,14 +47,11 @@
     pb = pull --rebase
     pl = pull --ff-only
     praise = blame
-    rc = rebase --continue # continue rebase
-    rs = rebase --skip     # skip rebase
-
-    # un-fuck things
-    restore = checkout --
-    uncommit = reset --soft HEAD^ # go back before last commit, with files in uncommitted state
+    rc = rebase --continue
+    rs = rebase --skip
+    restore = checkout -- # un-fuck things
+    uncommit = reset --soft HEAD^ # back to last commit, files uncommitted
     unstage = reset HEAD --
-
     rfl = log --walk-reflogs
     rmall = !git rm $(git ls-files -d)
     s = status

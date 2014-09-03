@@ -101,4 +101,7 @@ if [ -d ~/.zsh/functions ]; then
   done
 fi
 
+# added by travis gem
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
+
 # EOF
