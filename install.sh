@@ -93,6 +93,7 @@ ln -s $repo_dir/zsh/completion ~/.zsh/completion
 
 # vimfiles
 ln -s $repo_dir/vim/vimrc ~/.vimrc
+ln -s $repo_dir/vim/vimrc.plugins ~/.vimrc.plugins
 ln -sf $repo_dir/tmux.conf ~/.tmux.conf
 
 # # #

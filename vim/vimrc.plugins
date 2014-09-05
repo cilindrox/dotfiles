@@ -1,0 +1,44 @@
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle
+Plugin 'gmarik/Vundle.vim'
+
+" Plugins
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-endwise'
+Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/nerdtree'
+Plugin 'blueyed/vim-autoclose'
+Plugin 'vim-scripts/ctags.vim'
+Plugin 'vim-scripts/tComment'
+Plugin 'vim-scripts/matchit.zip'
+
+" Plugin 'christoomey/vim-run-interactive'
+" Plugin 'chriskempson/base16-vim'
+" Plugin 'danro/rename.vim'
+" Plugin 'kchmck/vim-coffee-script'
+" Plugin 'pbrisbin/vim-mkdir'
+" Plugin 'slim-template/vim-slim'
+" Plugin 'thoughtbot/vim-rspec'
+" Plugin 'tpope/vim-bundler'
+" Plugin 'tpope/vim-cucumber'
+" Plugin 'tpope/vim-rails'
+" Plugin 'bling/vim-airline'
+" Plugin 'airblade/vim-gitgutter'
+" Plugin 'mkitt/tabline.vim'
+
+" Plugins end
+
+if filereadable(expand("~/.vimrc.bundles.local"))
+  source ~/.vimrc.bundles.local
+endif
+
+" All of your Plugins must be added before the following line
+call vundle#end()
+filetype plugin indent on

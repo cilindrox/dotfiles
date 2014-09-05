@@ -1,5 +1,11 @@
 " Disallow Vi settings. Welcome to the future.
 set nocompatible
+filetype off
+
+" Load plugins
+if filereadable(expand("~/.vimrc.plugins"))
+  source ~/.vimrc.plugins
+endif
 
 " Leader
 let mapleader = " "
@@ -22,13 +28,6 @@ set autowrite     " Automatically :write before running commands
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
-
-" Load bundles
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
-endif
-
-filetype plugin indent on
 
 augroup vimrcEx
   autocmd!
@@ -53,7 +52,7 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile *.md set filetype=markdown
 
   " Enable spellchecking for Markdown
-  autocmd FileType markdown setlocal spell
+  autocmd FileType markdown setlocal spell spelllang=en_us
 
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
@@ -64,26 +63,44 @@ set tabstop=2
 set shiftwidth=2
 set shiftround
 set expandtab
-" set autoindent "Turns on auto-indenting
-" set smartindent "Remembers previous indent when creating new lines
+set autoindent    "Turns on auto-indenting
+set smartindent   "Remembers previous indent when creating new lines
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
-" let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+
+" CtrlP
+" let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp' " disable cache (using ag)
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" TODO(gfestari): Fuzzy finder
+" @see: http://superuser.com/a/445206
+let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+"   \ 'file': '\v\.(exe|so|dll)$',
+"   \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+"   \ }
+
+" Use The Silver Searcher instead of grep in CtrlP for listing files.
+" Lightning fast and respects .gitignore
 if executable('ag')
-  " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
 
-" TODO(gfestari): add color scheme
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" bind \ (backward slash) to grep shortcut
+command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+nnoremap \ :Ag<SPACE>
+
 
 " Numbers
 set number
@@ -147,31 +164,16 @@ set background=light
 " colorscheme base16-default
 
 
-" TODO(gfestari): Search settings
-" set hlsearch    " Highlights search terms
-" set showmatch   " Highlights matching parentheses
-" set ignorecase  " Ignores case when searching
-" set smartcase   " Unless you put some caps in your search term
-
-
-" Open NERDTree on startup
-" autocmd vimenter * NERDTree
-
-" Toggle NERDTree
-map <C-n> :NERDTreeToggle<CR>
-
-
-" CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-" @see: http://superuser.com/a/445206
-let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
+" Search and completion settings
+:set hlsearch         " Highlights search terms
+:set showmatch        " Highlights matching parentheses
+:set ignorecase       " Ignores case when searching
+" :set smartcase        " Unless you put some caps in your search term
+:set fileignorecase
+:set wildignorecase
 
 " Airline
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 
 
 " Local config
