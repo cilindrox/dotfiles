@@ -80,6 +80,12 @@ ln -s "$repo_dir/git_template" ~/.git_template
 # link default-gem list
 ln -s $repo_dir/prefs/default-gems ~/.rbenv/default-gems
 
+# # #
+# zsh config
+# # #
+
+mkdir ~/.zsh
+
 # link startup files and zsh config
 startup_files=( aliases.zsh funcs.zsh prompt.zsh zshrc zshenv zlogin zlogout )
 for j in "${startup_files[@]}"
@@ -91,10 +97,17 @@ done
 ln -s $repo_dir/zsh/functions ~/.zsh/functions
 ln -s $repo_dir/zsh/completion ~/.zsh/completion
 
+# # #
 # vimfiles
+# # #
+echo 'Installing Vundle and linking config files...'
 ln -s $repo_dir/vim/vimrc ~/.vimrc
 ln -s $repo_dir/vim/vimrc.plugins ~/.vimrc.plugins
-ln -sf $repo_dir/tmux.conf ~/.tmux.conf
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+echo 'done.'
+
+# tmux
+ln -s $repo_dir/tmux/tmux.conf ~/.tmux.conf
 
 # # #
 # Sublime Text 3 preferences
