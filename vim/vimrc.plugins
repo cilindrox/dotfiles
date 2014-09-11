@@ -8,6 +8,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Plugins
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-scriptease'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
