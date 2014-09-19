@@ -1,6 +1,9 @@
 {
   "autocomplete": true,
   "command": "/usr/local/bin/ctags",
-  "tag_file": ".tags",
-  "opts" : ["--exclude=node_modules", "--exclude=target", "--exclude=target-eclipse"]
+  "extra_tag_files": [".gemtags", "tags"],
+  "opts" : [
+    "--exclude=node_modules",
+    "--exclude=target"
+  ],
 }
