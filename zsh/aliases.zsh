@@ -99,6 +99,10 @@ alias vimupd='cd ~vim && gitall'
 
 alias dh='dirs -v'
 
+alias tml="tmux list-sessions"
+alias tma="tmux -2 attach -t $1"
+alias tmk="tmux kill-session -t $1"
+
 [ -f ~/.aliases ] && source ~/.aliases
 
 #EOF
