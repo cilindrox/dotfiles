@@ -36,6 +36,7 @@
     cam = commit -am
     cm = commit -m
     co = checkout
+    ctags = "!sh -c '[ -f .git/hooks/ctags ] || git init; .git/hooks/ctags' git-ctags"
     d = diff --color-words
     dh = diff --color-words head
     l = log --color --graph --pretty=format:'%C(magenta)%h%Creset %C(bold blue)%an%Creset:%C(green)%d%Creset %s - %C(cyan)(%cr)' --abbrev-commit --
