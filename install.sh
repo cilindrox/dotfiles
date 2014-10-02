@@ -48,7 +48,6 @@ brew install mongodb redis rethinkdb
 brew install go python3
 brew install leiningen
 brew install rbenv ruby-build rbenv-aliases rbenv-default-gems rbenv-gem-rehash rbenv-vars
-brew install zsh zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting
 
 # link restricted formulae
 brew link curl --force
@@ -57,7 +56,9 @@ brew link curl --force
 # # #
 # set zsh as your login shell
 # # #
-sudo chsh -s $(which zsh)
+brew install zsh zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting
+echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/zsh $USER
 
 # # #
 # link misc config settings
