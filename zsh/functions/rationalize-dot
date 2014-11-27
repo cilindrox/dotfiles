@@ -1,7 +1,7 @@
-# translates `....` into ../..
+# translates `...` into ../..
 
 function rationalize-dot () {
-  [[ $LBUFFER = *... ]] && LBUFFER+=/.. || LBUFFER+=.
+  [[ $LBUFFER = *.. ]] && LBUFFER+=/.. || LBUFFER+=.
 }
 
 zle -N rationalize-dot
