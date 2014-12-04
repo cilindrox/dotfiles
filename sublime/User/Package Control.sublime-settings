@@ -13,10 +13,9 @@
 		"GitCommitMsg",
 		"GitGutter",
 		"Gitignore",
-		"GoSublime",
-		"Jade",
 		"JavaScript Snippets",
-		"JsFormat",
+		"JavaScriptNext - ES6 Syntax",
+		"jsfmt",
 		"LESS",
 		"Mocha Snippets",
 		"Node Completions",
@@ -29,10 +28,11 @@
 		"SublimeLinter-coffee",
 		"SublimeLinter-coffeelint",
 		"SublimeLinter-haml",
+		"SublimeLinter-jscs",
 		"SublimeLinter-jshint",
 		"SublimeLinter-rubocop",
+		"TernJS",
 		"Theme - Soda",
-		"Vanilla lodash Snippets",
 		"WordCount"
 	]
 }
