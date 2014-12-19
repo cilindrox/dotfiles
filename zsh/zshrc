@@ -67,12 +67,14 @@ bindkey -e
 bindkey '^Q' push-line-or-edit
 bindkey '^Z' undo
 bindkey ' ' magic-space
+
+autoload -U select-word-style
+select-word-style bash
 # CTRL + back/forward word navigation
-# bindkey ";5D" backward-word
-# bindkey ";5C" forward-word
-# OS X-specific config
+# Use ";5D", ";5C" for other 'nixes
 bindkey '[C' forward-word
 bindkey '[D' backward-word
+
 # Type some chars, use the UP-DOWN keys to filter history
 # bindkey '\e[A' history-beginning-search-backward
 # bindkey '\e[B' history-beginning-search-forward
