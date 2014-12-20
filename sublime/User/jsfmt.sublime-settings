@@ -1,18 +1,19 @@
 {
-    // autoformat on save
-    "autoformat": true,
-
-    // array of extensions for autoformat
-    "extensions": ["js"],
-
-    "options-JSON": {
-        "indent": {
-            "value": "    "
-        },
-        "quotes": {
-            "type": "double"
-        }
+  "alert-errors": true,
+  "autoformat": false,
+  "extensions":
+  [
+    "js"
+  ],
+  "options-JSON":
+  {
+    "indent":
+    {
+      "value": "  "
     },
-
-    "alert-errors": true
+    "quotes":
+    {
+      "type": "double"
+    }
+  }
 }
