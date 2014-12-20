@@ -101,10 +101,10 @@
 	"indent_to_bracket": true,
 	"index_exclude_patterns":
 	[
-		"*.sql",
 		"*.log",
 		"*.temp",
-		"*.tmp"
+		"*.sql",
+		"*.tmp",
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,

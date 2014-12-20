@@ -9,7 +9,7 @@ git_prompt_info() {
 }
 
 # right-hand prompt with exit status error and git info
-RPS1='%F{red}%(?.✭.(%?%))%f '\
+RPS1='%F{red}%(?..(%?%))%f '\
 '$(git_prompt_info)'
 
 # adam3 prompt theme
