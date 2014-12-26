@@ -1,19 +1,19 @@
 {
-  "alert-errors": true,
-  "autoformat": false,
-  "extensions":
-  [
-    "js"
-  ],
-  "options-JSON":
-  {
-    "indent":
-    {
-      "value": "  "
-    },
-    "quotes":
-    {
-      "type": "double"
-    }
-  }
+	"alert-errors": true,
+	"autoformat": false,
+	"extensions":
+	[
+		"js"
+	],
+	"options-JSON":
+	{
+		"indent":
+		{
+			"value": "    "
+		},
+		"quotes":
+		{
+			"type": "double"
+		}
+	}
 }
