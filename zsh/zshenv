@@ -54,15 +54,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 # npm
 export NODE_PATH="$(brew --prefix)/lib/node_modules"
 
-# Android
-# export PATH=$PATH:$HOME/android-studio/sdk/tools
-# export PATH=$PATH:$HOME/platform-tools
-
-if [ -d $HOME/grails ]; then
-  export GRAILS_HOME=$HOME/grails
-  export PATH=$PATH:$GRAILS_HOME/bin
-fi
-
-PATH="/usr/local/heroku/bin:$PATH"
+# Heroku toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 
 # EOF
