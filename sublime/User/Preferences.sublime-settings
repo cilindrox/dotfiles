@@ -31,11 +31,13 @@
 	"bold_folder_labels": true,
 	"caret_extra_width": 2,
 	"caret_style": "phase",
+	"close_windows_when_empty": false,
 	"color_scheme": "Packages/User/SublimeLinter/base16-default.light (SL).tmTheme",
 	"copy_with_empty_selection": false,
 	"detect_indentation": true,
 	"draw_minimap_border": true,
 	"draw_white_space": "all",
+	"enable_tab_scrolling": true,
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
 	"file_exclude_patterns":
@@ -66,6 +68,7 @@
 		"dump.rdb"
 	],
 	"find_selected_text": true,
+	"findreplace_small": true,
 	"folder_exclude_patterns":
 	[
 		".svn",
@@ -108,6 +111,9 @@
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
+	"open_files_in_new_window": false,
+	"overlay_scroll_bars": "enabled",
+	"preview_on_click": false,
 	"rulers":
 	[
 		80
@@ -115,8 +121,10 @@
 	"scroll_past_end": true,
 	"shift_tab_unindent": true,
 	"show_full_path": true,
+	"sidebar_default": true,
 	"tab_size": 2,
-	"theme": "Soda Light 3.sublime-theme",
+	"tabs_small": true,
+	"theme": "predawn.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
