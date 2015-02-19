@@ -103,6 +103,10 @@ alias tml="tmux list-sessions"
 alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 
+alias vssh='vagrant ssh'
+alias vhalt='vagrant halt'
+alias vup='vagrant up'
+
 [ -f ~/.aliases ] && source ~/.aliases
 
 #EOF

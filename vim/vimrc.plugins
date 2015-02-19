@@ -21,6 +21,9 @@ Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/tComment'
 Plugin 'vim-scripts/matchit.zip'
 
+Plugin 'fatih/vim-go'
+Plugin 'Valloric/YouCompleteMe'
+
 " Plugin 'christoomey/vim-run-interactive'
 " Plugin 'chriskempson/base16-vim'
 " Plugin 'danro/rename.vim'
