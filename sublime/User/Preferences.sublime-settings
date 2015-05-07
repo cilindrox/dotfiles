@@ -65,7 +65,8 @@
 		"*.psd",
 		"*.tags",
 		"*.db",
-		"dump.rdb"
+		"dump.rdb",
+		"*.sublime-workspace"
 	],
 	"find_selected_text": true,
 	"findreplace_small": true,
@@ -104,10 +105,11 @@
 	"indent_to_bracket": true,
 	"index_exclude_patterns":
 	[
-		"*.log",
 		"*.temp",
 		"*.sql",
-		"*.tmp"
+		"*.log",
+		"*.tmp",
+		"coverage*"
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
