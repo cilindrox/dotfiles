@@ -58,4 +58,7 @@ source $(brew --prefix nvm)/nvm.sh
 # Heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Overcommit
+export GIT_TEMPLATE_DIR=`overcommit --template-dir`
+
 # EOF

@@ -175,6 +175,9 @@ set background=light
 " Airline
 " let g:airline_powerline_fonts = 1
 
+" Go lint
+set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
+autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")

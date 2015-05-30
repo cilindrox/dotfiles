@@ -24,6 +24,9 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'fatih/vim-go'
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'moll/vim-node'
+
 " Plugin 'christoomey/vim-run-interactive'
 " Plugin 'chriskempson/base16-vim'
 " Plugin 'danro/rename.vim'
