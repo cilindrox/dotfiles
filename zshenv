@@ -48,15 +48,15 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # Java
-export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=$PATH:$JAVA_HOME/bin
+# export JAVA_HOME=$(/usr/libexec/java_home)
+# export PATH=$PATH:$JAVA_HOME/bin
 
 # node
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # Heroku toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# export PATH="/usr/local/heroku/bin:$PATH"
 
 # Overcommit
 export GIT_TEMPLATE_DIR=`overcommit --template-dir`

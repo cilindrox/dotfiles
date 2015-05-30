@@ -1,4 +1,0 @@
-# this file should be located at ~/.gemrc
-
-install: --no-ri --no-rdoc
-update:  --no-ri --no-rdoc

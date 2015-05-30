@@ -8,15 +8,9 @@ Use this to enable the `subl` utility to work with files and projects on the com
 
 ### OS X Command Line
 
-**NOTE** This assumes Sublime Text is placed in 'Applications', and that ~/bin is in your path
+**NOTE** This [assumes](http://olivierlacan.com/posts/launch-sublime-text-3-from-the-command-line/) Sublime Text is placed in 'Applications'
 
-    ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-
-#### Symlink on Ubuntu
-
-        sudo ln -s ~/Sublime\ Text\ 3/sublime_text /usr/bin/subl
-
-    See [.desktop](./sublime.desktop) entry for a shortcut for Unity Launcher.
+    ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
 ## Setting Sublime as the default EDITOR
 
