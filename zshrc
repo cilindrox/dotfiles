@@ -3,7 +3,7 @@
 setopt EXTENDED_HISTORY       # save timestamp and duration.
 setopt HIST_VERIFY            # make a newline show the change before executing it.
 setopt HIST_IGNORE_SPACE      # ignore lines which start with space.
-setopt HIST_IGNORE_DUPS       # ignore duplicates.
+setopt HIST_IGNORE_ALL_DUPS   # ignore duplicates.
 setopt HIST_FIND_NO_DUPS      # do not display duplicates of a found line.
 setopt HIST_REDUCE_BLANKS     # trim extra blanks from history lines.
 setopt INC_APPEND_HISTORY     # incremental append, don't wait until shell exit.
@@ -40,10 +40,10 @@ setopt AUTO_PARAM_KEYS        # attempt to autocomplete params on lists.
 setopt AUTO_REMOVE_SLASH      # remove the slash if the next character is delimiter.
 setopt RCQUOTES               # double-single quotes '' for escaping
 
-# Keep 10,000 lines of history within the shell and save it to ~/.zsh_history
+# Keep 10,000 lines of history within the shell and save it to ~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.zsh_history
+HISTFILE=~/.histfile
 
 # Show elapsed time if a command takes longer than 10s
 REPORTTIME=10
