@@ -1,22 +1,18 @@
 # Add here your $PATH vars
 
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
+# GNU utils PATH $(brew --prefix coreutils)
+brew_path='/usr/local/opt/coreutils'  
+export PATH="$brew_path/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH"
+export MANPATH="$brew_path/libexec/gnuman:$MANPATH"
 
 # Ruby config -- add rbenv and ruby-build to $PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 # required by rbenv
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
-# alternatively, use
-#if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
-
-# use `most` as the default pager
 export PAGER='most'
-
-# Set your default EDITOR tool (replace with nano, vim, Emacs etc.)
 export EDITOR='vim'
 
 # Colored `less` output
@@ -29,27 +25,9 @@ export LESS_TERMCAP_so=$'\E[38;5;246m'      # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'             # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m'   # begin underline
 
-# GNU utils PATH
-gnu_dir="$(brew --prefix coreutils)"
-export PATH="$gnu_dir/libexec/gnubin:$PATH"
-export MANPATH="$gnu_dir/libexec/gnuman:$MANPATH"
-
-# sed
-sed_dir="$(brew --prefix gnu-sed)"
-PATH="$sed_dir/libexec/gnubin:$PATH"
-MANPATH="$sed_dir/libexec/gnuman:$MANPATH"
-
-# tar
-tar_dir="$(brew --prefix gnu-tar)"
-PATH="$tar_dir/libexec/gnubin:$PATH"
-
 # Go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-
-# Java
-# export JAVA_HOME=$(/usr/libexec/java_home)
-# export PATH=$PATH:$JAVA_HOME/bin
 
 # node
 export NVM_DIR=~/.nvm
@@ -59,6 +37,6 @@ source $(brew --prefix nvm)/nvm.sh
 # export PATH="/usr/local/heroku/bin:$PATH"
 
 # Overcommit
-export GIT_TEMPLATE_DIR=`overcommit --template-dir`
+# export GIT_TEMPLATE_DIR=`overcommit --template-dir`
 
 # EOF
