@@ -97,8 +97,8 @@ bindkey '^[[B' history-substring-search-down
 [[ -d $brew_dir/etc/profile.d ]] && source $brew_dir/etc/profile.d/z.sh
 
 # Helper functions.
-if [ -d ~/.zsh/functions ]; then
-  for function in ~/.zsh/functions/*; do
+if [ -d ~/.functions ]; then
+  for function in ~/.functions/*; do
     source $function
   done
 fi
