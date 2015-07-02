@@ -86,7 +86,7 @@ alias cpv='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
 alias mmv='noglob zmv -vW'
 
 # housekeeping for homebrew
-alias upd='brew update && brew upgrade && brew cleanup && brew prune'
+alias upd='brew update && brew upgrade --all && brew cleanup && brew prune'
 
 # Start mongoDB using a local DB path
 alias mond='mongod --dbpath "$(pwd)/data"&'
