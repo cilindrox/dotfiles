@@ -5,13 +5,19 @@ dotFiles
 
 ## Installation
 
-**STILL BETA**. See [TODO](#todo)
+Run:
 
-Just run:
-
-    sh install.sh
+```bash
+$ sh install.sh
+```
 
 and let the installation script work its magic.
+
+For linking files, it is recommended you use `[rcm](https://github.com/thoughtbot/rcm#installation)` like described in [this blogpost](https://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos)
+
+```bash
+brew install rcm
+```
 
 ## Homebrew
 
@@ -186,10 +192,6 @@ Just a list of handy manpages to keep as a reference.
 * terminfo(5)
 
 Source: [Arch Wiki](https://wiki.archlinux.org/index.php/Man_Page#Noteworthy_manpages)
-
-## TODO
-- Add param parsing options to install script
-- Add backup to dotfile linking functions
 
 [1]: http://brew.sh
 [2]: https://github.com/sstephenson/rbenv
