@@ -18,6 +18,7 @@ alias -g NUL="> /dev/null 2>&1"
 alias -g S='| sort -n'
 alias -g TL='| tail -f'
 alias -g lines='| wc -l'
+alias -g AG='| ag'
 
 # pretty-print JSON strings
 alias -g PJ='| python -mjson.tool'
@@ -107,6 +108,6 @@ alias vssh='vagrant ssh'
 alias vhalt='vagrant halt'
 alias vup='vagrant up'
 
-[ -f ~/.aliases ] && source ~/.aliases
+alias b2d='$(boot2docker shellinit)'
 
 #EOF

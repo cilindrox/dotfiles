@@ -1,5 +1,5 @@
 [user]
-	name = Gaston Festari
+    name = Gaston Festari
     email = cilindrox@gmail.com
 [core]
     pager = most
@@ -36,9 +36,11 @@
     cam = commit -am
     cm = commit -m
     co = checkout
+    cob = checkout -b
     ctags = "!sh -c '[ -f .git/hooks/ctags ] || git init; .git/hooks/ctags' git-ctags"
     d = diff --color-words
     dh = diff --color-words head
+    ir = !git rebase -i origin/master
     l = log --color --graph --pretty=format:'%C(magenta)%h%Creset %C(bold blue)%an%Creset:%C(green)%d%Creset %s - %C(cyan)(%cr)' --abbrev-commit --
     lg = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset, %C(magenta)%ar%Creset'
     ll = log --stat --abbrev-commit
@@ -53,6 +55,7 @@
     restore = checkout -- # un-fuck things
     uncommit = reset --soft HEAD^ # back to last commit, files uncommitted
     unstage = reset HEAD --
+    up = !git fetch origin && git rebase origin/master
     rfl = log --walk-reflogs
     rmall = !git rm $(git ls-files -d)
     s = status
