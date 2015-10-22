@@ -5,11 +5,6 @@ brew_path='/usr/local/opt/coreutils'
 export PATH="$brew_path/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH"
 export MANPATH="$brew_path/libexec/gnuman:$MANPATH"
 
-# Ruby config -- add rbenv and ruby-build to $PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-eval "$(rbenv init - zsh)"
-
 export PAGER='most'
 export EDITOR='vim'
 
