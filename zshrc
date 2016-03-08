@@ -1,15 +1,18 @@
 # Config options
-# ** History **
+#                     ** History **
 setopt EXTENDED_HISTORY       # save timestamp and duration.
 setopt HIST_VERIFY            # make a newline show the change before executing it.
 setopt HIST_IGNORE_SPACE      # ignore lines which start with space.
 setopt HIST_IGNORE_ALL_DUPS   # ignore duplicates.
 setopt HIST_FIND_NO_DUPS      # do not display duplicates of a found line.
+setopt HIST_IGNORE_DUPS       # do not record an event that was just recorded again.
+setopt HIST_EXPIRE_DUPS_FIRST # expire a duplicate event first when trimming history.
 setopt HIST_REDUCE_BLANKS     # trim extra blanks from history lines.
+setopt HIST_SAVE_NO_DUPS      # do not write a duplicate event to the history file.
 setopt INC_APPEND_HISTORY     # incremental append, don't wait until shell exit.
 setopt SHARE_HISTORY          # share history between zsh processes.
 setopt HIST_NO_FUNCTIONS      # skip function definitions.
-# ** Shell behavior **
+#                     ** Shell behavior **
 setopt AUTOCD                 # cd just by typing the name of a directory.
 setopt AUTOPUSHD              # flip between two places easily.
 setopt PUSHD_IGNORE_DUPS      # don't push multiple copies of the same dir onto the stack.
