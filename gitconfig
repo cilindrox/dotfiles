@@ -48,6 +48,7 @@
     news = log -p HEAD@{1}..HEAD@{0}
     noff = merge --no-ff
     pb = pull --rebase
+    pf = push --force-with-lease
     pl = pull --ff-only
     praise = blame
     rc = rebase --continue
