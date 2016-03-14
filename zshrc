@@ -56,6 +56,8 @@ DIRSTACKSIZE=5
 
 # load `zcalc` and `zmv` functions
 autoload -Uz zcalc zmv
+autoload -Uz url-quote-magic
+zle -N self-insert url-quote-magic
 
 # Store Homebrew location...
 brew_dir=$(brew --prefix)
