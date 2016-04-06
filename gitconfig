@@ -84,3 +84,5 @@
     required = true
 [commit]
     template = ~/.gitmessage
+[gpg]
+    program = gpg2

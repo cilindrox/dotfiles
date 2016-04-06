@@ -27,6 +27,10 @@ source $(brew --prefix nvm)/nvm.sh
 # Docker
 eval "$(docker-machine env dev)"
 
+# PGP
+# https://github.com/keybase/keybase-issues/issues/1712#issuecomment-141226705
+export GPG_TTY=$(tty)
+
 # Overcommit
 # export GIT_TEMPLATE_DIR=`overcommit --template-dir`
 
