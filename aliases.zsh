@@ -36,6 +36,8 @@ alias egrep='egrep --color=auto'
 alias ls='gls --color=auto'
 alias diff=colordiff
 
+alias gpg=gpg2
+
 alias la='ls -A'
 alias lf='ls -AF'
 alias ll='ls -lh'
