@@ -91,9 +91,6 @@ alias mmv='noglob zmv -vW'
 # housekeeping for homebrew
 alias upd='brew update && brew upgrade --all && brew cleanup && brew prune'
 
-# Start mongoDB using a local DB path
-alias mond='mongod --dbpath "$(pwd)/data"&'
-
 # show all git branches
 alias branches='git branch -a'
 
@@ -106,10 +103,6 @@ alias tml="tmux list-sessions"
 alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 
-alias vssh='vagrant ssh'
-alias vhalt='vagrant halt'
-alias vup='vagrant up'
-
-alias b2d='$(boot2docker shellinit)'
+alias dcu='docker-compose up'
 
 #EOF
