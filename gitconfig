@@ -5,7 +5,7 @@
     pager = most
     excludesfile = ~/.gitignore
     autocrlf = input
-    editor = subl -w
+    editor = nvim
 [credential]
     helper = osxkeychain
 [color]
