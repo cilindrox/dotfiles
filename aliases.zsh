@@ -103,6 +103,7 @@ alias tml="tmux list-sessions"
 alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 
+alias dm='docker-machine'
 alias dcu='docker-compose up'
 
 #EOF
