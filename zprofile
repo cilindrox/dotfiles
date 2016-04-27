@@ -25,7 +25,7 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # Docker
-eval "$(docker-machine env dev)"
+eval "$(docker-machine env default)"
 
 # PGP
 # https://github.com/keybase/keybase-issues/issues/1712#issuecomment-141226705
