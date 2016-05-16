@@ -19,6 +19,9 @@ test/tmp
 test/version_tmp
 tmp
 *.sublime-project
+GPATH
+GRTAGS
+GTAGS
 
 # YARD artifacts
 .yardoc
