@@ -10,9 +10,6 @@ typeset -U fpath
 # Load and initialize the modern completion system.
 autoload -Uz compinit && compinit
 
-# load completion system
-# zmodload -i zsh/complist
-
 # zsh syntax highlightning:
 #   https://github.com/zsh-users/zsh-syntax-highlighting
 [[ -d /usr/local/share/zsh-syntax-highlighting ]] && \
@@ -23,19 +20,12 @@ autoload -Uz compinit && compinit
 [[ -d /usr/local/opt/zsh-history-substring-search ]] && \
   source /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# Enable completion caching, use rehash to clear
+# Enable completion caching, auto rehash commands -- http://www.zsh.org/mla/users/2011/msg00531.html
 zstyle ':completion::complete:*' use-cache on
-
-# auto rehash commands -- http://www.zsh.org/mla/users/2011/msg00531.html
 zstyle ':completion:*' rehash true
 
 # Case-insensitive, partial-word, then substring completion.
 zstyle ':completion:*' matcher-list 'r:|[._-]=* r:|=* l:|=*' 'm:{a-zA-Z}={A-Za-z}'
-
-# Menu formatting and messages
-# zstyle ':completion:*' menu select=1 _complete _ignored _approximate
-# zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-# zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' menu select=long
@@ -69,12 +59,10 @@ zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
 
 # Directories
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-# zstyle ':completion:*' list-colors ''
 zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack path-directories
 zstyle ':completion:*:*:cd:*:directory-stack' menu yes select
 zstyle ':completion:*:-tilde-:*' group-order 'named-directories' 'path-directories' 'users' 'expand'
 zstyle ':completion:*' squeeze-slashes true
-# cd will ignore parent dir
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
 # History
@@ -84,16 +72,7 @@ zstyle ':completion:*:history-words' list false
 zstyle ':completion:*:history-words' menu yes
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-# Ubuntu:
-# zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-# OS X:
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,ucomm'
-
-# autoload -Uz vcs_info # ???
-# man zshcontrib
-# zstyle ':vcs_info:*' actionformats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
-# zstyle ':vcs_info:*' formats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%f '
-# zstyle ':vcs_info:*' enable git hg
 
 # Completion helper functions
 if [ -d ~/.zsh/completion ]; then
