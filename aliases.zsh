@@ -54,7 +54,6 @@ alias ag='ag --smart-case'
 alias ags='ag --stats'
 
 alias today='cal | grep -E --color "\b$(date +%e)\b|$"'
-alias gits='git status -sb'
 alias gemupd='gem update --system && gem update && gem cleanup'
 
 alias more=most
