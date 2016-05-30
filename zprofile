@@ -1,4 +1,4 @@
-# Add here your $PATH vars
+# $PATH vars go here
 
 # GNU utils PATH $(brew --prefix coreutils)
 brew_path='/usr/local/opt/coreutils'
@@ -23,9 +23,6 @@ eval "$(rbenv init - zsh)"
 # node
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
-
-# Docker
-eval "$(docker-machine env default)"
 
 # PGP
 # https://github.com/keybase/keybase-issues/issues/1712#issuecomment-141226705
