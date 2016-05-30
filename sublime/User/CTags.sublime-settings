@@ -1,9 +1,0 @@
-{
-  "autocomplete": true,
-  "command": "/usr/local/bin/ctags",
-  "extra_tag_files": [".gemtags", "tags"],
-  "opts" : [
-    "--exclude=node_modules",
-    "--exclude=target"
-  ],
-}
