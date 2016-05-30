@@ -1,10 +1,14 @@
-# mix in zsh completions (https://github.com/zsh-users/zsh-completions)
-# You might need to rebuild zcompdump:
-#   rm -f ~/.zcompdump; compinit
+# Misc completion
+[[ -d /usr/local/share/zsh/site-functions ]] && \
+  fpath=(/usr/local/share/zsh/site-functions $fpath)
+
+# zsh completions (github.com/zsh-users/zsh-completions)
 [[ -d /usr/local/share/zsh-completions ]] && \
   fpath=(/usr/local/share/zsh-completions $fpath)
 
-fpath=($HOME/.zsh/completion $fpath)
+# You might need to rebuild zcompdump:
+#   rm -f ~/.zcompdump; compinit
+
 typeset -U fpath
 
 # Load and initialize the modern completion system.
@@ -74,16 +78,6 @@ zstyle ':completion:*:history-words' menu yes
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,ucomm'
 
-# Completion helper functions
-if [ -d ~/.zsh/completion ]; then
-  for i in ~/.zsh/completion ; do
-    source $i
-  done
-fi
-
 # Enable node completion
 eval "$(npm completion 2>/dev/null)"
 
-# Homebrew git & misc completion
-[[ -d /usr/local/share/zsh/site-functions ]] && \
-  source /usr/local/share/zsh/site-functions
