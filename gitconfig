@@ -28,16 +28,15 @@
     added = green
     changed = yellow
     untracked = cyan
-[alias] # most of these are taken from: https://gist.github.com/oli/1637874
+[alias]
     aa = add --all --intent-to-add
     ap = add --patch
-    amend = commit --amend
+    amend = commit --amend --no-edit
     c = commit
     cam = commit -am
     cm = commit -m
     co = checkout
     cob = checkout -b
-    ctags = "!sh -c '[ -f .git/hooks/ctags ] || git init; .git/hooks/ctags' git-ctags"
     d = diff --color-words
     dh = diff --color-words head
     ir = !git rebase -i origin/master
@@ -45,7 +44,6 @@
     lg = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset, %C(magenta)%ar%Creset'
     ll = log --stat --abbrev-commit
     merff = merge --ff-only
-    news = log -p HEAD@{1}..HEAD@{0}
     noff = merge --no-ff
     pb = pull --rebase
     pf = push --force-with-lease
@@ -53,10 +51,9 @@
     praise = blame
     rc = rebase --continue
     rs = rebase --skip
-    restore = checkout -- # un-fuck things
+    restore = checkout --
     uncommit = reset --soft HEAD^ # back to last commit, files uncommitted
     unstage = reset HEAD --
-    up = !git fetch origin && git rebase origin/master
     rfl = log --walk-reflogs
     rmall = !git rm $(git ls-files -d)
     s = status
@@ -66,7 +63,6 @@
     up = !git remote update -p; git merge --ff-only @{u}
     view = !gitk
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
-    ctags = !.git/hooks/ctags
 [push]
     default = simple
 [rebase]
