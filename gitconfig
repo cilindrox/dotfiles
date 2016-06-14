@@ -2,28 +2,30 @@
     name = Gaston Festari
     email = cilindrox@gmail.com
 [core]
-    pager = most
+    pager = less -r
     excludesfile = ~/.gitignore
     autocrlf = input
     editor = nvim
 [credential]
     helper = osxkeychain
 [color]
-    diff = auto
-    status = auto
-    branch = auto
-    interactive = auto
-    ui = true
-    pager = true
+    ui = always
 [color "branch"]
     current = yellow reverse
     local = yellow
     remote = green
 [color "diff"]
     meta = yellow bold
+    commit = green bold
     frag = magenta bold
     old = red bold
     new = green bold
+    whitespace = red reverse
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = "red bold 52"
+    newNormal = "green bold"
+    newHighlight = "green bold 22"
 [color "status"]
     added = green
     changed = yellow
@@ -40,15 +42,13 @@
     d = diff --color-words
     dh = diff --color-words head
     ir = !git rebase -i origin/master
-    l = log --color --graph --pretty=format:'%C(magenta)%h%Creset %C(bold blue)%an%Creset:%C(green)%d%Creset %s - %C(cyan)(%cr)' --abbrev-commit --
-    lg = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset, %C(magenta)%ar%Creset'
+    l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset %C(magenta)(%ar)%Creset'
     ll = log --stat --abbrev-commit
     merff = merge --ff-only
     noff = merge --no-ff
     pb = pull --rebase
     pf = push --force-with-lease
     pl = pull --ff-only
-    praise = blame
     rc = rebase --continue
     rs = rebase --skip
     restore = checkout --
@@ -58,10 +58,7 @@
     rmall = !git rm $(git ls-files -d)
     s = status
     sb = status -sb
-    stache = !echo "You probably didnt want those files, anyway..." \
-    && echo && git stash $@
     up = !git remote update -p; git merge --ff-only @{u}
-    view = !gitk
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 [push]
     default = simple
