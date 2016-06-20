@@ -9,7 +9,7 @@
 [credential]
     helper = osxkeychain
 [color]
-    ui = always
+    ui = true
 [color "branch"]
     current = yellow reverse
     local = yellow
