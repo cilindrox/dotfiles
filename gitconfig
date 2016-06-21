@@ -79,3 +79,5 @@
     template = ~/.gitmessage
 [gpg]
     program = gpg2
+[help]
+    autocorrect = 1
