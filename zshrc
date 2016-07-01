@@ -9,7 +9,7 @@ setopt HIST_IGNORE_DUPS       # do not record an event that was just recorded ag
 setopt HIST_EXPIRE_DUPS_FIRST # expire a duplicate event first when trimming history.
 setopt HIST_REDUCE_BLANKS     # trim extra blanks from history lines.
 setopt HIST_SAVE_NO_DUPS      # do not write a duplicate event to the history file.
-setopt INC_APPEND_HISTORY     # incremental append, don't wait until shell exit.
+setopt INC_APPEND_HISTORY     # incremental append, don't wait until shell exits.
 setopt SHARE_HISTORY          # share history between zsh processes.
 setopt HIST_NO_FUNCTIONS      # skip function definitions.
 #                     ** Shell behavior **
