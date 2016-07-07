@@ -58,7 +58,7 @@ autoload -Uz url-quote-magic
 zle -N self-insert url-quote-magic
 
 # Store Homebrew location...
-brew_dir=$(brew --prefix)
+brew_dir='/usr/local'
 
 # Enable online help
 unalias run-help
