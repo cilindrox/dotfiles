@@ -1,4 +1,9 @@
-# Misc completion
+# COMPLETION SETTINGS
+
+# add custom completion scripts
+fpath=(~/.zsh/completion $fpath)
+
+# misc completion
 [[ -d /usr/local/share/zsh/site-functions ]] && \
   fpath=(/usr/local/share/zsh/site-functions $fpath)
 
@@ -77,7 +82,4 @@ zstyle ':completion:*:history-words' menu yes
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,ucomm'
-
-# Enable node completion
-eval "$(npm completion 2>/dev/null)"
 
