@@ -11,14 +11,11 @@ path=(
   $brew_path/libexec/gnubin
   /usr/local/{bin,sbin}
   $GOPATH/bin
-  $HOME/.rbenv/bin
-  $HOME/.rbenv/plugins/ruby-build/bin
-  /usr/local/heroku/bin
   $path
 )
 
 # ruby
-eval "$(rbenv init - zsh)"
+eval "$(rbenv init --no-rehash - zsh)"
 
 # node
 export NVM_DIR=~/.nvm
