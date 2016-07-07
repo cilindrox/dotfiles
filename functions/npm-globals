@@ -1,5 +1,0 @@
-# List all globally-installed npm packages
-
-function npm-globals () {
-  npm ls -gp --depth=0 | awk -F/node_modules/ '{print $2}' | grep -vE '^(npm|)$'
-}
