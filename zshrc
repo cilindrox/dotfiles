@@ -93,7 +93,10 @@ bindkey '^[[B' history-substring-search-down
 [[ -s ~/.aliases.zsh ]] && source ~/.aliases.zsh
 
 # Load the prompt.
-[[ -s ~/.prompt.zsh ]] && source ~/.prompt.zsh
+autoload -Uz promptinit && promptinit # use the included prompt functionality
+autoload -Uz colors && colors         # create a 'colors' associative array
+
+prompt pure
 
 # Completions config.
 [[ -s ~/.completion.zsh ]] && source ~/.completion.zsh
