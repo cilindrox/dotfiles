@@ -25,10 +25,8 @@ setopt INTERACTIVE_COMMENTS   # allow inline comments.
 setopt COMPLETE_IN_WORD       # complete from the cursor onwards.
 setopt ALWAYS_TO_END          # move cursor after the word with each completion.
 setopt BEEP                   # beep when no results are available.
-# setopt NOMATCH              # print an error when a pattern has no matches (default behavior).
 setopt CSH_NULL_GLOB          # error message when pattern fails. Null glob otherwise.
 setopt EXTENDED_GLOB          # expand globbing.
-# setopt GLOB_COMPLETE          # cycle through glob expansion results.
 setopt COMPLETE_ALIASES       # autocompletion for aliases' switches.
 setopt NO_FLOW_CONTROL        # disable Ctrl + q / Ctrl + s flow control. Similar to `stty -ixon`.
 setopt PROMPT_SUBST           # command substitution, parameter and arithmetic expansion.
@@ -81,13 +79,8 @@ bindkey '[C' forward-word
 bindkey '[D' backward-word
 
 # Type some chars, use the UP-DOWN keys to filter history
-# bindkey '\e[A' history-beginning-search-backward
-# bindkey '\e[B' history-beginning-search-forward
-# Alternate bindings for `history-substring-search` function
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-
-# ** Extra sauce **
 
 # Alias definitions.
 [[ -s ~/.aliases.zsh ]] && source ~/.aliases.zsh
@@ -110,8 +103,5 @@ if [ -d ~/.functions ]; then
     source $function
   done
 fi
-
-# added by travis gem
-[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 # EOF
