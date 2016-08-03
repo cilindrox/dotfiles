@@ -103,5 +103,6 @@ alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 
 alias dcu='docker-compose up'
+alias wifi='networksetup -setairportpower en0'
 
 #EOF
