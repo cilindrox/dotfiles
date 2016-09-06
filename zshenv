@@ -1,8 +1,6 @@
-export PAGER='most'
 export EDITOR='vim'
 
-# Colored `less` output
-export LESS='--ignore-case --raw-control-chars'
+# Colored LESS output
 export LESS_TERMCAP_mb=$'\E[01;31m'         # begin blinking
 export LESS_TERMCAP_md=$'\E[01;38;5;74m'    # begin bold
 export LESS_TERMCAP_me=$'\E[0m'             # end mode
