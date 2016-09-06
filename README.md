@@ -8,6 +8,7 @@ dotFiles
 Run:
 
 ```bash
+brew tap homebrew/completions
 $ sh install.sh
 ```
 
