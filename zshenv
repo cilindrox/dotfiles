@@ -9,4 +9,8 @@ export LESS_TERMCAP_so=$'\E[38;5;246m'      # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'             # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m'   # begin underline
 
+# fix tmux on Sierra
+# https://github.com/tmux/tmux/issues/475#issuecomment-231527159
+export EVENT_NOKQUEUE=1
+
 # EOF
