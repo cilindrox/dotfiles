@@ -1,8 +1,9 @@
 [user]
     name = Gaston Festari
     email = cilindrox@gmail.com
+    signingkey = DE0F58EB
 [core]
-    pager = less -r
+    pager = less -+S
     excludesfile = ~/.gitignore
     autocrlf = input
     editor = nvim
