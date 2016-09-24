@@ -50,8 +50,6 @@ alias dv='dirs -v'
 alias tag='ctags -R -f .git/tags'
 alias rand='echo $RANDOM'
 alias mkd='mkdir -pv'
-alias ag='ag --smart-case'
-alias ags='ag --stats'
 
 alias today='cal | grep -E --color "\b$(date +%e)\b|$"'
 alias gemupd='gem update --system && gem update && gem cleanup'
