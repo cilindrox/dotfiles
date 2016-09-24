@@ -36,7 +36,6 @@ brew install ansifilter
 brew install python --with-brewed-openssl
 pip install --upgrade pip setuptools
 brew install openssh --with-brewed-openssl
-brew install macvim --override-system-vim --custom-system-icons
 brew install vim --override-system-vi
 
 # # #
@@ -45,14 +44,13 @@ brew install vim --override-system-vi
 brew install openssl tmux bash emacs gpatch nano m4 make curl rsync
 brew install git git-extras tig ctags jq most the_silver_searcher colordiff mercurial tree htop-osx
 brew install z v figlet gource youtube-dl jpeg ffmpeg faac lame webp x264 xvid imagemagick ttyrec
-brew install mongodb redis 
+brew install mongodb redis
 brew install rbenv ruby-build rbenv-aliases rbenv-default-gems rbenv-gem-rehash rbenv-vars
 # brew install leiningen
 brew install go && mkdir ~/go
 
 # Node
 brew install nvm && mkdir ~/.nvm
-npm install -g npm pure-prompt jshint david nodemon ngen 
 
 # link restricted formulae
 brew link curl --force
