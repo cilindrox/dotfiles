@@ -57,8 +57,7 @@
     unstage = reset HEAD --
     rfl = log --walk-reflogs
     rmall = !git rm $(git ls-files -d)
-    s = status
-    sb = status -sb
+    s = status -sb
     up = !git remote update -p; git merge --ff-only @{u}
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 [push]
