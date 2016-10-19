@@ -41,6 +41,7 @@
     co = checkout
     cob = checkout -b
     d = diff --color-words
+    ds = diff --staged
     dh = diff --color-words head
     ir = !git rebase -i origin/master
     l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset %C(magenta)(%ar)%Creset'
