@@ -57,10 +57,10 @@
     uncommit = reset --soft HEAD^ # back to last commit, files uncommitted
     unstage = reset HEAD --
     rfl = log --walk-reflogs
-    rmall = !git rm $(git ls-files -d)
     s = status -sb
-    up = !git remote update -p; git merge --ff-only @{u}
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+[fetch]
+    prune = true
 [push]
     default = simple
 [rebase]
