@@ -25,7 +25,6 @@ setopt INTERACTIVE_COMMENTS   # allow inline comments.
 setopt COMPLETE_IN_WORD       # complete from the cursor onwards.
 setopt ALWAYS_TO_END          # move cursor after the word with each completion.
 setopt BEEP                   # beep when no results are available.
-setopt CSH_NULL_GLOB          # error message when pattern fails. Null glob otherwise.
 setopt EXTENDED_GLOB          # expand globbing.
 setopt COMPLETE_ALIASES       # autocompletion for aliases' switches.
 setopt NO_FLOW_CONTROL        # disable Ctrl + q / Ctrl + s flow control. Similar to `stty -ixon`.
