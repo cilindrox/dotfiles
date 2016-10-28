@@ -77,10 +77,6 @@ select-word-style bash
 bindkey '[C' forward-word
 bindkey '[D' backward-word
 
-# Type some chars, use the UP-DOWN keys to filter history
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
 # Alias definitions.
 [[ -s ~/.aliases.zsh ]] && source ~/.aliases.zsh
 
@@ -92,6 +88,11 @@ prompt pure
 
 # Completions config.
 [[ -s ~/.completion.zsh ]] && source ~/.completion.zsh
+
+# Type some chars, use the UP-DOWN keys to filter history
+# https://github.com/zsh-users/zsh-syntax-highlighting/issues/340#issuecomment-230382677
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # Zump around
 [[ -d $brew_dir/etc/profile.d ]] && source $brew_dir/etc/profile.d/z.sh
