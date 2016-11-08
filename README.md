@@ -3,30 +3,24 @@ dotFiles
 
 **This repo** is a collection of personal preferences and configuration settings I've tweaked and gathered from around the web. Use them wisely and share the shit out of this. Seriously.
 
+
 ## Installation
 
-Run:
+Using [Homebrew Bundle][bundle]:
 
 ```bash
-brew tap homebrew/completions
-$ sh install.sh
+brew bundle
 ```
 
 and let the installation script work its magic.
 
-For linking files, it is recommended you use `[rcm](https://github.com/thoughtbot/rcm#installation)` like described in [this blogpost](https://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos)
+*Note*: This requires [Homebrew][brew].
 
-```bash
-brew install rcm
-```
 
-## Homebrew
+### Linking Files
 
-Most of this couldn't be possible, at least not on OS X, without *Homebrew*. In order to install it on your system, just run
+For linking files, it is recommended you use `[rcm]` like described in [this blogpost](https://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos)
 
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-
-Refer to the [official documentation][1] for more info.
 
 ### Gotchas
 
@@ -194,9 +188,8 @@ Just a list of handy manpages to keep as a reference.
 
 Source: [Arch Wiki](https://wiki.archlinux.org/index.php/Man_Page#Noteworthy_manpages)
 
-[1]: http://brew.sh
+[bundle]: https://github.com/Homebrew/homebrew-bundle
+[brew]: http://brew.sh
+[rcm]: https://github.com/thoughtbot/rcm
 [2]: https://github.com/sstephenson/rbenv
 [3]: https://rvm.io
-[4]: zsh/README.md
-[5]: sublime/README.md
-[6]: https://github.com/gfestari/gitignore
