@@ -43,6 +43,7 @@
     d = diff --color-words
     ds = diff --staged
     dh = diff --color-words head
+    fix = commit --fixup
     ir = !git rebase -i origin/master
     l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset %C(magenta)(%ar)%Creset'
     ll = log --stat --abbrev-commit
@@ -58,6 +59,7 @@
     unstage = reset HEAD --
     rfl = log --walk-reflogs
     s = status -sb
+    squ = commit --squash
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 [fetch]
     prune = true
