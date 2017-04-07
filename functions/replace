@@ -8,10 +8,5 @@ function replace () {
   replace_with="$1"
   shift
 
-  items=$(ag -l --nocolor "$find_this" "$@")
-  temp="${TMPDIR:-/tmp}/replace_temp_file.$$"
-  IFS=$'\n'
-  for item in $items; do
-    sed "s/$find_this/$replace_with/g" "$item" > "$temp" && mv "$temp" "$item"
-  done
+  ag -l "${find_this}" | xargs perl -pi -E "s/${find_this}/${replace_with}/g"
 }

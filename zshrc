@@ -78,7 +78,7 @@ bindkey '[C' forward-word
 bindkey '[D' backward-word
 
 # Alias definitions.
-[[ -s ~/.aliases.zsh ]] && source ~/.aliases.zsh
+[[ -s ~/.aliasrc ]] && source ~/.aliasrc
 
 # Load the prompt.
 autoload -Uz promptinit && promptinit # use the included prompt functionality
@@ -105,3 +105,6 @@ if [ -d ~/.functions ]; then
 fi
 
 # EOF
+
+# kubectl autocompletion
+source <(kubectl completion zsh)

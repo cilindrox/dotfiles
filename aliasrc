@@ -38,11 +38,8 @@ alias diff=colordiff
 
 alias gpg=gpg2
 
-alias la='ls -A'
-alias lf='ls -AF'
+alias la='ls -AX'
 alias ll='ls -lh'
-alias lla='ll -A'
-alias lls='ll -S'
 
 alias ..='cd ..'
 alias ...='cd ../..'

@@ -34,28 +34,18 @@
 [alias]
     aa = add --all --intent-to-add
     ap = add --patch
-    amend = commit --amend --no-edit
-    c = commit
-    cam = commit -am
+    append = commit --amend --no-edit
     cm = commit -m
-    co = checkout
-    cob = checkout -b
     d = diff --color-words
     ds = diff --staged
     dh = diff --color-words head
     fix = commit --fixup
-    ir = !git rebase -i origin/master
     l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset %C(magenta)(%ar)%Creset'
     ll = log --stat --abbrev-commit
-    merff = merge --ff-only
-    noff = merge --no-ff
     pb = pull --rebase
     pf = push --force-with-lease
     pl = pull --ff-only
-    rc = rebase --continue
-    rs = rebase --skip
-    restore = checkout --
-    uncommit = reset --soft HEAD^ # back to last commit, files uncommitted
+    uncommit = reset --soft HEAD^
     unstage = reset HEAD --
     rfl = log --walk-reflogs
     s = status -sb
