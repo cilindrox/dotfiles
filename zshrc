@@ -106,5 +106,16 @@ fi
 
 # EOF
 
-# kubectl autocompletion
-source <(kubectl completion zsh)
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/gfestari/github/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Users/gfestari/github/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/gfestari/github/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Users/gfestari/github/google-cloud-sdk/completion.zsh.inc'
+fi
+
+# Kubernetes autocompletion
+(( $+commands[kubectl] )) && source <(kubectl completion zsh)
+(( $+commands[helm] )) && source <(helm completion zsh)
