@@ -6,16 +6,12 @@ dotFiles
 
 ## Installation
 
-Using [Homebrew Bundle][bundle]:
+This requires [Homebrew][brew] and [Homebrew Bundle][bundle]. To install,
+simply:
 
 ```bash
 brew bundle
 ```
-
-and let the installation script work its magic.
-
-*Note*: This requires [Homebrew][brew].
-
 
 ### Linking Files
 
@@ -30,51 +26,25 @@ Things to keep in the mind of the hacker...
 
 To keep everything running as smooth as possible, remember to run this periodically:
 
-    brew update && brew upgrade
+```bash
+brew update && brew upgrade && brew cleanup
+```
 
 If something seems to have gone fubar, just call the doctor:
 
-    brew doctor
-
-#### Keeping track of your Cellar
-
-Call `brew list` to get a (wait for it) list of all your installed packages. This can come in handy in order to keep and up-to-date backup reference, like so:
-
-    brew list > path/to/my/Dropbox/brew.packages
-
-I'll add a script to reinstall from that list at a later time.
+```bash
+brew doctor
+```
 
 #### Linking formulae
 
 On OSX, after installing `curl` you'll need to create the corresponding symlinks in order to replace Apple's bundled version. This is a simple matter of:
 
-    brew link curl --force
+```bash
+brew link curl --force
+```
 
 **DO NOT DO THIS WITH RUBY** the correct (and safest) approach is to use either [rbenv][2] or [rvm][3].
-
-## Bits and pieces
-
-More documentation and dependencies laying around this repo:
-
-* [Z-Shell configuration][4]
-* [Sublime configuration][5]
-* [gitignore][6]
-
-# Z-Shell
-
-Just some quick tips to kickstart your shell.
-
-## Linking homebrew
-
-On OS X, add homebrew completion by running this on your terminal:
-
-    mkdir -p ~/.zsh/func
-    ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" ~/.zsh/func/_brew
-
-Add the following to your ~/.zshrc:
-
-    fpath=($HOME/.zsh/completion $fpath)
-    typeset -U fpath
 
 
 ## Fixing PATH errors
@@ -135,8 +105,7 @@ Here's the list of available color combinations under GNU `ls` command. Just rem
     105 = light purple background
     106 = turquoise background
 
-   For more info, please refer to [this post](http://linux-sxs.org/housekeeping/lscolors.html).
-
+For more info, please refer to [this post](http://linux-sxs.org/housekeeping/lscolors.html).
 
 ## Console shortcuts
 
