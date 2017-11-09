@@ -91,11 +91,12 @@ alias vim='nvim'
 
 alias dh='dirs -v'
 
-alias tml="tmux list-sessions"
+alias tml='tmux list-sessions'
 alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 
 alias dcu='docker-compose up'
 alias wifi='networksetup -setairportpower en0'
+alias myip='curl -sSL https://www.canihazip.com/s'
 
 #EOF
