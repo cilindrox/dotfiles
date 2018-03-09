@@ -119,3 +119,7 @@ fi
 # Kubernetes autocompletion
 (( $+commands[kubectl] )) && source <(kubectl completion zsh)
 (( $+commands[helm] )) && source <(helm completion zsh)
+
+# Kubectl cluster access -
+#   https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
+export KUBECONFIG="$HOME/.kube/config"
