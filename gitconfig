@@ -1,7 +1,7 @@
 [user]
 	name = Gaston Festari
 	email = cilindrox@gmail.com
-	signingkey = DE0F58EB
+	signingkey = 4E736A3C!
 [core]
 	pager = less -+S
 	excludesfile = ~/.gitignore
