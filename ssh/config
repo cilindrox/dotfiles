@@ -1,0 +1,5 @@
+Host github.com
+  IdentityFile ~/.ssh/id_rsa_yubikey.pub
+
+Host pi.hole
+  IdentityFile ~/.ssh/id_rsa_yubikey.pub
