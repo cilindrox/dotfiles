@@ -17,49 +17,44 @@ alias -g M='| most'
 alias -g NUL="> /dev/null 2>&1"
 alias -g S='| sort -n'
 alias -g TL='| tail -f'
-alias -g lines='| wc -l'
+alias -g C='| wc -l'
 alias -g AG='| ag'
-
-# pretty-print JSON strings
 alias -g PJ='| python -mjson.tool'
 alias -g JQ='| jq .'
 
 # Double Rainbows!
-[[ -f ~/.dircolors ]] && . ~/.dircolors || eval "$(gdircolors -b)"
-
-# Sprinkle some color...
+[[ -f ~/.dircolors ]] && . ~/.dircolors || eval "$(dircolors -b)"
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias ls='gls --color=auto'
 alias diff=colordiff
 
+alias ls='ls --color=auto'
 alias la='ls -AX'
 alias ll='ls -lh'
-
 alias ..='cd ..'
 alias ...='cd ../..'
 alias dv='dirs -v'
 alias tag='ctags -R -f .git/tags'
 alias rand='echo $RANDOM'
 alias mkd='mkdir -pv'
-
-alias today='cal | grep -E --color "\b$(date +%e)\b|$"'
-alias gemupd='gem update --system && gem update && gem cleanup'
-
 alias more=most
 alias lol=lolcat
+alias today='cal | grep -E --color "\b$(date +%e)\b|$"'
+alias du='du --max-depth=1 -h'
+alias branches='git branch -a'
+alias vim='nvim'
+alias tml='tmux list-sessions'
+alias tma="tmux -2 attach -t $1"
+alias tmk="tmux kill-session -t $1"
+alias dcu='docker-compose up'
+alias k='kubectl'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Disk usage by user, recursive implementation
-#   http://serverfault.com/a/43298
-# On Ubuntu, replace 'gdu' with 'du'
-alias du='gdu --max-depth=1 -h'
 
 # Copy using rsync with the following options:
 #   @see: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/cp/cp.plugin.zsh
@@ -83,22 +78,7 @@ alias mmv='noglob zmv -vW'
 # housekeeping for homebrew
 alias upd='brew update && brew upgrade && brew cleanup && brew prune'
 
-# show all git branches
-alias branches='git branch -a'
-
-# Use neovim
-alias vim='nvim'
-
-alias dh='dirs -v'
-
-alias tml='tmux list-sessions'
-alias tma="tmux -2 attach -t $1"
-alias tmk="tmux kill-session -t $1"
-
 alias wifi='networksetup -setairportpower en0'
 alias myip='curl -sSL https://www.canihazip.com/s'
-
-alias dcu='docker-compose up'
-alias k='kubectl'
 
 #EOF

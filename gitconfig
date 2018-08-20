@@ -8,7 +8,8 @@
 	autocrlf = input
 	editor = nvim
 [credential]
-	helper = osxkeychain
+#	helper = osxkeychain
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 [color]
 	ui = true
 [color "branch"]
