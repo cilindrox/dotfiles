@@ -81,4 +81,9 @@ alias upd='brew update && brew upgrade && brew cleanup && brew prune'
 alias wifi='networksetup -setairportpower en0'
 alias myip='curl -sSL https://www.canihazip.com/s'
 
+# Attach or create tmux session named the same as current directory.
+function tat () {
+  tmux new-session -As "$(basename "$PWD" | tr . -)"
+}
+
 #EOF
