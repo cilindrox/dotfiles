@@ -31,7 +31,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias diff=colordiff
 
-alias ls='ls --color=auto'
+alias ls='gls --color=auto'
 alias la='ls -AX'
 alias ll='ls -lh'
 alias ..='cd ..'

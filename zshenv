@@ -10,15 +10,14 @@ export LESS_TERMCAP_ue=$'\E[0m'             # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m'   # begin underline
 
 # GNU utils PATH $(brew --prefix coreutils)
-# brew_path='/usr/local/opt/coreutils'
-# export MANPATH="$brew_path/libexec/gnuman:$MANPATH"
-
+brew_path='/usr/local/opt/coreutils/libexec'
+export MANPATH="$brew_path/gnuman:$MANPATH"
 export GOPATH=$HOME/go
 export KUBECONFIG="$HOME/.kube/config"
-
 path=(
-  # $brew_path/libexec/gnubin
-  /usr/local/{bin,sbin,go/bin}
+  $brew_path/gnubin
+  /usr/local/{bin,sbin,go/bin,opt/curl/bin}
+  /usr/{bin,sbin}
   $GOPATH/bin
   $path
 )

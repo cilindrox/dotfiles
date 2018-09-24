@@ -61,11 +61,11 @@ bindkey ' ' magic-space
 autoload -U select-word-style
 select-word-style bash
 # CTRL + back/forward word navigation
-bindkey ';5D' backward-word
-bindkey ';5C' forward-word
+# bindkey ';5D' backward-word
+# bindkey ';5C' forward-word
 # OS X variant
-# bindkey '[C' forward-word
-# bindkey '[D' backward-word
+bindkey '[C' forward-word
+bindkey '[D' backward-word
 
 # Load the prompt.
 autoload -Uz promptinit && promptinit
@@ -73,7 +73,9 @@ autoload -Uz colors && colors
 prompt pure
 
 # Helper functions.
-for f in /usr/local/share/zsh/site-functions/*.zsh; do source $f; done
+# for f in /usr/local/share/zsh/site-functions/*.zsh; do source $f; done
+source /usr/local/etc/profile.d/z.sh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Load and initialize the modern completion system.
 autoload -Uz compinit && compinit
@@ -139,3 +141,9 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,uco
 [[ -s ~/.aliases ]] && source ~/.aliases
 
 # EOF
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/gfestari/github/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/gfestari/github/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/gfestari/github/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/gfestari/github/google-cloud-sdk/completion.zsh.inc'; fi
