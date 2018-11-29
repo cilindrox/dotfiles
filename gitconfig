@@ -1,7 +1,7 @@
 [user]
 	name = Gaston Festari
 	email = cilindrox@gmail.com
-	signingkey = 4E736A3C!
+	signingkey = 0xA22687A64E736A3C
 [core]
 	pager = less -+S
 	excludesfile = ~/.gitignore
@@ -61,8 +61,6 @@
 [rerere]
 	enabled = true
 	autoupdate = true
-[init]
-	templatedir = ~/.git_template
 [pull]
 	ff = only
 [filter "lfs"]
