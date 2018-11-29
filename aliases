@@ -50,6 +50,7 @@ alias tml='tmux list-sessions'
 alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 alias dcu='docker-compose up'
+alias dcs='docker-compose stop'
 alias k='kubectl'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -76,7 +77,7 @@ alias cpv='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
 alias mmv='noglob zmv -vW'
 
 # housekeeping for homebrew
-alias upd='brew update && brew upgrade && brew cleanup && brew prune'
+alias upd='brew upgrade && brew cleanup && brew prune'
 
 alias wifi='networksetup -setairportpower en0'
 alias myip='curl -sSL https://www.canihazip.com/s'
