@@ -18,6 +18,7 @@ brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gnu-tar'
 brew 'gnupg2'
+brew 'pinentry-mac'
 brew 'go'
 brew 'grep', args: ['with-default-names']
 brew 'htop-osx'
