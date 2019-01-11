@@ -22,6 +22,7 @@ tmp
 GPATH
 GRTAGS
 GTAGS
+Session.vim
 
 # YARD artifacts
 .yardoc
