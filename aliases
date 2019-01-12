@@ -77,7 +77,7 @@ alias cpv='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
 alias mmv='noglob zmv -vW'
 
 # housekeeping for homebrew
-alias upd='brew upgrade && brew cleanup && brew prune'
+alias upd='brew upgrade && brew cleanup --prune 90'
 
 alias wifi='networksetup -setairportpower en0'
 alias myip='curl -sSL https://www.canihazip.com/s'
