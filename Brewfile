@@ -1,47 +1,60 @@
-tap 'homebrew/bundle'
-tap 'homebrew/cask'
-tap 'homebrew/core'
-tap 'homebrew/services'
-tap 'neovim/neovim'
-cask 'docker'
-cask 'google-cloud-sdk'
-brew 'bash'
-brew 'colordiff'
-brew 'coreutils'
-brew 'ctags'
-brew 'curl'
-brew 'diffutils', args: ['with-default-names']
-brew 'docker-completion'
-brew 'figlet'
-brew 'findutils', args: ['with-default-names']
-brew 'git'
-brew 'gnu-sed', args: ['with-default-names']
-brew 'gnu-tar'
-brew 'gnupg2'
-brew 'pinentry-mac'
-brew 'go'
-brew 'grep', args: ['with-default-names']
-brew 'htop-osx'
-brew 'jq'
-brew 'kubernetes-cli'
-brew 'kubernetes-helm'
-brew 'less', args: ['with-default-names']
-brew 'make', args: ['with-default-names']
-brew 'neovim'
-brew 'nmap'
-brew 'openssh'
-brew 'openssl'
-brew 'python3'
-brew 'rsync'
-brew 'the_silver_searcher'
-brew 'tmux'
-brew 'tree'
-brew 'vim', args: ['with-override-system-vi']
-brew 'wget'
-brew 'youtube-dl'
-brew 'z'
-brew 'zsh'
-brew 'zsh-completions'
-brew 'zsh-history-substring-search'
-brew 'zsh-lovers'
-brew 'zsh-syntax-highlighting'
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "neovim/neovim"
+brew "openssl"
+brew "python"
+brew "awscli"
+brew "bash"
+brew "bats"
+brew "colordiff"
+brew "coreutils"
+brew "ctags"
+brew "curl"
+brew "diffutils"
+brew "docker-completion"
+brew "figlet"
+brew "findutils", args: ["with-default-names"]
+brew "git"
+brew "go"
+brew "gnu-sed", args: ["with-default-names"]
+brew "gnu-tar"
+brew "pinentry"
+brew "gnupg"
+brew "grep"
+brew "htop"
+brew "jq"
+brew "jsonnet"
+brew "kubeaudit"
+brew "kubernetes-cli"
+brew "kubernetes-helm"
+brew "kustomize"
+brew "less"
+brew "make"
+brew "neovim"
+brew "nmap"
+brew "openssh"
+brew "pinentry-mac"
+brew "python@2"
+brew "ripgrep"
+brew "rsync"
+brew "shellcheck"
+brew "sops"
+brew "terraform"
+brew "the_silver_searcher"
+brew "tmux"
+brew "tree"
+brew "vim"
+brew "wget"
+brew "yamllint"
+brew "youtube-dl"
+brew "z"
+brew "zsh"
+brew "zsh-completions"
+brew "zsh-history-substring-search"
+brew "zsh-lovers"
+brew "zsh-syntax-highlighting"
+cask "aptible"
+cask "docker"
+cask "google-cloud-sdk"
