@@ -68,7 +68,8 @@
 	smudge = git lfs smudge %f
 	required = true
 [commit]
-	template = ~/.gitmessage
+	; gpgSign = true
+	; template = ~/.gitmessage
 [gpg]
 	program = gpg
 [help]
