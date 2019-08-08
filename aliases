@@ -51,7 +51,10 @@ alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 alias dcu='docker-compose up'
 alias dcs='docker-compose stop'
+
 alias k='kubectl'
+alias kpow='kubectl get po -w'
+alias klog='kubectl logs -f'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
