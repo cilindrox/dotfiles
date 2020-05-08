@@ -73,10 +73,16 @@ See the `bindkey` builtin for a more extensive list.
 
 ### Command shortcuts
 
-`!!` - Execute last command in history<p>
-`!abc` - Execute last command in history **beginning with** *abc*<p>
-`!abc:p` - Print last command in history **beginning with** *abc*<p>
-`. ~/.zshrc` - Reload your zsh configuration (assuming /home/< username>/.zshrc is the location of your zshrc file.)<p>
+Expression   | Description                                              |
+---          | ---                                                      |
+`!!`         | Execute last command in history                          |
+`!*`         | Access last command's params eg: vim !*                  |
+`!^`         | Access last command's first param                        |
+`!$`         | Access last command's last param                         |
+`!?abc?:*`   | Params of last `abc` command                             |
+`!abc`       | Execute last command in history **beginning with** *abc* |
+`!abc:p`     | Print last command in history **beginning with** *abc*   |
+`. ~/.zshrc` | Reload your zsh configuration                            |
 
 [bundle]: https://github.com/Homebrew/homebrew-bundle
 [brew]: http://brew.sh
