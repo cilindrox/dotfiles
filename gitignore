@@ -2,6 +2,7 @@
 ###############
 .agignore
 .tags
+tags
 .tags_sorted_by_file
 .sass-cache
 .gem

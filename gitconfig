@@ -42,6 +42,7 @@
 	dh = diff --color-words head
 	fix = commit --fixup
 	l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset %C(magenta)(%ar)%Creset'
+	ls = !git l -20
 	ll = log --stat --abbrev-commit
 	pb = pull --rebase
 	pf = push --force-with-lease
