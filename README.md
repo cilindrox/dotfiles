@@ -46,6 +46,12 @@ ln -s "$PWD/async.zsh" /usr/local/share/zsh/site-functions/async
 
 ## Misc
 
+Disable analytics:
+
+```bash
+brew analytics off
+```
+
 Some of these were originally available on [Stefan Klumpp's Geek!mind][geekmind]
 and are a nice reminder of how to get things done quicker.
 
