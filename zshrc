@@ -79,7 +79,7 @@ source /usr/local/etc/profile.d/z.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Load and initialize the modern completion system.
-autoload -Uz compinit && compinit
+autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
 # Enable completion caching, auto rehash commands - http://www.zsh.org/mla/users/2011/msg00531.html
