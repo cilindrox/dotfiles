@@ -54,6 +54,7 @@ zle -N self-insert url-quote-magic
 
 # Keybinds. Default to Emacs, even if EDITOR is set to vi
 bindkey -e
+bindkey '^U' backward-kill-line
 bindkey '^Q' push-line-or-edit
 bindkey '^Z' undo
 bindkey ' ' magic-space
