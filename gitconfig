@@ -36,6 +36,7 @@
 	aa = add --all --intent-to-add
 	ap = add --patch
 	append = commit --amend --no-edit
+	branchname = rev-parse --abbrev-ref HEAD
 	cm = commit -m
 	d = diff --color-words
 	ds = diff --staged
