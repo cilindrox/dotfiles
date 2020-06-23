@@ -16,16 +16,13 @@ export GOPATH=$HOME/go
 export KUBECONFIG="$HOME/.kube/config"
 path=(
   $brew_path/gnubin
-  /usr/local/{bin,sbin,go/bin,opt/curl/bin}
+  /usr/local/{bin,sbin,go/bin}
   /usr/{bin,sbin}
   $GOPATH/bin
   $path
 )
 
 typeset -U PATH
-
-# ruby
-# eval "$(rbenv init --no-rehash - zsh)"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
