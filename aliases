@@ -32,7 +32,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias diff=colordiff
 
-alias ls='gls --color=auto'
+alias ls='ls --color=auto'
 alias la='ls -AX'
 alias ll='ls -lh'
 alias ..='cd ..'
@@ -90,6 +90,8 @@ alias upd='brew upgrade && brew cleanup --prune 90'
 
 alias wifi='networksetup -setairportpower en0'
 alias myip='curl -sSL https://plex.tv/:/ip'
+
+alias toad='cowsay -f hypnotoad $(fortune) | lolcat'
 
 # Attach or create tmux session named the same as current directory.
 function tat () {

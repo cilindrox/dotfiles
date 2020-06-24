@@ -1,9 +1,4 @@
-export NPM_TOKEN=''
-export DOCKER_HOST=ssh://workstation
-
-export http_proxy=socks5h://localhost
-
-eval $(/opt/homebrew/bin/brew shellenv)
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 # PGP
 # https://github.com/keybase/keybase-issues/issues/1712#issuecomment-141226705
@@ -28,8 +23,6 @@ export KUBECONFIG="$HOME/.kube/config"
 export KUBECTL_EXTERNAL_DIFF="colordiff -N -u"
 
 path=(
-  $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin
-  $HOMEBREW_PREFIX/opt/curl/bin
   $HOME/{.local,.cargo,go}/bin
   $path
 )
