@@ -48,8 +48,6 @@
 	pb = pull --rebase
 	pf = push --force-with-lease
 	pl = pull --ff-only
-	uncommit = reset --soft HEAD^
-	unstage = reset HEAD --
 	rfl = log --walk-reflogs
 	s = status -sb
 	squ = commit --squash
