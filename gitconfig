@@ -7,6 +7,7 @@
 	excludesfile = ~/.gitignore
 	autocrlf = input
 	editor = nvim
+	attributesfile = ~/.gitattributes
 [credential]
 	helper = osxkeychain
 #	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
