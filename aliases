@@ -21,6 +21,7 @@ alias -g C='| wc -l'
 alias -g AG='| ag'
 alias -g PJ='| python -mjson.tool'
 alias -g JQ='| jq .'
+alias -g yml='| bat -l yaml -p'
 
 # Double Rainbows!
 [[ -f ~/.dircolors ]] && . ~/.dircolors || eval "$(dircolors -b)"
