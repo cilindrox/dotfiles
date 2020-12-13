@@ -1,4 +1,4 @@
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Colored LESS output
 export LESS_TERMCAP_mb=$'\E[01;31m'         # begin blinking
@@ -23,10 +23,6 @@ path=(
 )
 
 typeset -U PATH
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "${NVM_DIR}/nvm.sh" ] && . "${NVM_DIR}/nvm.sh" --no-use
 
 # PGP
 # https://github.com/keybase/keybase-issues/issues/1712#issuecomment-141226705
