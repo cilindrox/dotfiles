@@ -136,23 +136,18 @@ zstyle ':completion:*:history-words' menu yes
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,ucomm'
 
+[[ -s ~/.aliases ]] && source ~/.aliases
+
 # Kubernetes autocompletion
 (( $+commands[kubectl] )) && source <(kubectl completion zsh)
 (( $+commands[helm] )) && source <(helm completion zsh)
-
-[[ -s ~/.aliases ]] && source ~/.aliases
-
-# EOF
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi
-
-complete -o nospace -C /usr/local/bin/terraform terraform
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "${NVM_DIR}/nvm.sh" ] && . "${NVM_DIR}/nvm.sh" --no-use
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+
+# terraform
+complete -o nospace -C /usr/local/bin/terraform terraform
+
+# EOF
