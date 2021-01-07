@@ -46,10 +46,13 @@ alias lol=lolcat
 alias today='cal | grep -E --color "\b$(date +%e)\b|$"'
 alias du='du --max-depth=1 -h'
 alias branches='git branch -a'
+
 alias vim='nvim'
+
 alias tml='tmux list-sessions'
 alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
+
 alias dcu='docker-compose up'
 alias dcs='docker-compose stop'
 
@@ -84,7 +87,7 @@ alias mmv='noglob zmv -vW'
 alias upd='brew upgrade && brew cleanup --prune 90'
 
 alias wifi='networksetup -setairportpower en0'
-alias myip='curl -sSL https://www.canihazip.com/s'
+alias myip='curl -sSL https://plex.tv/:/ip'
 
 # Attach or create tmux session named the same as current directory.
 function tat () {
