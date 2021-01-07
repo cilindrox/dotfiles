@@ -14,9 +14,13 @@ brew_path='/usr/local/opt/coreutils/libexec'
 export MANPATH="$brew_path/gnuman:$MANPATH"
 export GOPATH=$HOME/go
 export KUBECONFIG="$HOME/.kube/config"
+export KUBECTL_EXTERNAL_DIFF="colordiff -N -u"
+
 path=(
   $brew_path/gnubin
-  /usr/local/{bin,sbin,go/bin}
+  $HOME/.local/bin
+  $HOME/.cargo/bin
+  /usr/local/{bin,sbin,go/bin,opt/curl/bin}
   /usr/{bin,sbin}
   $GOPATH/bin
   $path
