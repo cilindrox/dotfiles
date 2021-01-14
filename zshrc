@@ -139,7 +139,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,uco
 [[ -s ~/.aliases ]] && source ~/.aliases
 
 # Kubernetes autocompletion
-(( $+commands[kubectl] )) && source <(kubectl completion zsh)
+(( $+commands[kubectl] )) && source <(kubectl completion zsh) && complete -F __start_kubectl k
 (( $+commands[helm] )) && source <(helm completion zsh)
 
 # nvm
