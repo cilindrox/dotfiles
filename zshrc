@@ -141,6 +141,8 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,uco
 # Kubernetes autocompletion
 (( $+commands[kubectl] )) && source <(kubectl completion zsh) && complete -F __start_kubectl k
 (( $+commands[helm] )) && source <(helm completion zsh)
+(( $+commands[minikube] )) && source <(minikube completion zsh)
+(( $+commands[velero] )) && source <(velero completion zsh) && complete -F __start_velero v
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
