@@ -1,5 +1,5 @@
 //registry.npmjs.org/:_authToken=$NPM_TOKEN
-sign-git-tag=true
+sign-git-tag=false
 save=true
 ignore-scripts=false
 send-metrics=false
