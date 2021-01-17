@@ -2,9 +2,10 @@ Host *
   ControlPath ~/.ssh/controlmasters/%C
   ControlMaster auto
   ControlPersist 10m
+  IdentityFile ~/.ssh/id_rsa.pub
 
 Host github.com
-  IdentityFile ~/.ssh/id_rsa_yubikey.pub
+  User cilindrox
 
 Host pi.hole
   User cx
