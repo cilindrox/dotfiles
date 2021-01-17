@@ -7,8 +7,14 @@ I've gathered and tweaked from around the web. Use them wisely and share.
 
 ## Installation
 
-This requires [Homebrew][brew] and [Homebrew Bundle][bundle] in OS X. 
-To install, simply call `brew bundle`.
+This requires [Homebrew][brew] and [Homebrew Bundle][bundle] in OS X. Use the
+following to install all deps:
+
+```bash
+xcode-select --install
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update && brew bundle
+```
 
 ### Helper functions
 
