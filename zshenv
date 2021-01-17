@@ -17,10 +17,10 @@ export KUBECONFIG="$HOME/.kube/config"
 export KUBECTL_EXTERNAL_DIFF="colordiff -N -u"
 
 path=(
+  /usr/local/{bin,sbin,go/bin,opt/curl/bin}
   $brew_path/gnubin
   $HOME/.local/bin
   $HOME/.cargo/bin
-  /usr/local/{bin,sbin,go/bin,opt/curl/bin}
   /usr/{bin,sbin}
   $GOPATH/bin
   $path
