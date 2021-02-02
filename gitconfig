@@ -3,7 +3,7 @@
 	email = cilindrox@gmail.com
 	signingkey = 0xA22687A64E736A3C
 [core]
-	pager = less -+S
+	pager = less -RFX
 	excludesfile = ~/.gitignore
 	autocrlf = input
 	editor = nvim
