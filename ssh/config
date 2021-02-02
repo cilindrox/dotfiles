@@ -7,4 +7,25 @@ Host github.com
   IdentityFile ~/.ssh/id_rsa_yubikey.pub
 
 Host pi.hole
-  IdentityFile ~/.ssh/id_rsa_yubikey.pub
+  User cx
+
+Host er4
+  HostName er4.cx
+  User doomguy
+
+Host apac
+  HostName apac.cx
+  User doge
+
+Host esx
+  HostName esx.cx
+  User ubnt
+
+Host cloudkey
+  HostName cloudkey.cx
+  User doomguy
+
+Host homelab
+  HostName homelab.cx
+  User cx
+  DynamicForward 1080
