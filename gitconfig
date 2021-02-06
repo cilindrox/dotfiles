@@ -43,14 +43,13 @@
 	ds = diff --staged
 	dh = diff --color-words head
 	fix = commit --fixup
-	l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset %C(magenta)(%ar)%Creset'
-	ls = !git l -20
-	ll = log --stat --abbrev-commit
+	ls = log --graph --all -20
+	ll = log --format=medium --stat --abbrev-commit
 	pb = pull --rebase
 	pf = push --force-with-lease
 	pl = pull --ff-only
 	rfl = log --walk-reflogs
-	s = status -sb
+	s = status --short --branch
 	squ = commit --squash
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 [fetch]
@@ -78,3 +77,5 @@
 	autocorrect = 1
 [diff]
 	indentHeuristic = on
+[format]
+	pretty = format:%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset %C(magenta)(%ar)%Creset
