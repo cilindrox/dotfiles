@@ -16,10 +16,10 @@ brew "curl"
 brew "diffutils"
 brew "docker-completion"
 brew "figlet"
-brew "findutils", args: ["with-default-names"]
+brew "findutils"
 brew "git"
 brew "go"
-brew "gnu-sed", args: ["with-default-names"]
+brew "gnu-sed"
 brew "gnu-tar"
 brew "pinentry"
 brew "gnupg"
