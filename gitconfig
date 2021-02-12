@@ -10,7 +10,6 @@
 	attributesfile = ~/.gitattributes
 [credential]
 	helper = osxkeychain
-#	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 [color]
 	ui = true
 [color "branch"]
@@ -43,7 +42,8 @@
 	ds = diff --staged
 	dh = diff --color-words head
 	fix = commit --fixup
-	ls = log --graph --all -20
+	l = log --graph --all -20
+	ls = log --graph --all
 	ll = log --format=medium --stat --abbrev-commit
 	pb = pull --rebase
 	pf = push --force-with-lease
@@ -79,3 +79,5 @@
 	indentHeuristic = on
 [format]
 	pretty = format:%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset %C(magenta)(%ar)%Creset
+[url "git@github.com:"]
+	insteadOf = https://github.com/
