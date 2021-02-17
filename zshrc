@@ -59,7 +59,7 @@ bindkey '^Q' push-line-or-edit
 bindkey '^Z' undo
 bindkey ' ' magic-space
 
-autoload -U select-word-style
+autoload -Uz select-word-style
 select-word-style bash
 # CTRL + back/forward word navigation
 # bindkey ';5D' backward-word
@@ -73,14 +73,9 @@ autoload -Uz promptinit && promptinit
 autoload -Uz colors && colors
 prompt pure
 
-# Helper functions.
-# for f in /usr/local/share/zsh/site-functions/*.zsh; do source $f; done
-source /usr/local/etc/profile.d/z.sh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Load and initialize the modern completion system.
-autoload -U +X compinit && compinit
-autoload -U +X bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+autoload -Uz bashcompinit && bashcompinit
 
 # Enable completion caching, auto rehash commands - http://www.zsh.org/mla/users/2011/msg00531.html
 zstyle ':completion::complete:*' use-cache on
@@ -138,6 +133,9 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,uco
 
 [[ -s ~/.aliases ]] && source ~/.aliases
 
+source $HOMEBREW_PREFIX/etc/profile.d/z.sh
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Kubernetes autocompletion
 (( $+commands[kubectl] )) && source <(kubectl completion zsh) && complete -F __start_kubectl k
 (( $+commands[helm] )) && source <(helm completion zsh)
@@ -150,6 +148,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
 # terraform
-complete -o nospace -C /usr/local/bin/terraform terraform
+complete -o nospace -C $HOMEBREW_PREFIX/bin/terraform terraform
 
 # EOF

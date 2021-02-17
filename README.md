@@ -86,6 +86,16 @@ and are a nice reminder of how to get things done quicker.
 
 See the `bindkey` builtin for a more extensive list.
 
+## Load order
+
+.zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes]
+
+`zshenv` is the entrypoint and always sourced.
+
+`zprofile` is meant as an alternative to .zlogin; the two are not intended to be
+used together. Loads before zshrc instead of after and hands things off to 
+`zshrc`.
+
 ### Command shortcuts
 
 Expression   | Description                                              |
