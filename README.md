@@ -19,13 +19,13 @@ brew update && brew bundle
 ### Helper functions
 
 Util scripts and helper functions are linked under the 
-`/usr/local/share/zsh/site-functions` folder.
+`$BREW_PATH/share/zsh/site-functions` folder.
 
 These include the [syntax-highlighting] and [zsh-completions] plugins and `z` so
 you can [zump around][z].
 
 Prompt defaults to [pure], and completion functions are linked under the
-`/usr/local/share/zsh/vendor-completions` folder.
+`$BREW_PATH/share/zsh/vendor-completions` folder.
 
 All these helper functions should be included on your current `$fpath`.
 
@@ -37,31 +37,34 @@ rm -f ~/.zcompdump; compinit
 ```
 
 ```bash
-ln -s "$HOME/github/zsh-history-substring-search/zsh-history-substring-search.zsh" /usr/local/share/zsh/site-functions
-ln -s "$HOME/github/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" /usr/local/share/zsh/site-functions
-ln -s "$HOME/github/z/z.sh" /usr/local/share/zsh/site-functions/z.zsh
+export BREW_PATH=$(brew --prefix)
 
-ln -s "$HOME/github/zsh-completions/src" /usr/local/share/zsh/vendor-completions
+ln -s "$HOME/github/zsh-history-substring-search/zsh-history-substring-search.zsh" $BREW_PATH/share/zsh/site-functions
+ln -s "$HOME/github/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" $BREW_PATH/share/zsh/site-functions
+ln -s "$HOME/github/z/z.sh" $BREW_PATH/share/zsh/site-functions/z.zsh
 
-ln -s "$HOME/github/google-cloud-sdk/completion.zsh.inc" /usr/local/share/zsh/site-functions/completion.zsh
-ln -s "$HOME/github/google-cloud-sdk/path.zsh.inc" /usr/local/share/zsh/site-functions/path.zsh
+ln -s "$HOME/github/zsh-completions/src" $BREW_PATH/share/zsh/vendor-completions
 
-ln -s "$PWD/pure.zsh" /usr/local/share/zsh/site-functions/prompt_pure_setup
-ln -s "$PWD/async.zsh" /usr/local/share/zsh/site-functions/async
+ln -s "$HOME/github/google-cloud-sdk/completion.zsh.inc" $BREW_PATH/share/zsh/site-functions/completion.zsh
+ln -s "$HOME/github/google-cloud-sdk/path.zsh.inc" $BREW_PATH/share/zsh/site-functions/path.zsh
+
+ln -s "$PWD/pure.zsh" $BREW_PATH/share/zsh/site-functions/prompt_pure_setup
+ln -s "$PWD/async.zsh" $BREW_PATH/share/zsh/site-functions/async
 ```
 
 ## Misc
 
-Disable analytics:
+Disable analytics, link autocompletions by default:
 
 ```bash
-brew analytics off
+brew analytics off && \
+brew completions link
 ```
+
+### Console shortcuts
 
 Some of these were originally available on [Stefan Klumpp's Geek!mind][geekmind]
 and are a nice reminder of how to get things done quicker.
-
-### Console shortcuts
 
 `Ctrl+A` - Move to the **beginning** of the line<p>
 `Ctrl+E` - Move to the **end** of the line<p>
