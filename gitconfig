@@ -10,6 +10,8 @@
 	attributesfile = ~/.gitattributes
 [credential]
 	helper = osxkeychain
+	# gnome - helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+	# linux - helper = cache --timeout=7200
 [color]
 	ui = true
 [color "branch"]
@@ -81,5 +83,5 @@
 	indentHeuristic = on
 [format]
 	pretty = format:%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset %C(magenta)(%ar)%Creset
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+# [url "git@github.com:"]
+#	insteadOf = https://github.com/
