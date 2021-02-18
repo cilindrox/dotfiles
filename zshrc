@@ -149,5 +149,3 @@ export NVM_DIR="$HOME/.nvm"
 
 # terraform
 complete -o nospace -C $HOMEBREW_PREFIX/bin/terraform terraform
-
-# EOF
