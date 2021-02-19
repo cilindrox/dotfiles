@@ -49,8 +49,10 @@ REPORTTIME=10
 DIRSTACKSIZE=5
 
 # load builtin functions
-autoload -Uz zcalc zmv url-quote-magic
+autoload -Uz zcalc zmv url-quote-magic up-line-or-beginning-search down-line-or-beginning-search
 zle -N self-insert url-quote-magic
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
 
 # Keybinds. Default to Emacs, even if EDITOR is set to vi
 bindkey -e
@@ -61,12 +63,16 @@ bindkey ' ' magic-space
 
 autoload -Uz select-word-style
 select-word-style bash
+
 # CTRL + back/forward word navigation
 # bindkey ';5D' backward-word
 # bindkey ';5C' forward-word
-# OS X variant
+
 bindkey '[C' forward-word
 bindkey '[D' backward-word
+
+bindkey '^[[A' up-line-or-beginning-search
+bindkey '^[[B' down-line-or-beginning-search
 
 # Load the prompt.
 autoload -Uz promptinit && promptinit
