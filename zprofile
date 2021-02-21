@@ -7,11 +7,10 @@ eval $(/opt/homebrew/bin/brew shellenv)
 
 # PGP
 # https://github.com/keybase/keybase-issues/issues/1712#issuecomment-141226705
-export GPG_TTY=$(tty)
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+# export GPG_TTY=$(tty)
+# export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 export EDITOR='nvim'
-
 export MANPATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnuman:$MANPATH"
 
 export GOPATH="$HOME/go"

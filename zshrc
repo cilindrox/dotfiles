@@ -142,16 +142,8 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,uco
 source $HOMEBREW_PREFIX/etc/profile.d/z.sh
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Kubernetes autocompletion
-(( $+commands[kubectl] )) && source <(kubectl completion zsh) && complete -F __start_kubectl k
-(( $+commands[helm] )) && source <(helm completion zsh)
-(( $+commands[minikube] )) && source <(minikube completion zsh)
-(( $+commands[velero] )) && source <(velero completion zsh) && complete -F __start_velero v
-
-# nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "${NVM_DIR}/nvm.sh" ] && . "${NVM_DIR}/nvm.sh" --no-use
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+[ -s "${NVM_DIR}/nvm.sh" ] && source "${NVM_DIR}/nvm.sh" --no-use
 
 # terraform
 complete -o nospace -C $HOMEBREW_PREFIX/bin/terraform terraform
