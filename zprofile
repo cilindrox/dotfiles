@@ -26,7 +26,7 @@ path=(
 )
 
 fpath=(
-  $HOMEBREW_PREFIX/share/zsh/site-functions
+  $HOMEBREW_PREFIX/share/{zsh/site-functions,zsh-completions}
   $HOME/.zsh/pure
   $HOMEBREW_PREFIX/opt/curl/share/zsh/site-functions
   $fpath
