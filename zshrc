@@ -26,15 +26,14 @@ setopt HIST_ALLOW_CLOBBER     # use history entries to enable clobbering.
 setopt INTERACTIVE_COMMENTS   # allow inline comments.
 setopt COMPLETE_IN_WORD       # complete from the cursor onwards.
 setopt ALWAYS_TO_END          # move cursor after the word with each completion.
-setopt BEEP                   # beep when no results are available.
+setopt NO_BEEP                # beep when no results are available.
+setopt NO_LIST_BEEP           # disable beeping on ambiguous-completion.
 setopt EXTENDED_GLOB          # expand globbing.
 setopt COMPLETE_ALIASES       # autocompletion for alias switches.
 setopt NO_FLOW_CONTROL        # disable Ctrl + q / Ctrl + s flow control. Similar to `stty -ixon`.
 setopt PROMPT_SUBST           # command substitution, parameter and arithmetic expansion.
-unsetopt MENU_COMPLETE        # insert the first match immediately.
-setopt AUTO_MENU              # show menu for completion. Disable MENU_COMPLETE.
+setopt AUTO_MENU              # show menu for completion. Disables MENU_COMPLETE.
 setopt MAGIC_EQUAL_SUBST      # enable completion after equals sign on `var=value` patterns.
-unsetopt LIST_BEEP            # disable beeping on ambiguous-completion.
 setopt PATH_DIRS              # perform path search even on command names with slashes.
 setopt AUTO_LIST              # automatically list choices on ambiguous completion.
 setopt AUTO_PARAM_SLASH       # add a trailing slash for completed directories.
