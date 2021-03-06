@@ -30,3 +30,7 @@ Host homelab
   HostName homelab.cx
   User cx
   DynamicForward 1080
+
+Host workstation
+  HostName workstation.cx
+  User cx
