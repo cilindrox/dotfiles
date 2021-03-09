@@ -1,0 +1,18 @@
+# copy The Silver Searcher colors
+
+--colors=line:fg:yellow
+--colors=line:style:bold
+--colors=path:fg:green
+--colors=path:style:bold
+--colors=match:fg:black
+--colors=match:bg:yellow
+--colors=match:style:nobold
+
+# ignored patterns
+
+--glob
+!{log,tags,tmp,vendor,.git}/*
+
+--smart-case
+--max-columns=150
+--max-columns-preview
