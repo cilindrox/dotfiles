@@ -11,7 +11,7 @@
 # ignored patterns
 
 --glob
-!{log,tags,tmp,vendor,.git}/*
+!{vendor,.git}/*
 
 --smart-case
 --max-columns=150

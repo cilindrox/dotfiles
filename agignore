@@ -1,7 +1,4 @@
 # list of ignored patterns for The Silver Searcher
 
-log
-tags
-tmp
 .git/*
 vendor/*
