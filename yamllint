@@ -1,0 +1,9 @@
+# ln -sf $PWD/yamllint ~/.config/yamllint/config
+
+extends: relaxed
+
+locale: en_US.UTF-8
+
+rules:
+  indentation:
+    indent-sequences: consistent
