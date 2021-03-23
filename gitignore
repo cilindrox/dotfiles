@@ -24,6 +24,7 @@ GPATH
 GRTAGS
 GTAGS
 Session.vim
+.projections.json
 
 # YARD artifacts
 .yardoc
