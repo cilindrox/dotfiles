@@ -1,53 +1,48 @@
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
+REPORTTIME=10  # Show elapsed time if a command takes longer than 10s
+DIRSTACKSIZE=5 # Amount of directories to remember
 
 # Shell settings
-setopt EXTENDED_HISTORY       # save timestamp and duration.
-setopt HIST_IGNORE_SPACE      # ignore lines which start with space.
-setopt HIST_IGNORE_ALL_DUPS   # ignore duplicates.
-setopt HIST_FIND_NO_DUPS      # do not display duplicates of a found line.
-setopt HIST_IGNORE_DUPS       # do not record an event that was just recorded again.
-setopt HIST_EXPIRE_DUPS_FIRST # expire a duplicate event first when trimming history.
-setopt HIST_REDUCE_BLANKS     # trim extra blanks from history lines.
-setopt HIST_SAVE_NO_DUPS      # do not write a duplicate event to the history file.
-setopt INC_APPEND_HISTORY     # incremental append, do not wait until shell exits.
-setopt SHARE_HISTORY          # share history between zsh processes.
-setopt HIST_NO_FUNCTIONS      # skip function definitions.
-
+setopt ALWAYS_TO_END          # move cursor after the word with each completion.
 setopt AUTOCD                 # cd just by typing the name of a directory.
 setopt AUTOPUSHD              # flip between two places easily.
+setopt AUTO_LIST              # automatically list choices on ambiguous completion.
+setopt AUTO_MENU              # show menu for completion. Disables MENU_COMPLETE.
+setopt AUTO_PARAM_KEYS        # attempt to autocomplete params on lists.
+setopt AUTO_PARAM_SLASH       # add a trailing slash for completed directories.
+setopt AUTO_REMOVE_SLASH      # remove the slash if the next character is delimiter.
+setopt COMPLETE_ALIASES       # autocompletion for alias switches.
+setopt COMPLETE_IN_WORD       # complete from the cursor onwards.
+setopt EXTENDED_GLOB          # expand globbing.
+setopt HIST_ALLOW_CLOBBER     # use history entries to enable clobbering.
+setopt HIST_EXPIRE_DUPS_FIRST # expire a duplicate event first when trimming history.
+setopt HIST_FIND_NO_DUPS      # do not display duplicates of a found line.
+setopt HIST_IGNORE_ALL_DUPS   # ignore duplicates.
+setopt HIST_IGNORE_DUPS       # do not record an event that was just recorded again.
+setopt HIST_IGNORE_SPACE      # ignore lines which start with space.
+setopt HIST_NO_FUNCTIONS      # skip function definitions.
+setopt HIST_REDUCE_BLANKS     # trim extra blanks from history lines.
+setopt HIST_SAVE_NO_DUPS      # do not write a duplicate event to the history file.
+setopt INTERACTIVE_COMMENTS   # allow inline comments.
+setopt MAGIC_EQUAL_SUBST      # enable completion after equals sign on `var=value` patterns.
+setopt NO_BEEP                # beep when no results are available.
+setopt NO_CLOBBER             # avoid overwriting files. Use ! to confirm.
+setopt NO_FLOW_CONTROL        # disable Ctrl + q / Ctrl + s flow control. Similar to `stty -ixon`.
+setopt NO_LIST_BEEP           # disable beeping on ambiguous-completion.
+setopt PATH_DIRS              # perform path search even on command names with slashes.
+setopt PROMPT_SUBST           # command substitution, parameter and arithmetic expansion.
 setopt PUSHD_IGNORE_DUPS      # do not push multiple copies of the same dir onto the stack.
+setopt PUSHD_MINUS            # swaps `+` and `-` when used w/a number to specify a dir in the stack.
 setopt PUSHD_SILENT           # do not print the directory stack after pushd or popd.
 setopt PUSHD_TO_HOME          # pushd with no arguments gets you to Kansas.
-setopt PUSHD_MINUS            # swaps `+` and `-` when used w/a number to specify a dir in the stack.
-setopt NO_CLOBBER             # avoid overwriting files. Use ! to confirm.
-setopt HIST_ALLOW_CLOBBER     # use history entries to enable clobbering.
-setopt INTERACTIVE_COMMENTS   # allow inline comments.
-setopt COMPLETE_IN_WORD       # complete from the cursor onwards.
-setopt ALWAYS_TO_END          # move cursor after the word with each completion.
-setopt NO_BEEP                # beep when no results are available.
-setopt NO_LIST_BEEP           # disable beeping on ambiguous-completion.
-setopt EXTENDED_GLOB          # expand globbing.
-setopt COMPLETE_ALIASES       # autocompletion for alias switches.
-setopt NO_FLOW_CONTROL        # disable Ctrl + q / Ctrl + s flow control. Similar to `stty -ixon`.
-setopt PROMPT_SUBST           # command substitution, parameter and arithmetic expansion.
-setopt AUTO_MENU              # show menu for completion. Disables MENU_COMPLETE.
-setopt MAGIC_EQUAL_SUBST      # enable completion after equals sign on `var=value` patterns.
-setopt PATH_DIRS              # perform path search even on command names with slashes.
-setopt AUTO_LIST              # automatically list choices on ambiguous completion.
-setopt AUTO_PARAM_SLASH       # add a trailing slash for completed directories.
-setopt AUTO_PARAM_KEYS        # attempt to autocomplete params on lists.
-setopt AUTO_REMOVE_SLASH      # remove the slash if the next character is delimiter.
 setopt RCQUOTES               # double-single quotes '' for escaping
+setopt SHARE_HISTORY          # share history between zsh processes.
 
-# Show elapsed time if a command takes longer than 10s
-REPORTTIME=10
+# setopt INC_APPEND_HISTORY_TIME # uses EXTENDED_HISTORY format to write after the command is finished. Incompatible with SHARE_HISTORY
 
-# Amount of directories to remember
-DIRSTACKSIZE=5
-
-# load builtin functions
+# builtin functions
 autoload -Uz zcalc zmv url-quote-magic up-line-or-beginning-search down-line-or-beginning-search
 zle -N self-insert url-quote-magic
 zle -N up-line-or-beginning-search
