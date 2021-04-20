@@ -14,5 +14,5 @@
 !{vendor,.git}/*
 
 --smart-case
---max-columns=150
 --max-columns-preview
+#--max-columns=150
