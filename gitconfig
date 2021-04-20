@@ -80,7 +80,7 @@
 [help]
 	autocorrect = 1
 [diff]
-	indentHeuristic = on
+	indentHeuristic = true
 [format]
 	pretty = format:%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset %C(magenta)(%ar)%Creset
 # [url "git@github.com:"]
