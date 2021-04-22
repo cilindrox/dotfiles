@@ -34,3 +34,4 @@ Host homelab
 Host workstation
   HostName workstation.cx
   User cx
+  DynamicForward 1080
