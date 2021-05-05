@@ -61,6 +61,12 @@ brew analytics off && \
 brew completions link
 ```
 
+Install public keys on host:
+
+```bash
+curl -sSL https://github.com/${USERNAME}.keys -o ~/.ssh/authorized_keys
+```
+
 ### Console shortcuts
 
 Some of these were originally available on [Stefan Klumpp's Geek!mind][geekmind]
