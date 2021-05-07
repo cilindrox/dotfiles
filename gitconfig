@@ -40,6 +40,7 @@
 	append = commit --amend --no-edit
 	branchname = rev-parse --abbrev-ref HEAD
 	cm = commit -m
+	ctags = !.git/hooks/ctags
 	d = diff --color-words
 	ds = diff --staged
 	dh = diff --color-words head
@@ -87,3 +88,4 @@
 #	insteadOf = https://github.com/
 [init]
 	defaultBranch = main
+	templatedir = ~/.git_template
