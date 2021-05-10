@@ -3,5 +3,5 @@ set -e
 PATH="/usr/local/bin:$PATH"
 trap 'rm -f "$dir/$$.tags"' EXIT
 git ls-files | \
-  ctags --tag-relative -L - -f"$$.tags" --exclude=node_modules,.terraform
+  ctags --tag-relative -L - -f"$$.tags" --exclude=node_modules
 mv "$$.tags" "tags"

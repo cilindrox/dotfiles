@@ -1,5 +1,6 @@
 --langdef=terraform
 --langmap=terraform:.tf.tfvars
+--exclude=.terraform
 --regex-terraform=/^[[:space:]]*resource[[:space:]]*"([^"]*)"[[:space:]]*"([^"]*)"/\2/r,Resource/
 --regex-terraform=/^[[:space:]]*data[[:space:]]*"([^"]*)"[[:space:]]*"([^"]*)"/\2/d,Data/
 --regex-terraform=/^[[:space:]]*variable[[:space:]]*"([^"]*)"/\1/v,Variable/
