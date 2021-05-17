@@ -1,5 +1,5 @@
 export NPM_TOKEN=''
-export DOCKER_HOST=ssh://homelab
+export DOCKER_HOST=ssh://workstation
 
 export http_proxy=socks5h://localhost
 
