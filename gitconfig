@@ -82,6 +82,7 @@
 	autocorrect = 1
 [diff]
 	indentHeuristic = true
+	algorithm = histogram
 [format]
 	pretty = format:%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset %C(magenta)(%ar)%Creset
 # [url "git@github.com:"]
