@@ -27,6 +27,9 @@ export GOPATH="$HOME/go"
 export KUBECONFIG="$HOME/.kube/config"
 export KUBECTL_EXTERNAL_DIFF="colordiff -N -u"
 
+export TF_CLI_ARGS_apply="-parallelism=12"
+export TF_CLI_ARGS_plan="-parallelism=12"
+
 path=(
   $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin
   $HOMEBREW_PREFIX/opt/curl/bin
