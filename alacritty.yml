@@ -1,0 +1,112 @@
+env:
+  TERM: xterm-256color
+window:
+  dimensions:
+    columns: 100
+    lines: 40
+  # padding:
+  #   x: 0
+  #   y: 0
+
+  dynamic_padding: true
+  decorations: full
+  opacity: 1.0
+
+  dynamic_title: true
+
+colors:
+  # Base16-Flat 256
+  primary:
+    background: '0x2c3e50'
+    foreground: '0xe0e0e0'
+  # cursor:
+  #   text: '0x2c3e50'
+  #   cursor: '0xe0e0e0'
+  normal:
+    black:   '0x2c3e50'
+    red:     '0xe74c3c'
+    green:   '0x2ecc71'
+    yellow:  '0xf1c40f'
+    blue:    '0x3498db'
+    magenta: '0x9b59b6'
+    cyan:    '0x1abc9c'
+    white:   '0xe0e0e0'
+  bright:
+    black:   '0x95a5a6'
+    red:     '0xe74c3c'
+    green:   '0x2ecc71'
+    yellow:  '0xf1c40f'
+    blue:    '0x3498db'
+    magenta: '0x9b59b6'
+    cyan:    '0x1abc9c'
+    white:   '0xecf0f1'
+  indexed_colors:
+  - { index: 16, color: '0xe67e22' }
+  - { index: 17, color: '0xbe643c' }
+  - { index: 18, color: '0x34495e' }
+  - { index: 19, color: '0x7f8c8d' }
+  - { index: 20, color: '0xbdc3c7' }
+  - { index: 21, color: '0xf5f5f5' }
+
+# draw_bold_text_with_bright_colors: false
+
+scrolling:
+  history: 15000
+  multiplier: 3
+
+font:
+  normal:
+    family: Hack
+    style: Regular
+  # bold:
+  #   family: monospace
+  #   style: Bold
+  # italic:
+  #   family: monospace
+  #   style: Italic
+  # bold_italic:
+  #   family: monospace
+  #   style: Bold Italic
+
+  size: 11.0
+
+cursor:
+  style:
+    shape: Block
+    blinking: On
+  # blink_interval: 750
+  unfocused_hollow: true
+
+live_config_reload: true
+
+shell:
+  program: /usr/bin/zsh
+  args:
+  - --login
+
+working_directory: None
+
+# Send ESC (\x1b) before characters when alt is pressed.
+# alt_send_esc: true
+
+mouse:
+  hide_when_typing: true
+
+selection:
+  save_to_clipboard: true
+
+hints:
+  enabled:
+  - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
+            [^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+    command: xdg-open
+    post_processing: true
+    mouse:
+      enabled: true
+      mods: Control
+    binding:
+      key: U
+      mods: Control|Shift
+
+key_bindings:
+- { key: N, mods: Alt, command: { program: "alacritty", args: [] } }
