@@ -96,4 +96,10 @@ function tat () {
 	tmux new-session -As "$(basename "$PWD" | tr . -)"
 }
 
+function procmem () {
+	ps -eo size,pid,user,command --sort -size | \
+		awk '{ hr=$1/1024 ; printf("%13.2f Mb ",hr) } { for ( x=4 ; x<=NF ; x++ ) { printf("%s ",$x) } print "" }' | \
+		cut -d "" -f2 | cut -d "-" -f1
+}
+
 #EOF
