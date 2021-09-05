@@ -46,6 +46,7 @@
 	dh = diff --color-words head
 	fix = commit --fixup
 	l = log --graph --all -20
+	last = describe --abbrev=0 --tags
 	ls = log --graph --all
 	ll = log --format=medium --stat --abbrev-commit
 	pb = pull --rebase
