@@ -1,10 +1,2 @@
 *.log
-
-# Ignore Sublime Text's base16 theme packages
-*(SL).tmTheme
-
-# Atom editor misc folders
-atom/storage
-atom/packages
-atom/.node-gyp/
-atom/compile-cache/
+ssh/*
