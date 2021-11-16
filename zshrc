@@ -20,7 +20,6 @@ setopt HIST_ALLOW_CLOBBER     # use history entries to enable clobbering.
 setopt HIST_EXPIRE_DUPS_FIRST # expire a duplicate event first when trimming history.
 setopt HIST_FIND_NO_DUPS      # do not display duplicates of a found line.
 setopt HIST_IGNORE_ALL_DUPS   # ignore duplicates.
-setopt HIST_IGNORE_DUPS       # do not record an event that was just recorded again.
 setopt HIST_IGNORE_SPACE      # ignore lines which start with space.
 setopt HIST_NO_FUNCTIONS      # skip function definitions.
 setopt HIST_REDUCE_BLANKS     # trim extra blanks from history lines.
