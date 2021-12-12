@@ -21,6 +21,7 @@ Host apac
 Host esx
   HostName esx.cx
   User ubnt
+  HostKeyAlgorithms +ssh-rsa
 
 Host cloudkey
   HostName cloudkey.cx
