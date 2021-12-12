@@ -11,15 +11,15 @@ Host pi.hole
   User cx
 
 Host er4
-  HostName er4.cx
+  HostName er4.home.local
   User doomguy
 
 Host apac
-  HostName apac.cx
+  HostName apac.home.local
   User doge
 
 Host esx
-  HostName esx.cx
+  HostName esx.home.local
   User ubnt
   HostKeyAlgorithms +ssh-rsa
 
@@ -27,12 +27,8 @@ Host cloudkey
   HostName cloudkey.cx
   User doomguy
 
-Host homelab
-  HostName homelab.cx
-  User cx
-  DynamicForward 1080
-
 Host workstation
-  HostName workstation.cx
+  HostName workstation.home.local
   User cx
   DynamicForward 1080
+  LocalForward 8085 localhost:8085
