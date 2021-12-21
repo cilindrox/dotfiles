@@ -5,5 +5,9 @@ extends: relaxed
 locale: en_US.UTF-8
 
 rules:
-  indentation:
-    indent-sequences: consistent
+  comments:
+    level: warning
+  comments-indentation:
+    level: warning
+  truthy:
+    level: warning
