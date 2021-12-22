@@ -30,7 +30,7 @@ export KUBECTL_EXTERNAL_DIFF="colordiff -N -u"
 export TF_CLI_ARGS_apply="-parallelism=12"
 export TF_CLI_ARGS_plan="-parallelism=12"
 
-export YAMLLINT_CONFIG_FILE=~/.config/yamllint/config/yamllint
+export YAMLLINT_CONFIG_FILE=~/.config/yamllint/config
 
 path=(
   $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin
