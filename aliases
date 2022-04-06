@@ -85,6 +85,9 @@ alias cpv='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
 # If you decide to ditch the 'noglob', remember to quote the parameters.
 alias mmv='noglob zmv -vW'
 
+alias zcp='zmv -C'
+alias zln='zmv -L'
+
 # housekeeping for homebrew
 alias upd='brew upgrade && brew cleanup --prune 90'
 
