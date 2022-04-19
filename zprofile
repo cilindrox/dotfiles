@@ -32,6 +32,14 @@ export TF_CLI_ARGS_plan="-parallelism=12"
 
 export YAMLLINT_CONFIG_FILE=~/.config/yamllint/config
 
+export KUBE_PS1_CTX_COLOR='magenta'
+export KUBE_PS1_DIVIDER='/'
+export KUBE_PS1_ENABLED=off
+export KUBE_PS1_NS_COLOR='yellow'
+export KUBE_PS1_PREFIX=''
+export KUBE_PS1_SUFFIX=''
+export KUBE_PS1_SYMBOL_ENABLE=false
+
 path=(
   $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin
   $HOMEBREW_PREFIX/opt/curl/bin
