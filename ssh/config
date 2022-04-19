@@ -14,8 +14,7 @@ Host er4
   HostName er4.home.local
   User doomguy
 
-Host apac
-  HostName apac.home.local
+Host ap*.home.local
   User doge
   HostKeyAlgorithms +ssh-rsa
 
@@ -25,11 +24,11 @@ Host esx
   HostKeyAlgorithms +ssh-rsa
 
 Host cloudkey
-  HostName cloudkey.cx
+  HostName cloudkey.hoem.top
   User doomguy
 
 Host nas
   HostName nas.home.local
   User cx
   DynamicForward 1080
-  LocalForward 8085 localhost:8085
+  # LocalForward 8085 localhost:8085
