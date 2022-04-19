@@ -54,6 +54,9 @@ bindkey '^Q' push-line-or-edit
 bindkey '^Z' undo
 bindkey ' ' magic-space
 
+bindkey '^[[3~' delete-char
+bindkey '^[3;5~' delete-char
+
 autoload -Uz select-word-style
 select-word-style bash
 
