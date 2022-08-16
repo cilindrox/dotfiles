@@ -8,6 +8,7 @@
 	autocrlf = input
 	editor = nvim
 	attributesfile = ~/.gitattributes
+	fsmonitor = true
 [credential]
 	helper = osxkeychain
 	# gnome - helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
