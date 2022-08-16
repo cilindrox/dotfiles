@@ -11,3 +11,6 @@ rules:
     level: warning
   truthy:
     level: warning
+  line-length:
+    level: warning
+    max: 120
