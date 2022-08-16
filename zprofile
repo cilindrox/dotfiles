@@ -1,8 +1,3 @@
-export NPM_TOKEN=''
-export DOCKER_HOST=ssh://workstation
-
-export http_proxy=socks5h://localhost
-
 eval $(/opt/homebrew/bin/brew shellenv)
 
 # PGP

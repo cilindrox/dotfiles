@@ -31,4 +31,3 @@ Host nas
   HostName nas.home.local
   User cx
   DynamicForward 1080
-  # LocalForward 8085 localhost:8085
