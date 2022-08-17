@@ -1,12 +1,11 @@
-eval $(/opt/homebrew/bin/brew shellenv)
+export http_proxy=socks5h://localhost
 
-# PGP
-# https://github.com/keybase/keybase-issues/issues/1712#issuecomment-141226705
-# export GPG_TTY=$(tty)
-# export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-
-export LIBVIRT_DEFAULT_URI=qemu:///system
-export VAGRANT_DEFAULT_PROVIDER=libvirt
+export HOMEBREW_PREFIX="/usr/local";
+export HOMEBREW_CELLAR="/usr/local/Cellar";
+export HOMEBREW_REPOSITORY="/usr/local/Homebrew";
+export PATH="/usr/local/bin:/usr/local/sbin${PATH+:$PATH}";
+export MANPATH="/usr/local/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/usr/local/share/info:${INFOPATH:-}";
 
 # Fixes duplicate char when triggering completion or hist search due to unicode
 # ref: https://stackoverflow.com/a/22779469/992453
