@@ -141,8 +141,5 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,uco
 source $HOMEBREW_PREFIX/etc/profile.d/z.sh
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "${NVM_DIR}/nvm.sh" ] && source "${NVM_DIR}/nvm.sh" --no-use
-
 # terraform
 complete -o nospace -C $HOMEBREW_PREFIX/bin/terraform terraform
