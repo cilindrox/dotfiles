@@ -20,7 +20,7 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export GOPATH="$HOME/go"
 
 export KUBECONFIG="$HOME/.kube/config"
-export KUBECTL_EXTERNAL_DIFF="colordiff -N -u"
+export KUBECTL_EXTERNAL_DIFF='colordiff -N -u'
 
 export TF_CLI_ARGS_apply="-parallelism=12"
 export TF_CLI_ARGS_plan="-parallelism=12"
