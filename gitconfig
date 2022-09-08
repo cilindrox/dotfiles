@@ -45,6 +45,7 @@
 	d = diff --color-words
 	ds = diff --staged
 	dh = diff --color-words head
+	dft = difftool
 	fix = commit --fixup
 	l = log --graph --all -20
 	last = describe --abbrev=0 --tags
@@ -85,6 +86,13 @@
 [diff]
 	indentHeuristic = true
 	algorithm = histogram
+	tool = difftastic
+[difftool]
+	prompt = false
+[difftool "difftastic"]
+	cmd = difft --display inline "$LOCAL" "$REMOTE"
+[pager]
+	difftool = true
 [format]
 	pretty = format:%C(yellow)%h%C(cyan)%d%Creset %s - %C(bold blue)%an%Creset %C(magenta)(%ar)%Creset
 # [url "git@github.com:"]
