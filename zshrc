@@ -13,7 +13,6 @@ setopt AUTO_MENU              # show menu for completion. Disables MENU_COMPLETE
 setopt AUTO_PARAM_KEYS        # attempt to autocomplete params on lists.
 setopt AUTO_PARAM_SLASH       # add a trailing slash for completed directories.
 setopt AUTO_REMOVE_SLASH      # remove the slash if the next character is delimiter.
-setopt COMPLETE_ALIASES       # autocompletion for alias switches.
 setopt COMPLETE_IN_WORD       # complete from the cursor onwards.
 setopt EXTENDED_GLOB          # expand globbing.
 setopt HIST_ALLOW_CLOBBER     # use history entries to enable clobbering.
