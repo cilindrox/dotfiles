@@ -1,6 +1,6 @@
 {
   "cpus": 4,
   "driver": "docker",
-  "kubernetes-version": "v1.21.4",
+  "kubernetes-version": "v1.24.7",
   "memory": 8192
 }
