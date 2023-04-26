@@ -2,7 +2,7 @@
 
 *It's dangerous out there!* here are some scripts to help you on your shell adventures.
 
-**This repo** is a collection of personal preferences and configuration settings 
+**This repo** is a collection of personal preferences and configuration settings
 I've gathered and tweaked from around the web. Use them wisely and share.
 
 ## Installation
@@ -18,7 +18,7 @@ brew update && brew bundle
 
 ### Helper functions
 
-Util scripts and helper functions are linked under the 
+Util scripts and helper functions are linked under the
 `$BREW_PATH/share/zsh/site-functions` folder.
 
 These include the [syntax-highlighting] and [zsh-completions] plugins and `z` so
@@ -29,7 +29,7 @@ Prompt defaults to [pure], and completion functions are linked under the
 
 All these helper functions should be included on your current `$fpath`.
 
-> **NOTE**: If completions aren't working for some reason, you might want to try 
+> **NOTE**: If completions aren't working for some reason, you might want to try
 > rebuilding the cache:
 
 ```bash
@@ -99,7 +99,7 @@ See the `bindkey` builtin for a more extensive list.
 `zshenv` is the entrypoint and always sourced.
 
 `zprofile` is meant as an alternative to .zlogin; the two are not intended to be
-used together. Loads before zshrc instead of after and hands things off to 
+used together. Loads before zshrc instead of after and hands things off to
 `zshrc`.
 
 ### Command shortcuts
