@@ -77,6 +77,9 @@ autoload -Uz promptinit && promptinit
 autoload -Uz colors && colors
 prompt pure
 
+zstyle :prompt:pure:suspended_jobs color yellow
+zstyle :prompt:pure:git:stash show yes
+
 # Load and initialize the modern completion system.
 autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
