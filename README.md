@@ -32,6 +32,13 @@ you can [zump around][z].
 rm -f ~/.zcompdump; compinit
 ```
 
+You can compile the additional helpers via the following:
+
+```bash
+rm -f functions/*.zwc
+for f (functions/*) zcompile $f
+```
+
 ```bash
 export BREW_PATH=$(brew --prefix)
 
@@ -40,11 +47,6 @@ ln -s "$HOME/github/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" $BREW_P
 ln -s "$HOME/github/z/z.sh" $BREW_PATH/share/zsh/site-functions/z.zsh
 
 ln -s "$HOME/github/zsh-completions/src" $BREW_PATH/share/zsh/vendor-completions
-
-ln -s "$HOME/github/google-cloud-sdk/completion.zsh.inc" $BREW_PATH/share/zsh/site-functions/completion.zsh
-ln -s "$HOME/github/google-cloud-sdk/path.zsh.inc" $BREW_PATH/share/zsh/site-functions/path.zsh
-
-ln -s "$PWD/async.zsh" $BREW_PATH/share/zsh/site-functions/async
 ```
 
 ## Misc

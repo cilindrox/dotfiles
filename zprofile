@@ -44,8 +44,11 @@ path=(
 fpath=(
   $HOMEBREW_PREFIX/share/zsh/site-functions
   $HOMEBREW_PREFIX/opt/curl/share/zsh/site-functions
+  $HOME/github/dotfiles/functions
   $fpath
 )
+
+autoload change-extension cs extract mcd replace
 
 # Typecast to set and remove dupes.
 typeset -U PATH FPATH
