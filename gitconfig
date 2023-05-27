@@ -40,6 +40,7 @@
 	ap = add --patch
 	append = commit --amend --no-edit
 	branchname = rev-parse --abbrev-ref HEAD
+	whatchanged=for-each-ref --sort='-authordate:iso8601' --count 20 --format=' %(color:green)%(authordate:relative)%09%(if)%(HEAD)%(then)%(color:brightwhite)*%(else)%(color:white) %(end)%(refname:short)%09%(color:yellow)%(authorname)%(authoremail)' refs/heads
 	cm = commit -m
 	ctags = !.git/hooks/ctags
 	d = diff --color-words
