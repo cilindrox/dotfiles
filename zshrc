@@ -75,10 +75,18 @@ bindkey '^[[B' down-line-or-beginning-search
 # Load the prompt.
 autoload -Uz promptinit && promptinit
 autoload -Uz colors && colors
-prompt pure
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' formats '%b'
 
-zstyle :prompt:pure:suspended_jobs color yellow
-zstyle :prompt:pure:git:stash show yes
+PROMPT='%F{blue}%(5~|%-1~/.../%3~|%~)%f$prompt_newline%# '
+RPROMPT='%B%F{red}%0(?..%?)%b%f %F{yellow}${vcs_info_msg_0_}%f'
+# Show user@machine on remote hosts
+if [[ $SSH_CLIENT ]]; then
+  PROMPT='%n@%m %F{blue}%(5~|%-1~/.../%3~|%~)%f %# '
+fi
 
 # Load and initialize the modern completion system.
 autoload -Uz compinit && compinit

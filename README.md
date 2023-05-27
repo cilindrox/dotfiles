@@ -19,15 +19,11 @@ brew update && brew bundle
 ### Helper functions
 
 Util scripts and helper functions are linked under the
-`$BREW_PATH/share/zsh/site-functions` folder.
+`$BREW_PATH/share/zsh/site-functions` folder. These should be included in
+`$fpath`.
 
 These include the [syntax-highlighting] and [zsh-completions] plugins and `z` so
 you can [zump around][z].
-
-Prompt defaults to [pure], and completion functions are linked under the
-`$BREW_PATH/share/zsh/vendor-completions` folder.
-
-All these helper functions should be included on your current `$fpath`.
 
 > **NOTE**: If completions aren't working for some reason, you might want to try
 > rebuilding the cache:
@@ -48,7 +44,6 @@ ln -s "$HOME/github/zsh-completions/src" $BREW_PATH/share/zsh/vendor-completions
 ln -s "$HOME/github/google-cloud-sdk/completion.zsh.inc" $BREW_PATH/share/zsh/site-functions/completion.zsh
 ln -s "$HOME/github/google-cloud-sdk/path.zsh.inc" $BREW_PATH/share/zsh/site-functions/path.zsh
 
-ln -s "$PWD/pure.zsh" $BREW_PATH/share/zsh/site-functions/prompt_pure_setup
 ln -s "$PWD/async.zsh" $BREW_PATH/share/zsh/site-functions/async
 ```
 
@@ -119,6 +114,5 @@ Expression   | Description                                              |
 [brew]: http://brew.sh
 [syntax-highlighting]: https://github.com/zsh-users/zsh-syntax-highlighting
 [z]: https://github.com/rupa/z
-[pure]: https://github.com/sindresorhus/pure
 [zsh-completions]: https://github.com/zsh-users/zsh-completions
 [geekmind]: http://www.geekmind.net/2011/01/shortcuts-to-improve-your-bash-zsh.html

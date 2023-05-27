@@ -43,7 +43,6 @@ path=(
 
 fpath=(
   $HOMEBREW_PREFIX/share/zsh/site-functions
-  $HOME/.zsh/pure
   $HOMEBREW_PREFIX/opt/curl/share/zsh/site-functions
   $fpath
 )
