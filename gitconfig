@@ -100,3 +100,5 @@
 [init]
 	defaultBranch = main
 	templatedir = ~/.git_template
+[advice]
+	skippedCherryPicks = false
