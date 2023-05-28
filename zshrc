@@ -85,7 +85,7 @@ PROMPT='%F{blue}%(5~|%-1~/.../%3~|%~)%f$prompt_newline%# '
 RPROMPT='%B%F{red}%0(?..%?)%b%f %F{yellow}${vcs_info_msg_0_}%f'
 # Show user@machine on remote hosts
 if [[ $SSH_CLIENT ]]; then
-  PROMPT='%n@%m %F{blue}%(5~|%-1~/.../%3~|%~)%f %# '
+  PROMPT='%F{10}%B%n@%m%b%f %F{blue}%(5~|%-1~/.../%3~|%~)%f %# '
 fi
 
 # Load and initialize the modern completion system.
