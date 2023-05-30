@@ -18,16 +18,11 @@ Host ap*.home.local
   User doge
   HostKeyAlgorithms +ssh-rsa
 
-Host esx
-  HostName esx.home.local
-  User ubnt
-  HostKeyAlgorithms +ssh-rsa
-
 Host cloudkey
   HostName cloudkey.hoem.top
   User doomguy
 
 Host nas
-  HostName nas.home.local
+  HostName ubuntu-server.home.local
   User cx
   DynamicForward 1080
