@@ -81,8 +81,8 @@ precmd_functions+=( precmd_vcs_info )
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' formats '%b'
 
-PROMPT='%F{blue}%(5~|%-1~/.../%3~|%~)%f$prompt_newline%# '
-RPROMPT='%B%F{red}%0(?..%?)%b%f %F{yellow}${vcs_info_msg_0_}%f'
+PROMPT='%F{blue}%(5~|%-1~/.../%3~|%~)%f %F{yellow}${vcs_info_msg_0_}%f$prompt_newline%# '
+RPROMPT=%B%F{red}%0(?..%?)%b%f
 # Show user@machine on remote hosts
 if [[ $SSH_CLIENT ]]; then
   PROMPT='%F{10}%B%n@%m%b%f %F{blue}%(5~|%-1~/.../%3~|%~)%f %# '
