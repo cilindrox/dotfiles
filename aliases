@@ -64,8 +64,8 @@ function tmk () {
 
 alias tml='tmux list-sessions'
 
-alias dcu='docker-compose up'
-alias dcs='docker-compose stop'
+alias dcu='docker compose up'
+alias dcs='docker compose stop'
 
 alias k='kubectl'
 alias klog='kubectl logs -f'
