@@ -1,4 +1,0 @@
-# list of ignored patterns for The Silver Searcher
-
-.git/*
-vendor/*
