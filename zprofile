@@ -5,6 +5,8 @@ export PATH="/usr/local/bin:/usr/local/sbin${PATH+:$PATH}";
 export MANPATH="/usr/local/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="/usr/local/share/info:${INFOPATH:-}";
 
+# LIBVIRT_DEFAULT_URI=qemu:///system
+
 # Fixes duplicate char when triggering completion or hist search due to unicode
 # ref: https://stackoverflow.com/a/22779469/992453
 export LC_ALL=en_US.UTF-8
