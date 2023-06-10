@@ -2,7 +2,7 @@ Host *
   ControlPath ~/.ssh/controlmasters/%C
   ControlMaster auto
   ControlPersist 10m
-  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/id_ed25519
 
 Host github.com
   User cilindrox

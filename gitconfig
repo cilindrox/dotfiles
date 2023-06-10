@@ -1,7 +1,7 @@
 [user]
 	name = Gaston Festari
 	email = cilindrox@gmail.com
-	signingkey = 0xA22687A64E736A3C
+	signingkey = ~/.ssh/id_ed25519.pub
 [core]
 	pager = less -RFX
 	excludesfile = ~/.gitignore
@@ -78,10 +78,15 @@
 	smudge = git lfs smudge %f
 	required = true
 [commit]
-	; gpgSign = true
+	gpgsign = true
 	; template = ~/.gitmessage
+[tag]
+	gpgsign = true
 [gpg]
 	program = gpg
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
 [help]
 	autocorrect = 1
 [diff]
