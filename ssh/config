@@ -23,6 +23,6 @@ Host cloudkey
   User doomguy
 
 Host nas
-  HostName ubuntu-server.home.local
+  HostName nas.home.local
   User cx
   DynamicForward 1080
