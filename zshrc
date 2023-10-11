@@ -53,24 +53,21 @@ bindkey '^Q' push-line-or-edit
 bindkey '^Z' undo
 bindkey ' ' magic-space
 
-bindkey '^[[3~' delete-char
-bindkey '^[3;5~' delete-char
-
 autoload -Uz select-word-style
 select-word-style bash
 
 # CTRL + back/forward word navigation
 bindkey ';5C' forward-word
-bindkey ';5D' backward-word
 bindkey ';3C' forward-word
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;3C' forward-word
+bindkey ';5D' backward-word
 bindkey ';3D' backward-word
 bindkey '^[[1;5D' backward-word
-bindkey '^[[1;5C' forward-word
 bindkey '^[[1;3D' backward-word
-bindkey '^[[1;3C' forward-word
 
-bindkey '^[[A' up-line-or-beginning-search
-bindkey '^[[B' down-line-or-beginning-search
+bindkey "$key[Up]" up-line-or-beginning-search
+bindkey "$key[Down]" down-line-or-beginning-search
 
 # Load the prompt.
 autoload -Uz promptinit && promptinit
