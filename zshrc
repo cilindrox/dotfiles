@@ -58,31 +58,29 @@ bindkey '^Z' undo
 bindkey ' ' magic-space
 bindkey '^X^E' edit-command-line
 
-bindkey '^[[3~' delete-char
-bindkey '^[3;5~' delete-char
-
 autoload -Uz select-word-style
 select-word-style bash
 
 # CTRL + back/forward word navigation
 bindkey ';5C' forward-word
-bindkey ';5D' backward-word
 bindkey ';3C' forward-word
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;3C' forward-word
+bindkey ';5D' backward-word
 bindkey ';3D' backward-word
 bindkey '^[[1;5D' backward-word
-bindkey '^[[1;5C' forward-word
 bindkey '^[[1;3D' backward-word
-bindkey '^[[1;3C' forward-word
 
-bindkey '^[[A' up-line-or-beginning-search
-bindkey '^[[B' down-line-or-beginning-search
+bindkey "$key[Up]" up-line-or-beginning-search
+bindkey "$key[Down]" down-line-or-beginning-search
 
 # Load the prompt.
 autoload -Uz promptinit && promptinit
 autoload -Uz colors && colors
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
+precmd_foot_jump_prompt() { print -Pn "\e]133;A\e\\" }
+precmd_functions+=( precmd_vcs_info precmd_foot_jump_prompt )
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' formats '%b'
 
