@@ -25,4 +25,3 @@ Host cloudkey
 Host nas
   HostName nas.home.local
   User cx
-  DynamicForward 1080
