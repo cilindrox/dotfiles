@@ -10,9 +10,7 @@
 	attributesfile = ~/.gitattributes
 	fsmonitor = true
 [credential]
-	helper = osxkeychain
-	# gnome - helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
-	# linux - helper = cache --timeout=7200
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 [color]
 	ui = true
 [color "branch"]
