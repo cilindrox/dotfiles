@@ -23,5 +23,5 @@ Host cloudkey
   User doomguy
 
 Host nas
-  HostName nas.home.local
   User cx
+  DynamicForward 1080
