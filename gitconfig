@@ -63,6 +63,8 @@
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 [fetch]
 	prune = true
+[merge]
+	conflictStyle = zdiff3
 [push]
 	default = simple
 [rebase]
@@ -88,7 +90,7 @@
 [gpg "ssh"]
 	allowedSignersFile = ~/.config/git/allowed_signers
 [help]
-	autocorrect = 1
+	autocorrect = 10
 [diff]
 	indentHeuristic = true
 	algorithm = histogram
