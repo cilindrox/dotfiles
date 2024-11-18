@@ -71,7 +71,6 @@ alias k='kubectl'
 alias klog='kubectl logs -f'
 alias kno='kubectl get no'
 alias kpow='kubectl get po -w'
-alias kctx='kubectl config current-context'
 
 function kns () {
 	if [ -z "$1" ]; then

@@ -1,0 +1,7 @@
+# Set or show kubectl namespace for the current context
+
+function kn () {
+	[ "$1" ] && kubectl config set-context --current --namespace $1 || kubectl config view --minify |
+		rg namespace |
+		cut -d" " -f6
+}
