@@ -45,22 +45,8 @@ alias more=most
 alias lol=lolcat
 alias today='cal | grep -E --color "\b$(date +%e)\b|$"'
 alias du='du --max-depth=1 -h'
-alias branches='git branch -a'
 
 alias vim='nvim'
-
-# Attach or create tmux session named the same as current directory.
-function tat () {
-	tmux new-session -As "$(basename "$PWD" | tr . -)"
-}
-
-function tma () {
-	tmux -2 attach -t "$1"
-}
-
-function tmk () {
-	tmux kill-session -t "$1"
-}
 
 alias tml='tmux list-sessions'
 
@@ -105,11 +91,5 @@ alias upd='brew upgrade && brew cleanup --prune 90'
 
 alias wifi='networksetup -setairportpower en0'
 alias myip='curl -sSL https://plex.tv/:/ip'
-
-function procmem () {
-	ps -eo size,pid,user,command --sort -size | \
-		awk '{ hr=$1/1024 ; printf("%13.2f Mb ",hr) } { for ( x=4 ; x<=NF ; x++ ) { printf("%s ",$x) } print "" }' | \
-		cut -d "" -f2 | cut -d "-" -f1
-}
 
 #EOF

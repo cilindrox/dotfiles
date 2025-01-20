@@ -1,0 +1,5 @@
+# Use tmk $SESSION to kill an existing tmux session
+
+function tmk () {
+	tmux kill-session -t "$1"
+}

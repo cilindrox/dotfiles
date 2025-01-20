@@ -1,0 +1,5 @@
+# Use tma $SESSION to attach to an existing tmux session
+
+function tma () {
+	tmux -2 attach -t "$1"
+}
