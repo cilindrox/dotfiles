@@ -1,3 +1,6 @@
+# Global Order: zshenv, zprofile, zshrc, zlogin
+
+# Ubuntu - see: /etc/zsh/zshrc
 skip_global_compinit=1
 
 export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
@@ -7,6 +10,8 @@ export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PAT
 export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
 
+# Fixes duplicate char when triggering completion or hist search due to unicode
+# ref: https://stackoverflow.com/a/22779469/992453
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -41,3 +46,5 @@ fpath=(
 
 # Typecast to set and remove dupes.
 typeset -U PATH FPATH
+
+autoload -U change-extension cs extract mcd replace kx kn tat tma tmk

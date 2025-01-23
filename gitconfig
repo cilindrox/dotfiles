@@ -11,7 +11,8 @@
 	fsmonitor = true
 	untrackedCache = true
 [credential]
-	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+	# gnome - helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+	helper = cache --timeout=7200
 [color]
 	ui = true
 [color "branch"]
@@ -86,7 +87,7 @@
 	smudge = git lfs smudge %f
 	required = true
 [commit]
-	gpgsign = true
+	gpgsign = false
 	verbose = true
 	; template = ~/.gitmessage
 [tag]

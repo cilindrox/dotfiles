@@ -41,7 +41,7 @@ fpath=(
   $fpath
 )
 
-autoload change-extension cs extract mcd replace kx kn tat tma tmk
-
 # Typecast to set and remove dupes.
 typeset -U PATH FPATH
+
+autoload -U change-extension cs extract mcd replace kx kn tat tma tmk
