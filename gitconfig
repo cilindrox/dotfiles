@@ -9,6 +9,7 @@
 	editor = nvim
 	attributesfile = ~/.gitattributes
 	fsmonitor = true
+	untrackedCache = true
 [credential]
 	helper = osxkeychain
 	# gnome - helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
@@ -61,15 +62,22 @@
 	s = status --short --branch
 	squ = commit --squash
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+[branch]
+	sort = -committerdate
 [fetch]
 	prune = true
+	pruneTags = true
+	all = true
 [merge]
 	conflictStyle = zdiff3
 [push]
 	default = simple
+	autoSetupRemote = true
+	followTags = true
 [rebase]
 	autoSquash = true
 	autoStash = true
+	updateRefs = true
 [rerere]
 	enabled = true
 	autoupdate = true
@@ -81,9 +89,11 @@
 	required = true
 [commit]
 	gpgsign = true
+	verbose = true
 	; template = ~/.gitmessage
 [tag]
 	gpgsign = true
+	sort = version:refname
 [gpg]
 	program = gpg
 	format = ssh
@@ -94,6 +104,8 @@
 [diff]
 	indentHeuristic = true
 	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
 	tool = difftastic
 [difftool]
 	prompt = false
