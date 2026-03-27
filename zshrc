@@ -41,7 +41,15 @@ setopt SHARE_HISTORY          # share history between zsh processes.
 # setopt INC_APPEND_HISTORY_TIME # uses EXTENDED_HISTORY format to write after the command is finished. Incompatible with SHARE_HISTORY
 
 # builtin functions
-autoload -Uz zcalc zmv url-quote-magic up-line-or-beginning-search down-line-or-beginning-search
+autoload -Uz \
+  edit-command-line \
+  zcalc \
+  zmv \
+  url-quote-magic \
+  up-line-or-beginning-search \
+  down-line-or-beginning-search
+
+zle -N edit-command-line
 zle -N self-insert url-quote-magic
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
@@ -52,6 +60,7 @@ bindkey '^U' backward-kill-line
 bindkey '^Q' push-line-or-edit
 bindkey '^Z' undo
 bindkey ' ' magic-space
+bindkey '^X^E' edit-command-line
 
 bindkey '^[[3~' delete-char
 bindkey '^[3;5~' delete-char
