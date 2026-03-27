@@ -77,7 +77,7 @@
 [rebase]
 	autoSquash = true
 	autoStash = true
-	updateRefs = true
+	updateRefs = false
 [rerere]
 	enabled = true
 	autoupdate = true
