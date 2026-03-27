@@ -13,6 +13,7 @@
 --glob
 !{vendor,.git}/*
 
+--hidden
 --smart-case
 --max-columns-preview
 #--max-columns=150
