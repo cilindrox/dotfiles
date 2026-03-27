@@ -8,5 +8,5 @@ function replace () {
   replace_with="$1"
   shift
 
-  ag -l "${find_this}" | xargs perl -pi -E "s/${find_this}/${replace_with}/g"
+  rg --files-with-matches "${find_this}" | xargs perl -pi -E "s/${find_this}/${replace_with}/g"
 }
