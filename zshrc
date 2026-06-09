@@ -158,7 +158,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,uco
 [[ -s ~/.aliases ]] && source ~/.aliases
 
 source $HOMEBREW_PREFIX/etc/profile.d/z.sh
-source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # terraform
 complete -o nospace -C $HOMEBREW_PREFIX/bin/terraform terraform
