@@ -129,3 +129,5 @@
 	skippedCherryPicks = false
 [includeIf "gitdir:~/github/work/"]
 	path = ~/.gitconfig-work
+[column]
+	ui = auto
