@@ -10,8 +10,8 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export EDITOR='nvim'
-export MANPATH="/opt/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
+export EDITOR='vim'
+
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 export GOPATH="$HOME/go"
