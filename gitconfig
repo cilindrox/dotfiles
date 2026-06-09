@@ -6,7 +6,7 @@
 	pager = less -RFX
 	excludesfile = ~/.gitignore
 	autocrlf = input
-	editor = nvim
+	editor = vim
 	attributesfile = ~/.gitattributes
 	fsmonitor = true
 	untrackedCache = true

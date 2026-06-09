@@ -46,8 +46,6 @@ alias lol=lolcat
 alias today='cal | grep -E --color "\b$(date +%e)\b|$"'
 alias du='du --max-depth=1 -h'
 
-alias vim='nvim'
-
 alias tml='tmux list-sessions'
 
 alias dcu='docker compose up'
