@@ -8,6 +8,14 @@
 --colors=match:bg:yellow
 --colors=match:style:nobold
 
+# custom types
+
+--type-add
+web:*.{html,css,js}*
+
+--type-add
+hcl:*.{tf,tfvars,hcl}*
+
 # ignored patterns
 
 --glob
