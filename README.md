@@ -40,7 +40,7 @@ for f (functions/*) zcompile $f
 ```
 
 ```bash
-export BREW_PATH=$(brew --prefix)
+BREW_PATH=$(brew --prefix)
 
 ln -s "$HOME/github/zsh-history-substring-search/zsh-history-substring-search.zsh" $BREW_PATH/share/zsh/site-functions
 ln -s "$HOME/github/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" $BREW_PATH/share/zsh/site-functions
