@@ -98,18 +98,28 @@ if [[ $SSH_CLIENT ]]; then
 fi
 
 # Load and initialize the modern completion system.
-autoload -Uz compinit && compinit
-autoload -Uz bashcompinit && bashcompinit
+# Call compinit cache once, daily.
+autoload -Uz compinit bashcompinit
+() {
+  local comp_file="${ZDOTDIR:-$HOME}/.zcompdump"
+  if [[ -f "$comp_file" && -n "$(find "$comp_file" -mtime -1 2>/dev/null)" ]]; then
+    compinit -C
+  else
+    compinit
+  fi
+  bashcompinit
+}
 
-# Enable completion caching, auto rehash commands - http://www.zsh.org/mla/users/2011/msg00531.html
+# Caching
 zstyle ':completion::complete:*' use-cache on
-zstyle ':completion:*' rehash true
+zstyle ':completion::complete:*' cache-path "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompcache"
 
-# Case-insensitive, partial-word, then substring completion.
+# Matchers and Menu
 zstyle ':completion:*' matcher-list 'r:|[._-]=* r:|=* l:|=*' 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' menu select=long
 
+# Formatting and Grouping
 zstyle ':completion:*:matches' group 'yes'
 zstyle ':completion:*:options' description 'yes'
 zstyle ':completion:*:options' auto-description 'specify: %d'
@@ -118,22 +128,15 @@ zstyle ':completion:*:descriptions' format ' %F{yellow}-- %d --%f'
 zstyle ':completion:*:messages' format ' %F{purple}-- %d --%f'
 zstyle ':completion:*:warnings' format ' %F{red}-- no matches for: %d --%f'
 zstyle ':completion:*:default' list-prompt '%S%M matches. Hit TAB for more, or the character to insert%s'
-zstyle ':completion:*' format ' %F{yellow}-- %d --%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
 
-# insert all expansions for expand completer
-# zstyle ':completion:*:expand:*' tag-order all-expansions
-
-# zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
-
 # One error for every three characters
 zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3))numeric)'
 
 # Don't complete unavailable commands.
 zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec))'
-
 # Array completion element sorting.
 zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
 
