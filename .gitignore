@@ -1,3 +1,4 @@
 *.log
 ssh/*
 functions/*.zwc
+git/allowed_signers
