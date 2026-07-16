@@ -4,10 +4,8 @@
 	signingkey = ~/.ssh/id_ed25519.pub
 [core]
 	pager = less -RFX
-	excludesfile = ~/.gitignore
 	autocrlf = input
 	editor = vim
-	attributesfile = ~/.gitattributes
 	fsmonitor = true
 	untrackedCache = true
 [credential]
@@ -90,7 +88,7 @@
 [commit]
 	gpgsign = true
 	verbose = true
-	; template = ~/.gitmessage
+	; template = ~/.config/git/message
 [tag]
 	gpgsign = true
 	sort = version:refname
@@ -124,10 +122,10 @@
 	insteadOf = gist:
 [init]
 	defaultBranch = main
-	templatedir = ~/.git_template
+	templatedir = ~/.config/git/template
 [advice]
 	skippedCherryPicks = false
 [includeIf "gitdir:~/github/work/"]
-	path = ~/.gitconfig-work
+	path = ~/.config/git/config-work
 [column]
 	ui = auto
