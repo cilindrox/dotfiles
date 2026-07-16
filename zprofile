@@ -21,15 +21,13 @@ export KUBECTL_EXTERNAL_DIFF='colordiff -N -u'
 
 export LESS='-Re'
 
-export TF_CLI_ARGS_apply="-parallelism=12"
-export TF_CLI_ARGS_plan="-parallelism=12"
-
-export YAMLLINT_CONFIG_FILE=~/.config/yamllint/config
+export TF_CLI_ARGS_apply='-parallelism=12'
+export TF_CLI_ARGS_plan='-parallelism=12'
 
 path=(
   $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin
   $HOMEBREW_PREFIX/opt/curl/bin
-  $HOME/{.local,.cargo,go}/bin
+  $HOME/{.local,go}/bin
   $path
 )
 
@@ -40,8 +38,6 @@ fpath=(
   $HOME/github/dotfiles/functions
   $fpath
 )
-
-autoload change-extension cs extract mcd replace kx kn tat tma tmk
 
 # Typecast to set and remove dupes.
 typeset -U PATH FPATH

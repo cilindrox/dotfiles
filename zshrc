@@ -159,5 +159,4 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,uco
 
 source $HOMEBREW_PREFIX/etc/profile.d/z.sh
 
-# terraform
-complete -o nospace -C $HOMEBREW_PREFIX/bin/terraform terraform
+autoload -Uz change-extension cs extract mcd replace kx kn tat tma tmk
