@@ -107,9 +107,9 @@ zstyle ':completion:*' rehash true
 
 # Case-insensitive, partial-word, then substring completion.
 zstyle ':completion:*' matcher-list 'r:|[._-]=* r:|=* l:|=*' 'm:{a-zA-Z}={A-Za-z}'
-
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' menu select=long
+
 zstyle ':completion:*:matches' group 'yes'
 zstyle ':completion:*:options' description 'yes'
 zstyle ':completion:*:options' auto-description 'specify: %d'
@@ -121,7 +121,6 @@ zstyle ':completion:*:default' list-prompt '%S%M matches. Hit TAB for more, or t
 zstyle ':completion:*' format ' %F{yellow}-- %d --%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
-zstyle ':completion:*' use-compctl false
 
 # insert all expansions for expand completer
 # zstyle ':completion:*:expand:*' tag-order all-expansions
