@@ -15,14 +15,13 @@ setopt AUTO_PARAM_SLASH       # add a trailing slash for completed directories.
 setopt AUTO_REMOVE_SLASH      # remove the slash if the next character is delimiter.
 setopt COMPLETE_IN_WORD       # complete from the cursor onwards.
 setopt EXTENDED_GLOB          # expand globbing.
+setopt INC_APPEND_HISTORY_TIME # uses EXTENDED_HISTORY format to write after the command is finished. Incompatible with SHARE_HISTORY
 setopt HIST_ALLOW_CLOBBER     # use history entries to enable clobbering.
-setopt HIST_EXPIRE_DUPS_FIRST # expire a duplicate event first when trimming history.
 setopt HIST_FIND_NO_DUPS      # do not display duplicates of a found line.
 setopt HIST_IGNORE_ALL_DUPS   # ignore duplicates.
 setopt HIST_IGNORE_SPACE      # ignore lines which start with space.
 setopt HIST_NO_FUNCTIONS      # skip function definitions.
 setopt HIST_REDUCE_BLANKS     # trim extra blanks from history lines.
-setopt HIST_SAVE_NO_DUPS      # do not write a duplicate event to the history file.
 setopt INTERACTIVE_COMMENTS   # allow inline comments.
 setopt MAGIC_EQUAL_SUBST      # enable completion after equals sign on `var=value` patterns.
 setopt NO_BEEP                # beep when no results are available.
@@ -36,9 +35,6 @@ setopt PUSHD_MINUS            # swaps `+` and `-` when used w/a number to specif
 setopt PUSHD_SILENT           # do not print the directory stack after pushd or popd.
 setopt PUSHD_TO_HOME          # pushd with no arguments gets you to Kansas.
 setopt RCQUOTES               # double-single quotes '' for escaping
-setopt SHARE_HISTORY          # share history between zsh processes.
-
-# setopt INC_APPEND_HISTORY_TIME # uses EXTENDED_HISTORY format to write after the command is finished. Incompatible with SHARE_HISTORY
 
 # builtin functions
 autoload -Uz \
