@@ -1,7 +1,0 @@
-# Disables documentation on each gem installation.
-# Quicker and uses less space.
-# [sauce](http://cbednarski.com/articles/installing-ruby)
-# Should be linked as ~/.gemrc
-
-install: --no-ri --no-rdoc
-update: --no-ri --no-rdoc
