@@ -26,7 +26,8 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 export GOPATH="$HOME/go"
 
-export KUBECONFIG="$HOME/.kube/config"
+export KUBECONFIG="$HOME/.config/kube/config"
+export KUBECACHEDIR="$HOME/.cache/kube"
 export KUBECTL_EXTERNAL_DIFF='colordiff -N -u'
 
 export LESS='-Re'
