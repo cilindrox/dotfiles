@@ -98,7 +98,7 @@ fi
 autoload -Uz compinit bashcompinit
 () {
   local comp_file="${ZDOTDIR:-$HOME}/.zcompdump"
-  if [[ -f "$comp_file" && -n "$(find "$comp_file" -mtime -1 2>/dev/null)" ]]; then
+  if [[ -f "$comp_file" && -n "$comp_file"(#qN.m-1) ]]; then
     compinit -C
   else
     compinit
@@ -106,33 +106,37 @@ autoload -Uz compinit bashcompinit
   bashcompinit
 }
 
-# Caching
+# Completers
+zstyle ':completion:*' completer _expand_alias _complete _ignored _approximate
+
+# Matchers and Menu
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' menu select=long
+
+# Cache
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompcache"
 
-# Matchers and Menu
-zstyle ':completion:*' matcher-list 'r:|[._-]=* r:|=* l:|=*' 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*:*:*:*:*' menu select
-zstyle ':completion:*' menu select=long
-
 # Formatting and Grouping
+
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*' group-name ''
 zstyle ':completion:*:matches' group 'yes'
 zstyle ':completion:*:options' description 'yes'
 zstyle ':completion:*:options' auto-description 'specify: %d'
-zstyle ':completion:*:corrections' format ' %F{green}-- %d (errors: %e) --%f'
+
 zstyle ':completion:*:descriptions' format ' %F{yellow}-- %d --%f'
 zstyle ':completion:*:messages' format ' %F{purple}-- %d --%f'
 zstyle ':completion:*:warnings' format ' %F{red}-- no matches for: %d --%f'
+zstyle ':completion:*:corrections' format ' %F{green}-- %d (errors: %e) --%f'
 zstyle ':completion:*:default' list-prompt '%S%M matches. Hit TAB for more, or the character to insert%s'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' verbose yes
 
-zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 # One error for every three characters
-zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3))numeric)'
+zstyle -e ':completion:*:approximate:*' max-errors 'reply=( $(( ($#PREFIX + $#SUFFIX) / 3 )) numeric )'
 
 # Don't complete unavailable commands.
 zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec))'
+
 # Array completion element sorting.
 zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
 
@@ -142,7 +146,7 @@ zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack path-d
 zstyle ':completion:*:*:cd:*:directory-stack' menu yes select
 zstyle ':completion:*:-tilde-:*' group-order 'named-directories' 'path-directories' 'users' 'expand'
 zstyle ':completion:*' squeeze-slashes true
-zstyle ':completion:*:cd:*' ignore-parents parent pwd
+zstyle ':completion:*:-command-:*' ignore-parents parent pwd
 
 # History
 zstyle ':completion:*:history-words' stop yes
@@ -150,8 +154,8 @@ zstyle ':completion:*:history-words' remove-all-dups yes
 zstyle ':completion:*:history-words' list false
 zstyle ':completion:*:history-words' menu yes
 
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,state,cputime,ucomm'
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 
 [[ -s ~/.aliases ]] && source ~/.aliases
 
