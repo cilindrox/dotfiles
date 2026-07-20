@@ -110,7 +110,7 @@ autoload -Uz compinit bashcompinit
 zstyle ':completion:*' completer _expand_alias _complete _ignored _approximate
 
 # Matchers and Menu
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z} r:|[._-]=* r:|=* l:|=*'
 zstyle ':completion:*' menu select=long
 
 # Cache
